@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+import "POGOProtos/Data/Fitness/FitnessReport.proto";
+
+message GetFitnessReportResponse {
+	Status status = 1;
+	repeated .POGOProtos.Data.Fitness.FitnessReport daily_reports = 2;
+	repeated .POGOProtos.Data.Fitness.FitnessReport weekly_reports = 3;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_NOT_FOUND = 2;
+		ERROR_RECORDS_NOT_FOUND = 3;
+		ERROR_INVALID_WINDOW = 4;
+		ERROR_UNKNOWN = 5;
+	}
+}
