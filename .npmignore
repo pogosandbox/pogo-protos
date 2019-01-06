@@ -1,6 +1,8 @@
 .vscode
 node_modules
 old
-temp.js
+notused
+temp*.js
 test
 .travis.yml
+*.md
