@@ -1,6 +1,6 @@
 {
   "name": "pogo-protos",
-  "version": "2.31.0",
+  "version": "2.31.1",
   "description": "Pokémon Go Protobuf files from POGOProtos, wrapped up in a Node module",
   "main": "index.js",
   "repository": {
@@ -22,19 +22,20 @@
   },
   "homepage": "https://github.com/pogosandbox/pogo-protos#readme",
   "dependencies": {
-    "protobufjs": "^6.8.8",
-    "uglify-js": "^3.4.9"
+    "protobufjs": "^6.8.8"
   },
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "uglify-js": "^3.4.9"
   },
   "typings": "./pogo-protos.d.ts",
   "scripts": {
     "test": "node test/test.js",
-    "build": "run-s compile minjs js ts",
+    "build": "run-s compile minjs uglify tempjs ts",
     "compile": "node proto/compile.js",
     "minjs": "pbjs --keep-case -t static-module --no-verify --no-create --no-delimited --no-beautify --no-comments -o compiled.js ./proto/POGOProtos.proto",
-    "js": "pbjs --keep-case -t static-module --no-verify --no-create --no-delimited -o temp.js ./proto/POGOProtos.proto",
-    "ts": "pbts --no-comments -o compiled.d.ts temp.js"
+    "uglify": "uglifyjs compiled.js -o compiled.js",
+    "tempjs": "pbjs --keep-case -t static-module --no-verify --no-create --no-delimited -o temp-ts.js ./proto/POGOProtos.proto",
+    "ts": "pbts --no-comments -o compiled.d.ts temp-ts.js"
   }
 }
