@@ -101,6 +101,3 @@ message ReplaceLoginActionMessage {
 	.POGOProtos.Enums.IdentityProvider existing_identity_provider = 1;
 	AddLoginActionMessage new_login = 2;
 }
-
-message ListLoginActionMessage {
-}
