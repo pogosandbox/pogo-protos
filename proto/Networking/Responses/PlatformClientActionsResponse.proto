@@ -130,17 +130,19 @@ message AddLoginActionResponse {
 }
 
 message RemoveLoginActionResponse {
+	bool success = 1;
+	repeated .POGOProtos.Data.Login.LoginDetail login_detail = 2;
+	Status status = 3;
+
 	enum Status {
 		UNSET = 0;
 		LOGIN_NOT_REMOVABLE = 1;
 	}
-
-	bool success = 1;
-	repeated .POGOProtos.Data.Login.LoginDetail login_detail = 2;
-	Status status = 3;
 }
 
 message SubmitNewPoiResponse {
+	Status status = 1;
+
 	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
@@ -151,11 +153,11 @@ message SubmitNewPoiResponse {
 		MINOR = 6;
 		NOT_AVAILABLE = 7;
 	}
-
-	Status status = 1;
 }
 
 message UploadPoiPhotoByUrlResponse {
+	Result status = 1;
+
 	enum Result {
 		UNSET = 0;
 		SUCCESS = 1;
@@ -166,8 +168,6 @@ message UploadPoiPhotoByUrlResponse {
 		IMAGE_NOT_SERVABLE = 6;
 		PORTAL_NOT_FOUND = 7;
 	}
-
-	Result status = 1;
 }
 
 message PingResponse {
@@ -178,6 +178,10 @@ message PingResponse {
 }
 
 message ReplaceLoginActionResponse {
+	bool success = 1;
+	repeated POGOProtos.Data.Login.LoginDetail login_detail = 2;
+	Status status = 3;
+
 	enum Status {
 		UNSET = 0;
 		AUTH_FAILURE = 1;
@@ -185,8 +189,9 @@ message ReplaceLoginActionResponse {
 		LOGIN_ALREADY_HAVE = 3;
 		LOGIN_NOT_REPLACEABLE = 4;
 	}
+}
 
+message ListLoginActionResponse {
 	bool success = 1;
-	repeated POGOProtos.Data.Login.LoginDetail login_detail = 2;
-	Status status = 3;
+	repeated .POGOProtos.Data.Login.LoginDetail login_detail = 2;
 }

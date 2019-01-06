@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Networking.Platform.Responses;
+package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Data/Store/CurrencyQuantity.proto";
 

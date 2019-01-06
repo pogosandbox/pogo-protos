@@ -97,7 +97,10 @@ message PingMessage {
 	string return_value = 4;
 }
 
-message ReplaceLoginActionProto {
+message ReplaceLoginActionMessage {
 	.POGOProtos.Enums.IdentityProvider existing_identity_provider = 1;
 	AddLoginActionMessage new_login = 2;
+}
+
+message ListLoginActionMessage {
 }

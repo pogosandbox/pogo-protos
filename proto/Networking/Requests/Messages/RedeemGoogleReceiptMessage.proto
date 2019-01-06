@@ -1,7 +1,7 @@
 syntax = "proto3";
-package POGOProtos.Networking.Platform.Requests;
+package POGOProtos.Networking.Requests.Messages;
 
-message RedeemGoogleReceiptRequest {
+message RedeemGoogleReceiptMessage {
 	string receipt = 1;  // see https://developer.android.com/google/play/billing/billing_reference.html table 4
 	string receipt_signature = 2;
 	string purchase_currency = 3;
