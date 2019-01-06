@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+import "POGOProtos/Enums/IdentityProvider.proto";
+import "POGOProtos/Networking/Platform/Requests/AddLoginActionMessage.proto";
+
+message ReplaceLoginActionMessage {
+	.POGOProtos.Enums.IdentityProvider existing_identity_provider = 1;
+	.POGOProtos.Networking.Platform.Requests.AddLoginActionMessage new_login = 2;
+}

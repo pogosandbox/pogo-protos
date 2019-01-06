@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+import "POGOProtos/Data/Login/LoginDetail.proto";
+
+message AddLoginActionResponse {
+	bool success = 1;
+	repeated .POGOProtos.Data.Login.LoginDetail login_detail = 2;
+	Status status = 3;
+
+	enum Status {
+		UNSET = 0;
+		AUTH_FAILURE = 1;
+		LOGIN_TAKEN = 2;
+	}
+}

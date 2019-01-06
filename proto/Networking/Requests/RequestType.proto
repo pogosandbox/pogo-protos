@@ -164,9 +164,9 @@ enum RequestType {
 	REPLACE_LOGIN_ACTION = 5016;                // Implemented
 	PROXY_SOCIAL_SIDE_CHANNEL_ACTION = 5017;    // Implemented
 	COLLECT_CLIENT_TELEMETRY = 5018;            // Implemented
-	PURCHASE_SKU = 5019;                        // ???
-	GET_AVAILABLE_SKUS_AND_BALANCES = 5020;     // ???
-	REDEEM_GOOGLE_RECEIPT = 5021;               // ???
+	PURCHASE_SKU = 5019;                        // Implemented
+	GET_AVAILABLE_SKUS_AND_BALANCES = 5020;     // Implemented
+	REDEEM_GOOGLE_RECEIPT = 5021;               // Implemented
 	REDEEM_APPLE_RECEIPT = 5022;                // ???
 	REDEEM_DESKTOP_RECEIPT = 5023;              // ???
 	UPDATE_FITNESS_METRICS = 5024;              // Implemented

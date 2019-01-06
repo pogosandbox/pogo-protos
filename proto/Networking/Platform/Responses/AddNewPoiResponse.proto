@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+message AddNewPoiResponse {
+	Status status = 1;
+	repeated string message = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		INTERNAL_ERROR = 3;
+		TOO_MANY_RECENT_SUBMISSIONS = 4;
+		INVALID_INPUT = 5;
+	}
+}

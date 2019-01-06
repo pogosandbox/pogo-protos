@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+import "POGOProtos/Enums/IdentityProvider.proto";
+
+message AddLoginActionMessage {
+	.POGOProtos.Enums.IdentityProvider identity_provider = 1;
+	bytes inner_message = 2;
+}
