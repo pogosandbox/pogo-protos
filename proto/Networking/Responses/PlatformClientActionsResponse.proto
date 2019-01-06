@@ -190,3 +190,8 @@ message ReplaceLoginActionResponse {
 		LOGIN_NOT_REPLACEABLE = 4;
 	}
 }
+
+message ListLoginActionResponse {
+	bool success = 1;
+	repeated .POGOProtos.Data.Login.LoginDetail login_detail = 2;
+}
