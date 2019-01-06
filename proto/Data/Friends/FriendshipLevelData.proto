@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Enums/FriendshipLevelMilestone.proto";
+
+message FriendshipLevelData {
+	int64 bucket = 1;
+	int32 points_earned_today = 2;
+	.POGOProtos.Enums.FriendshipLevelMilestone awarded_friendship_milestone = 3;
+	.POGOProtos.Enums.FriendshipLevelMilestone current_friendship_milestone = 4;
+	double next_friendship_milestone_progress_percentage = 5;
+	int32 points_toward_next_milestone = 6;
+}

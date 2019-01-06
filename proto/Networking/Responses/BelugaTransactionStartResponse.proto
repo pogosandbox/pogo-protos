@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Beluga/BelugaBleTransferPrep.proto";
+
+message BelugaTransactionStartResponse {
+	Status status = 1;
+	.POGOProtos.Data.Beluga.BelugaBleTransferPrep beluga_transfer_prep = 2;
+	bytes server_signature = 3;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILED = 2;
+		ERROR_INVALID_POKEMON_ID = 3;
+		ERROR_POKEMON_DEPLOYED = 4;
+		ERROR_POKEMON_IS_EGG = 5;
+		ERROR_POKEMON_IS_BUDDY = 6;
+		ERROR_POKEMON_NOT_ALLOWED = 7;
+		ERROR_INVALID_NONCE = 8;
+		ERROR_TOO_MANY_POKEMON = 9;
+		ERROR_NO_POKEMON_SPECIFIED = 10;
+	}
+}

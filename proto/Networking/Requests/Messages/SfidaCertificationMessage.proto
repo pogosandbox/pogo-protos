@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message SfidaCertificationMessage {
+	enum SfidaCertificationStage {
+		UNSET = 0;
+		STAGE1 = 1;
+		STAGE2 = 2;
+		STAGE3 = 3;
+	}
+
+	SfidaCertificationStage stage = 1;
+	bytes payload = 2;
+}

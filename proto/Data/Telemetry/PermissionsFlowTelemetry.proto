@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/TelemetryIds.proto";
+
+message PermissionsFlowTelemetry {
+	.POGOProtos.Enums.PermissionContextTelemetryIds permission_context_telemetry_ids = 1;
+	.POGOProtos.Enums.DeviceServiceTelemetryIds device_service_telemetry_ids = 2;
+	.POGOProtos.Enums.PermissionFlowStepTelemetryIds permission_flow_step_telemetry_ids = 3;
+	bool success = 4;
+}

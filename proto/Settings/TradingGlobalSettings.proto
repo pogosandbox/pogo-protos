@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message TradingGlobalSettings {
+	bool enable_trading = 1;
+	uint32 min_player_level = 2;
+}

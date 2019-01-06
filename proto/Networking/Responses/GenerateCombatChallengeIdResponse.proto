@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GenerateCombatChallengeIdResponse {
+	Result result = 1;
+	string challenge_id = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 2;
+		ERROR_ACCESS_DENIED = 3;
+	}
+}

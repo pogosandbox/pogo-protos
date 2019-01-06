@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+import "POGOProtos/Data/Location.proto";
+
+message CombatPlayerProfile {
+	string player_id = 1;
+	.POGOProtos.Data.Player.PlayerPublicProfile public_profile = 2;
+	repeated string combat_league_template_id = 3;
+	fixed64 buddy_pokemon_id = 4;
+	.POGOProtos.Data.Location location = 5;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Sfida/SfidaMetricsUpdate.proto";
+
+message SfidaUpdateMessage {
+	double player_lat = 1;
+	double player_lng = 2;
+	.POGOProtos.Data.Sfida.SfidaMetricsUpdate metrics_update = 3;
+}

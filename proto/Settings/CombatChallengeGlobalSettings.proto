@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+import "POGOProtos/Enums/FriendshipLevelMilestone.proto";
+
+message CombatChallengeGlobalSettings {
+	.POGOProtos.Enums.FriendshipLevelMilestone distance_check_override_friendship_level = 1;
+	int32 get_combat_challenge_polling_interval_sec = 2;
+}

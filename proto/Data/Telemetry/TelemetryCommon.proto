@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message TelemetryCommon {
+	int64 timestamp = 1;
+	string correlation_vector = 2;
+	string event_id = 3;
+	int64 client_timestamp_ms = 4;
+}

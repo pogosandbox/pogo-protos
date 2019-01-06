@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Beluga;
+
+import "POGOProtos/Data/Beluga/BelugaBleTransferPrep.proto";
+
+message BelugaBleTransferProto {
+	.POGOProtos.Data.Beluga.BelugaBleTransferPrep server_response = 1;
+	bytes server_signature = 2;
+	repeated string localized_origins = 3;
+	string language = 4;
+}

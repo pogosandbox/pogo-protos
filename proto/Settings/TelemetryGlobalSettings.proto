@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message TelemetryGlobalSettings {
+	bool enabled = 1;
+	double session_sampling_fraction = 2;
+	int32 max_buffer_size_kb = 3;
+	int32 batch_size = 4;
+	int64 update_interval_ms = 5;
+	int64 frame_rate_sample_interval_ms = 6;
+	int64 frame_rate_sample_period_ms = 7;
+	bool enable_omni_wrapper_sending = 8;
+}

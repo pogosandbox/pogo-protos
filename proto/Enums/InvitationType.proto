@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum InvitationType {
+	INVITATION_TYPE_UNSET = 0;
+	INVITATION_TYPE_CODE = 1;
+	INVITATION_TYPE_FACEBOOK = 2;
+	INVITATION_TYPE_SERVER_REQUEST = 3;
+}

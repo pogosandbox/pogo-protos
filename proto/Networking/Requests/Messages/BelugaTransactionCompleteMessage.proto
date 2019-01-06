@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Beluga/BelugaBleCompleteTransferRequest.proto";
+
+message BelugaTransactionCompleteMessage {
+	.POGOProtos.Data.Beluga.BelugaBleCompleteTransferRequest beluga_transfer = 1;
+	bytes app_signature = 2;
+	bytes firmware_signature = 3;
+}

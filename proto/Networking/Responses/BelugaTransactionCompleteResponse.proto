@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Beluga/BelugaBleFinalizeTransfer.proto";
+
+message BelugaTransactionCompleteResponse {
+	Status status = 1;
+	int32 candy_awarded = 2;
+	.POGOProtos.Inventory.Loot loot_awarded = 3;
+	.POGOProtos.Data.Beluga.BelugaBleFinalizeTransfer beluga_finalize_response = 4;
+	int32 buckets_until_weekly_award = 5;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILED = 2;
+		ERROR_INVALID_POKEMON_ID = 3;
+		ERROR_POKEMON_DEPLOYED = 4;
+		ERROR_POKEMON_NOT_ALLOWED = 5;
+		ERROR_POKEMON_IS_BUDDY = 6;
+		ERROR_INVALID_TRANSACTION_ID = 7;
+		ERROR_MISSING_TRANSACTION_ID = 8;
+	}
+}

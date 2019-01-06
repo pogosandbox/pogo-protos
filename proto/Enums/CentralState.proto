@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum CentralState {
+	UNKNOWN_CENTRAL_STATE = 0;
+	RESETTING = 1;
+	UNSUPPORTED = 2;
+	UNAUTHORIZED = 3;
+	POWERED_OFF = 4;
+	POWERED_ON = 5;
+}

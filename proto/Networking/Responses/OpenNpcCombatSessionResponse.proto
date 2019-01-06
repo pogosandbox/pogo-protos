@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/Combat.proto";
+
+message OpenNpcCombatSessionResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.Combat combat = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 2;
+		ERROR_POKEMON_LINEUP_INELIGIBLE_FOR_LEAGUE = 3;
+		ERROR_ACCESS_DENIED = 4;
+	}
+}

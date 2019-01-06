@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message StartTutorialActionResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_ALREADY_STARTED_TUTORIAL = 2;
+		ERROR_FAILED_TO_START = 3;
+	}
+}

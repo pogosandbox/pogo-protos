@@ -1,0 +1,43 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Data/Logs/CatchPokemonLogEntry.proto";
+import "POGOProtos/Data/Logs/FortSearchLogEntry.proto";
+import "POGOProtos/Data/Logs/BuddyPokemonLogEntry.proto";
+import "POGOProtos/Data/Logs/RaidRewardsLogEntry.proto";
+import "POGOProtos/Data/Logs/PasscodeRewardsLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestStampCardLogEntry.proto";
+import "POGOProtos/Data/Logs/CompleteQuestPokemonEncounterLogEntry.proto";
+import "POGOProtos/Data/Logs/OpenGiftLogEntry.proto";
+import "POGOProtos/Data/Logs/SendGiftLogEntry.proto";
+import "POGOProtos/Data/Logs/TradingLogEntry.proto";
+import "POGOProtos/Data/Logs/ShareExRaidPassLogEntry.proto";
+import "POGOProtos/Data/Logs/DeclineExRaidPassLogEntry.proto";
+import "POGOProtos/Data/Logs/FitnessRewardsLogEntry.proto";
+import "POGOProtos/Data/Logs/BelugaDailyTransferLogEntry.proto";
+import "POGOProtos/Data/Logs/CombatLogEntry.proto";
+
+message ActionLogEntry {
+	int64 timestamp_ms = 1;
+	bool sfida = 2;
+
+	oneof Action {
+		.POGOProtos.Data.Logs.CatchPokemonLogEntry catch_pokemon = 3;
+		.POGOProtos.Data.Logs.FortSearchLogEntry fort_search = 4;
+		.POGOProtos.Data.Logs.BuddyPokemonLogEntry buddy_pokemon = 5;
+		.POGOProtos.Data.Logs.RaidRewardsLogEntry raid_rewards = 6;
+		.POGOProtos.Data.Logs.PasscodeRewardsLogEntry passcode_rewards = 7;
+		.POGOProtos.Data.Logs.CompleteQuestLogEntry complete_quest = 8;
+		.POGOProtos.Data.Logs.CompleteQuestStampCardLogEntry complete_quest_stamp_card = 9;
+		.POGOProtos.Data.Logs.CompleteQuestPokemonEncounterLogEntry complete_quest_pokemon_encounter = 10;
+		.POGOProtos.Data.Logs.BelugaDailyTransferLogEntry beluga_transfer = 11;
+		.POGOProtos.Data.Logs.OpenGiftLogEntry open_gift = 12;
+		.POGOProtos.Data.Logs.SendGiftLogEntry send_gift = 13;
+		.POGOProtos.Data.Logs.TradingLogEntry trading = 14;
+		.POGOProtos.Data.Logs.ShareExRaidPassLogEntry share_ex_raid_pass = 15;
+		.POGOProtos.Data.Logs.DeclineExRaidPassLogEntry decline_ex_raid_pass = 16;
+		.POGOProtos.Data.Logs.FitnessRewardsLogEntry fitness_rewards = 17;
+		.POGOProtos.Data.Logs.CombatLogEntry combat = 18;
+	}
+}

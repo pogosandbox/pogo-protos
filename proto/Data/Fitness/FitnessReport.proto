@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Fitness;
+
+import "POGOProtos/Data/Fitness/FitnessMetrics.proto";
+
+message FitnessReport {
+	oneof Window {
+		int32 day_offset_from_now = 1;
+		int32 week_offset_from_now = 2;
+	}
+
+	.POGOProtos.Data.Fitness.FitnessMetrics metrics = 10;
+	bytes game_data = 11;
+}

@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/TelemetryIds.proto";
+
+message ProfilePageTelemetry {
+	.POGOProtos.Enums.ProfilePageTelemetryIds profile_page_click_id = 1;
+}

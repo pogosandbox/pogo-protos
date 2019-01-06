@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Fitness;
+
+message FitnessMetrics {
+	double distance_walked_meters = 1;
+	int32 step_count = 2;
+	double calories_burned_kcals = 3;
+	int64 exercise_duration_mi = 4;
+	double wheelchair_distance_meters = 5;
+	double wheelchair_push_count = 6;
+}

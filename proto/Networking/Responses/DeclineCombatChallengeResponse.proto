@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message DeclineCombatChallengeResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_CHALLENGE_STATE = 2;
+		ERROR_CHALLENGE_NOT_FOUND = 3;
+		ERROR_ALREADY_TIMEDOUT = 4;
+		ERROR_ALREADY_CANCELLED = 5;
+	}
+}

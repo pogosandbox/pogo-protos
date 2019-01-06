@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Data.Trading;
+
+message ExcludedPokemon {
+	fixed64 pokemon_id = 1;
+	ExclusionReason exclusion_reason = 2;
+
+	enum ExclusionReason {
+		UNSET = 0;
+		MYTHICAL_POKEMON = 1;
+		SLASHED = 2;
+		GYM_DEPLOYED = 3;
+		BUDDY = 4;
+		STAMINA_NOT_FULL = 5;
+		EGG_NOT_HATCHED = 6;
+		FRIENDSHIP_LEVEL_LOW = 7;
+		FRIEND_CANNOT_AFFORD = 8;
+		FRIEND_REACHED_DAILY_LIMIT = 9;
+		ALREADY_TRADED = 10;
+		PLAYER_CANNOT_AFFORD = 11;
+		PLAYER_REACHED_DAILY_LIMIT = 12;
+		FAVORITE = 13;
+	}
+}

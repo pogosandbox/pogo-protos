@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Enums/InvitationType.proto";
+
+message OutgoingFriendInvite {
+	Status status = 1;
+	string player_id = 2;
+	int64 created_ms = 3;
+	.POGOProtos.Enums.InvitationType invitation_type = 4;
+	string full_name = 5;
+
+	enum Status {
+		UNSET = 0;
+		PENDING = 1;
+		CANCELLED = 2;
+		DECLINED = 3;
+	}
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum SfidaConnectState {
+	DISCONNECTED = 0;
+	DISCONNECTING = 1;
+	CONNECTED = 2;
+	DISCOVERED = 3;
+	CERTIFIED = 4;
+	SOFTWARE_UPDATE = 5;
+	FAILED = 6;
+	CONNECTING = 7;
+}

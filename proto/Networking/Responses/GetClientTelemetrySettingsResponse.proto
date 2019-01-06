@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetClientTelemetrySettingsResponse {
+	int32 one = 1;
+	int32 two = 2;
+	int32 three = 3;
+	int32 four = 4;
+	int32 five = 5;
+	fixed64 six = 6;
+	int32 seven = 7;
+	fixed64 eight = 8;
+	string nine = 9;
+}

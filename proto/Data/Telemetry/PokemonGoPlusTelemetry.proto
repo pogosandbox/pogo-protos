@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/PokemonGoPlusIds.proto";
+
+message PokemonGoPlusTelemetry {
+	.POGOProtos.Enums.PokemonGoPlusIds pgp_event_ids = 1;
+	int32 count = 2;
+	int32 version = 3;
+}

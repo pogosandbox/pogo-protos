@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message LuckyPokemonSettings {
+	float power_up_stardust_discount_percent = 1;
+}

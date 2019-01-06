@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data.AssetCache;
+
+import "POGOProtos/Data/AssetCache/HashedKey.proto";
+
+message JournalRemoveEntry {
+	.POGOProtos.Data.AssetCache.HashedKey hashed_key = 1;
+}

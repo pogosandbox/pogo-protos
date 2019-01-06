@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ChangeArTelemetry {
+	bool ar_enabled = 1;
+	bool ar_plus_enabled = 2;
+}

@@ -1,0 +1,27 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+message CombatAction {
+	ActionType type = 1;
+	int32 action_start_turn = 3;
+	int32 duration_turns = 5;
+	int32 attacker_index = 6;
+	int32 target_index = 7;
+	fixed64 active_pokemon_id = 8;
+	fixed64 target_pokemon_id = 14;
+	float minigame_score = 15;
+	int32 move = 16;
+
+	enum ActionType {
+		UNSET = 0;
+		ATTACK = 1;
+		SPECIAL_ATTACK = 2;
+		SPECIAL_ATTACK_2 = 3;
+		MINIGAME_OFFENSIVE_FINISH = 4;
+		MINIGAME_DEFENSIVE_START = 5;
+		MINIGAME_DEFENSIVE_FINISH = 6;
+		FAINT = 7;
+		CHANGE_POKEMON = 8;
+		QUICK_SWAP_POKEMON = 9;
+	}
+}

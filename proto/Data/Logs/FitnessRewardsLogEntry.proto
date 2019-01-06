@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Inventory/Loot.proto";
+
+message FitnessRewardsLogEntry {
+	Result result = 1;
+	.POGOProtos.Inventory.Loot rewards = 2;
+	double distance_walked_km = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

@@ -1,0 +1,56 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message Distribution {
+	int64 count = 1;
+	float mean = 2;
+	double sum_of_squared_deviation = 3;
+	Range range = 4;
+	BucketOptions bucket_options = 5;
+	repeated int64 bucket_counts = 6;
+
+	message BucketOptions {
+		oneof BucketType {
+			Distribution.LinearBuckets linear_buckets = 1;
+			Distribution.ExponentialBuckets exponential_buckets = 2;
+			Distribution.ExplicitBuckets explicit_buckets = 3;
+		}
+
+		message ExplicitBuckets {
+			repeated int64 bounds = 1;
+		}
+
+		message ExponentialBuckets {
+			int64 num_finite_buckets = 1;
+			float growth_factor = 2;
+			float scale = 3;
+		}
+
+		message LinearBuckets {
+			int64 num_finite_buckets = 1;
+			int64 width = 2;
+			int64 offset = 3;
+		}
+	}
+
+	message ExplicitBuckets {
+		repeated int64 bounds = 1;
+	}
+
+	message ExponentialBuckets {
+		int64 num_finite_buckets = 1;
+		float growth_factor = 2;
+		float scale = 3;
+	}
+
+	message LinearBuckets {
+		int64 num_finite_buckets = 1;
+		int64 width = 2;
+		int64 offset = 3;
+	}
+
+	message Range {
+		int64 min = 1;
+		int64 max = 2;
+	}
+}

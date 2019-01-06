@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/Distribution.proto";
+import "POGOProtos/Data/Telemetry/TelemetryCommon.proto";
+
+message PlatformMetricData {
+	.POGOProtos.Data.Telemetry.TelemetryCommon common_telemetry = 1;
+
+	oneof DatapointValue {
+		int64 long_value = 2;
+		double double_value = 3;
+		bool boolean_value = 4;
+		.POGOProtos.Data.Telemetry.Distribution distribution = 5;
+	}
+
+	Kind metric_kind = 6;
+
+	enum Kind {
+		UNSPECIFIED = 0;
+		GAUGE = 1;
+		DELTA = 2;
+		CUMULATIVE = 3;
+	}
+}

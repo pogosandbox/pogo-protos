@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SendGiftResponse {
+	Result result = 1;
+	int32 awarded_xp = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_DOES_NOT_EXIST = 3;
+		ERROR_GIFT_DOES_NOT_EXIST = 4;
+		ERROR_GIFT_ALREADY_SENT_TODAY = 5;
+		ERROR_PLAYER_HAS_UNOPENED_GIFT = 6;
+		ERROR_FRIEND_UPDATE = 7;
+	}
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Geofence;
+
+message GeofenceMetadata {
+	double latitude_deg = 1;
+	double longitude_deg = 2;
+	double radius = 3;
+	string identifier = 4;
+	int64 expiration_ms = 5;
+	int64 dwell_time_ms = 6;
+	bool fire_on_entrance = 7;
+	bool fire_on_exit = 8;
+}

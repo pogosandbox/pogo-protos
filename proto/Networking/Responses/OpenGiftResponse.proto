@@ -1,0 +1,27 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Friends/FriendshipLevelData.proto";
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+
+message OpenGiftResponse {
+	Result result = 1;
+	.POGOProtos.Inventory.Loot items = 2;
+	.POGOProtos.Data.PokemonData egg_pokemon = 3;
+	.POGOProtos.Data.Friends.FriendshipLevelData updated_friendship_data = 4;
+	.POGOProtos.Data.Player.PlayerPublicProfile friend_profile = 5;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_BAG_FULL = 3;
+		ERROR_PLAYER_LIMIT_REACHED = 4;
+		ERROR_GIFT_DOES_NOT_EXIST = 5;
+		ERROR_FRIEND_NOT_FOUND = 6;
+		ERROR_INVALID_PLAYER_ID = 7;
+		ERROR_FRIEND_UPDATE = 8;
+	}
+}

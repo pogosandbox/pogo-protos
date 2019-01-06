@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/TelemetryIds.proto";
+
+message AvatarCustomizationTelemetry {
+	.POGOProtos.Enums.AvatarCustomizationTelemetryIds avatar_customization_click_id = 1;
+	string asset_name = 2;
+	string sku = 3;
+	bool has_enough_coins = 4;
+	string group_name = 5;
+	string color_choice_id = 6;
+}

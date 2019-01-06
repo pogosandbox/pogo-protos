@@ -1,0 +1,127 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Enums/ActivityType.proto";
+import "POGOProtos/Enums/BadgeType.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/RaidLevel.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message QuestCondition {
+	ConditionType type = 1;
+
+	oneof Condition {
+		WithPokemonType with_pokemon_type = 2;
+		WithPokemonCategory with_pokemon_category = 3;
+		WithWeatherBoost with_weather_boost = 4;
+		WithDailyCaptureBonus with_daily_capture_bonus = 5;
+		WithDailySpinBonus with_daily_spin_bonus = 6;
+		WithWinRaidStatus with_win_raid_status = 7;
+		WithRaidLevel with_raid_level = 8;
+		WithThrowType with_throw_type = 9;
+		WithWinGymBattleStatus with_win_gym_battle_status = 10;
+		WithSuperEffectiveChargeMove with_super_effective_charge_move = 11;
+		WithItem with_item = 12;
+		WithUniquePokestop with_unique_pokestop = 13;
+		WithQuestContext with_quest_context = 14;
+		WithBadgeType with_badge_type = 15;
+		WithPlayerLevel with_player_level = 16;
+		WithWinBattleStatus with_win_battle_status = 17;
+	}
+
+	enum ConditionType {
+		UNSET = 0;
+		WITH_POKEMON_TYPE = 1;
+		WITH_POKEMON_CATEGORY = 2;
+		WITH_WEATHER_BOOST = 3;
+		WITH_DAILY_CAPTURE_BONUS = 4;
+		WITH_DAILY_SPIN_BONUS = 5;
+		WITH_WIN_RAID_STATUS = 6;
+		WITH_RAID_LEVEL = 7;
+		WITH_THROW_TYPE = 8;
+		WITH_WIN_GYM_BATTLE_STATUS = 9;
+		WITH_SUPER_EFFECTIVE_CHARGE = 10;
+		WITH_ITEM = 11;
+		WITH_UNIQUE_POKESTOP = 12;
+		WITH_QUEST_CONTEXT = 13;
+		WITH_THROW_TYPE_IN_A_ROW = 14;
+		WITH_CURVE_BALL = 15;
+		WITH_BADGE_TYPE = 16;
+		WITH_PLAYER_LEVEL = 17;
+		WITH_WIN_BATTLE_STATUS = 18;
+		WITH_NEW_FRIEND = 19;
+		WITH_DAYS_IN_A_ROW = 20;
+	}
+
+	message WithPokemonType {
+		repeated .POGOProtos.Enums.PokemonType pokemon_type = 1;
+	}
+
+	message WithWeatherBoost {
+	}
+
+	message WithPokemonCategory {
+		string category_name = 1;
+		repeated .POGOProtos.Enums.PokemonId pokemon_ids = 2;
+	}
+
+	message WithDailyCaptureBonus {
+	}
+
+	message WithDailySpinBonus {
+	}
+
+	message WithWinRaidStatus {
+	}
+
+	message WithRaidLevel {
+		repeated .POGOProtos.Enums.RaidLevel raid_level = 1;
+	}
+
+	message WithThrowType {
+		oneof Throw {
+			.POGOProtos.Enums.ActivityType throw_type = 1;
+			bool hit = 2;
+		}
+	}
+
+	message WithCurveBall {
+	}
+
+	message WithWinGymBattleStatus {
+	}
+
+	message WithSuperEffectiveChargeMove {
+	}
+
+	message WithItem {
+		.POGOProtos.Inventory.Item.ItemId item = 1;
+	}
+
+	message WithUniquePokestop {
+	}
+
+	message WithQuestContext {
+		Context context = 1;
+
+		enum Context {
+			UNSET = 0;
+			STORY_QUEST = 1;
+			CHALLENGE_QUEST = 2;
+		}
+	}
+
+	message WithBadgeType {
+		repeated .POGOProtos.Enums.BadgeType badge_type = 1;
+		int32 badge_rank = 2;
+		int32 amount = 3;
+	}
+
+	message WithPlayerLevel {
+		int32 level = 1;
+	}
+
+	message WithWinBattleStatus {
+	}
+}

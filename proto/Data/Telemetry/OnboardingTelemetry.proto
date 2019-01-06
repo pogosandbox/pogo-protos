@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/OnboardingEventIds.proto";
+
+message OnboardingTelemetry {
+	.POGOProtos.Enums.OnboardingPathIds onboarding_path = 1;
+	.POGOProtos.Enums.OnboardingEventIds event_id = 2;
+	int32 data = 3;
+	string conversation = 4;
+}

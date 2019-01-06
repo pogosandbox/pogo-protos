@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+import "POGOProtos/Data/Friends/FriendshipLevelData.proto";
+
+message LeveledUpFriends {
+	repeated .POGOProtos.Data.Player.PlayerPublicProfile friend_profiles = 1;
+	repeated .POGOProtos.Data.Friends.FriendshipLevelData friend_milestone_levels = 2;
+}

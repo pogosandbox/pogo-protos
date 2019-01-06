@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message WeatherDetailClickTelemetry {
+	string gameplay_weather_type = 1;
+	bool alert_active = 2;
+	int32 severity = 3;
+}

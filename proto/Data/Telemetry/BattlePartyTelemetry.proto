@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/TelemetryIds.proto";
+
+message BattlePartyTelemetry {
+	.POGOProtos.Enums.BattlePartyTelemetryIds battle_party_click_id = 1;
+	int32 battle_party_count = 2;
+	int32 battle_party_number = 3;
+}

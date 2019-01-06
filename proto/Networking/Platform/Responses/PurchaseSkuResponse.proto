@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+import "POGOProtos/Data/Store/CurrencyUpdate.proto";
+
+message PurchaseSkuResponse {
+	Status result = 1;
+	repeated bytes added_inventory_item = 2;
+	repeated .POGOProtos.Data.Store.CurrencyUpdate currency_update = 3;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+		BALANCE_TOO_LOW = 3;
+		SKU_NOT_AVAILABLE = 4;
+		OVER_INVENTORY_LIMIT = 5;
+	}
+}

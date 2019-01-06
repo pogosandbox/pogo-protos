@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Data/Combat/CombatMoveBuffs.proto";
+
+message CombatMoveSettings {
+	.POGOProtos.Enums.PokemonMove unique_id = 1;
+	.POGOProtos.Enums.PokemonType type = 2;
+	float power = 3;
+	string vfx_name = 4;
+	int32 duration_turns = 5;
+	int32 energy_delta = 6;
+	.POGOProtos.Data.Combat.CombatMoveBuffs buffs = 7;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+message RedeemGoogleReceiptRequest {
+	string receipt = 1;				// see https://developer.android.com/google/play/billing/billing_reference.html table 4
+	string receipt_signature = 2;
+	string purchase_currency = 3;
+	int32 price_paid_e6 = 4;
+	int64 price_paid_e6_long = 5;
+}

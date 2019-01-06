@@ -1,0 +1,37 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+import "POGOProtos/Data/Store/CurrencyQuantity.proto";
+
+message GetAvailableSkusAndBalancesResponse {
+	Status status = 1;
+	repeated AvailableSku available_sku = 2;                             // Items to show in the shop
+	repeated .POGOProtos.Data.Store.CurrencyQuantity player_currencies = 3;  // currencies that player has at the moment
+	string player_token = 4;
+
+	message AvailableSku {
+		string id = 1;                                    		// Internal ID (probably for Google Play/App Store) example: "pgorelease.incenseordinary.1"
+		bool is_third_party_vendor_item = 2;                    // If true, this item is bought with real currency (USD, etc.) through the Play/App Store instead of Pokecoins
+		.POGOProtos.Data.Store.CurrencyQuantity price = 3;  	// This defines how much the item costs (with the exception of items that cost real money like Pokecoins, that's defined in the respective store)
+		.POGOProtos.Data.Store.CurrencyQuantity currency_granted = 4;  	// When bought, this IAP will yield this much currency
+		repeated GameItemContent game_item_content = 5;         // The item and count of such item that this IAP will yield
+		repeated SkuPresentation presentation_data = 6;         // Stuff like SORT:12, CATEGORY:ITEMS
+		bool can_be_purchased = 7;                              // Possibly something to toggle visibility in the store/purchasibility?
+	}
+
+	message GameItemContent {
+		string type = 1;
+		int32 quantity = 2;
+	}
+
+	message SkuPresentation {
+		string key = 1;
+		string value = 2;
+	}
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+}

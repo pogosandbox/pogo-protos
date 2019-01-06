@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+import "POGOProtos/Data/Player/PlayerSummary.proto";
+
+message AcceptFriendInviteResponse {
+	Result result = 1;
+	.POGOProtos.Data.Player.PlayerSummary friend = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_INVITE_DOES_NOT_EXIST = 3;
+		ERROR_MAX_FRIENDS_LIMIT_REACHED_DELETED = 4;
+		ERROR_INVITE_HAS_BEEN_CANCELLED = 5;
+		ERROR_SENDER_HAS_MAX_FRIENDS = 6;
+		ERROR_RECEIVER_HAS_MAX_FRIENDS = 7;
+	}
+}

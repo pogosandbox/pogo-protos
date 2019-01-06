@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message SocialClientSettings {
+	bool enable_social = 1;
+	int32 max_friend_details = 2;
+	int32 player_level_gate = 3;
+	int32 max_friend_nickname_length = 4;
+	bool enable_add_friend_via_qr_code = 5;
+	bool enable_share_ex_pass = 6;
+	bool enable_facebook_friends = 7;
+	int32 facebook_friend_limit_per_request = 8;
+	bool disable_facebook_friends_opening_prompt = 9;
+}
+
+message SocialGiftCountTelemetry {
+	int32 unopened_gift_count = 1;
+	int32 unsent_gift_count = 2;
+}

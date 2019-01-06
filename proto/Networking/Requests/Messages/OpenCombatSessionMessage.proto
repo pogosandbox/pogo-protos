@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message OpenCombatSessionMessage {
+	string combat_id = 1;
+	repeated fixed64 attacking_pokemon_id = 2;
+	string combat_league_template_id = 3;
+}

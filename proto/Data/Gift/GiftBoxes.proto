@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data.Gift;
+
+import "POGOProtos/Data/Gift/GiftBox.proto";
+
+message GiftBoxes {
+	repeated .POGOProtos.Data.Gift.GiftBox gifts = 1;
+}

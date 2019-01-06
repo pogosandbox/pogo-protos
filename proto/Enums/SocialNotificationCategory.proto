@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum SocialNotificationCategory {
+	UNSET_SOCIAL_NOTIFICATION = 0;
+	FRIEND_INVITE_RECEIVED_SOCIAL_NOTIFICATION = 1;
+	FRIEND_INVITE_ACCEPTED_SOCIAL_NOTIFICATION = 2;
+}

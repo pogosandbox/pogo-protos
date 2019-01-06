@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message UpsightLoggingSettings {
+	bool use_verbose_logging = 1;
+	int32 logging_percentage = 2;
+	bool disable_logging = 3;
+}

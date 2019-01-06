@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message RpcSocketResponseTime {
+	uint64 request_id = 1;
+	string probe_id = 2;
+	float response_time = 3;
+	bool side_channel = 4;
+	bool ad_hoc = 5;
+	float ad_hoc_delay = 6;
+}

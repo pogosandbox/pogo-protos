@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum UpdateType {
+	ADD_UPDATE_TYPE = 0;
+	MODIFY = 1;
+	REMOVE_UPDATE_TYPE = 2;
+	PREDICTED_MODIFY = 3;
+	PREDICTED_REMOVE = 4;
+	ROLLED_BACK_MODIFY = 5;
+	ROLLED_BACK_REMOVE = 6;
+}

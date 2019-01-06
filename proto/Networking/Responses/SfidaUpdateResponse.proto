@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/EncounterType.proto";
+import "POGOProtos/Data/Sfida/SfidaNearbyPokemon.proto";
+
+message SfidaUpdateResponse {
+	Status status = 1;
+	bool nearby_pokemon = 2;
+	bool uncaught_pokemon = 3;
+	bool legendary_pokemon = 4;
+	string spawnpoint_id = 5;
+	int64 encounter_id = 6;
+	bool nearby_pokestop = 7;
+	string pokestop_id = 8;
+	.POGOProtos.Enums.EncounterType encounter_type = 9;
+	int32 pokedex_number = 10;
+	repeated .POGOProtos.Data.Sfida.SfidaNearbyPokemon nearby = 11;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

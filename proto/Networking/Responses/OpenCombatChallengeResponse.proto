@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/CombatChallenge.proto";
+
+message OpenCombatChallengeResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.CombatChallenge challenge = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_CHALLENGE_STATE = 2;
+		ERROR_CHALLENGE_NOT_FOUND = 3;
+		ERROR_POKEMON_NOT_IN_INVENTORY = 4;
+		ERROR_NOT_ELIGIBLE_LEAGUE = 5;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 6;
+		ERROR_ALREADY_TIMEDOUT = 8;
+		ERROR_ALREADY_CANCELLED = 9;
+		ERROR_FRIEND_NOT_FOUND = 10;
+		ERROR_FAILED_TO_SEND_NOTIFICATION = 11;
+		ERROR_ACCESS_DENIED = 12;
+		ERROR_INELIGIBLE_OPPONENT = 13;
+	}
+}

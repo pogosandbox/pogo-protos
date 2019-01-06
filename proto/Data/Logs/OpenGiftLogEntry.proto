@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Inventory/Loot.proto";
+
+message OpenGiftLogEntry {
+	Result result = 1;
+	string friend_codename = 2;
+	.POGOProtos.Inventory.Loot items = 3;
+	repeated .POGOProtos.Data.PokemonData pokemon_eggs = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatNpcPersonality {
+	string personality_name = 1;
+	float super_effective_chance = 2;
+	float special_chance = 3;
+	float defensive_minimum_score = 4;
+	float defensive_maximum_score = 5;
+	float offensive_minimum_score = 6;
+	float offensive_maximum_score = 7;
+}

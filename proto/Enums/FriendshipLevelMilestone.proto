@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum FriendshipLevelMilestone {
+	FRIENDSHIP_LEVEL_UNSET = 0;
+	FRIENDSHIP_LEVEL_0 = 1;
+	FRIENDSHIP_LEVEL_1 = 2;
+	FRIENDSHIP_LEVEL_2 = 3;
+	FRIENDSHIP_LEVEL_3 = 4;
+	FRIENDSHIP_LEVEL_4 = 5;
+}

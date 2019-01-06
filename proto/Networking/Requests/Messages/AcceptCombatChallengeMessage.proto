@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message AcceptCombatChallengeMessage {
+	string challenge_id = 1;
+	repeated fixed64 attacking_pokemon_id = 6;
+}

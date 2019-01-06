@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Networking/Requests/RequestType.proto";
+
+message RpcResponseTime {
+	.POGOProtos.Networking.Requests.RequestType rpc_id = 1;
+	int32 count_call = 2;
+	float average_response_time = 3;
+}

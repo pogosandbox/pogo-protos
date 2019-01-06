@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message PlayerChurnParameters {
+	string account_id = 1;
+	string code_name = 2;
+	string team = 3;
+	string country = 4;
+	int32 level = 5;
+	int32 total_pokemon_caught = 6;
+	int32 gifts_opened_daily = 7;
+	int32 total_big_karps = 8;
+	int32 stardust_balance = 9;
+	int32 total_raids = 10;
+	int32 total_pokemon_evolved = 11;
+	int32 total_legendary_raids = 12;
+	int32 total_eggs_hatched = 13;
+	int32 total_battle_attack_won = 14;
+	int32 total_battle_defended_won = 15;
+	int32 total_quests_completed = 16;
+	int32 poke_coin_balance = 17;
+	int32 pokemon_caught_active_day = 18;
+	float total_km_walked = 19;
+	float num_pokedex_entries = 20;
+	float km_walked_past_active_day = 21;
+	int64 days_since_last_logon = 22;
+	int64 days_since_creation = 23;
+	int64 days_since_last_pokemon_caught = 24;
+}

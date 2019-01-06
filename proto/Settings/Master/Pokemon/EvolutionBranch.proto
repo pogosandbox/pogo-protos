@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message EvolutionBranch {
+	.POGOProtos.Enums.PokemonId evolution = 1;
+	.POGOProtos.Inventory.Item.ItemId evolution_item_requirement = 2;
+	int32 candy_cost = 3;
+	float km_buddy_distance_requirement = 4;
+	.POGOProtos.Enums.Form form = 5;
+}

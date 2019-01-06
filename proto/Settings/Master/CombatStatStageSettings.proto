@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatStatStageSettings {
+	int32 minimum_stat_stage = 1;
+	int32 maximum_stat_stage = 2;
+	repeated float attack_buff_multiplier = 3;
+	repeated float defense_buff_multiplier = 4;
+}

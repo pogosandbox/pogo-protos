@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GetFitnessReportMessage {
+	int32 num_of_days = 1;
+	int32 num_of_weeks = 2;
+}

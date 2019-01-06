@@ -1,0 +1,46 @@
+syntax = "proto3";
+package POGOProtos.Data.Quests;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message QuestPrecondition {
+	QuestPreconditionType type = 1;
+
+	oneof Condition {
+		string quest_template_id = 2;
+		Level level = 3;
+		Medal medal = 4;
+		Quests quests = 5;
+	}
+
+	enum Operator {
+		UNSET = 0;
+		EQUALS = 1;
+		GREATER_THAN = 2;
+		LESS_THAN = 3;
+	}
+
+	enum QuestPreconditionType {
+		QUEST_PRECONDITION_UNSET = 0;
+		QUEST_PRECONDITION_QUEST = 1;
+		QUEST_PRECONDITION_LEVEL = 2;
+		QUEST_PRECONDITION_MEDAL = 3;
+		QUEST_PRECONDITION_IS_MINOR = 4;
+		QUEST_PRECONDITION_EXCLUSIVE_QUESTS = 5;
+	}
+
+	message Quests {
+		repeated string quest_template_ids = 1;
+	}
+
+	message Level {
+		QuestPrecondition.Operator operator = 1;
+		int32 level = 2;
+	}
+
+	message Medal {
+		.POGOProtos.Enums.BadgeType type = 1;
+		QuestPrecondition.Operator operator = 2;
+		int32 badge_rank = 3;
+	}
+}

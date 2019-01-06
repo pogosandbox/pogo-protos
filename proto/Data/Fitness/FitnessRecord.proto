@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Fitness;
+
+import "POGOProtos/Data/Fitness/FitnessSample.proto";
+import "POGOProtos/Data/Fitness/FitnessStats.proto";
+
+message FitnessRecord {
+	repeated .POGOProtos.Data.Fitness.FitnessSample raw_samples = 2;
+	int64 last_aggregation_timestamp_ms = 3;
+	.POGOProtos.Data.Fitness.FitnessStats fitness_stats = 4;
+}

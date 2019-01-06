@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetUploadUrlResponse {
+	Status status = 1;
+	string signed_url = 2;
+	string supporting_image_signed_url = 3;
+
+	enum Status {
+		UNSET = 0;
+		FAILURES = 1;
+		SUCCESS = 2;
+	}
+}

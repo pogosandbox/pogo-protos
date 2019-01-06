@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform;
+
+message InternalAuth {
+	string email = 1;
+	string player_id = 2;
+	string app_id = 3;
+	string key = 4;
+}

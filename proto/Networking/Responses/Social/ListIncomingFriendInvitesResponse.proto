@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+import "POGOProtos/Data/Friends/IncomingFriendInviteDisplay.proto";
+
+message ListIncomingFriendInvitesResponse {
+	Result result = 1;
+	repeated .POGOProtos.Data.Friends.IncomingFriendInviteDisplay invites = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+}

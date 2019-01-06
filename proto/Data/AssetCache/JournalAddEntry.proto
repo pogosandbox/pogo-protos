@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.AssetCache;
+
+import "POGOProtos/Data/AssetCache/HashedKey.proto";
+
+message JournalAddEntry {
+	.POGOProtos.Data.AssetCache.HashedKey hashed_key = 1;
+	int64 entry_size = 2;
+}

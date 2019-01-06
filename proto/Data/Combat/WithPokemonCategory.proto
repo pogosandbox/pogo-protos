@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Enums/PokemonType.proto";
+
+message WithPokemonCategory {
+	string category_name = 1;
+	repeated .POGOProtos.Enums.PokemonType pokemon_ids = 2;
+}

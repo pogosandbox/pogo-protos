@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/BadgeType.proto";
+import "POGOProtos/Data/Combat/UnlockCondition.proto";
+import "POGOProtos/Data/Combat/PokemonCondition.proto";
+
+message CombatLeague {
+	string title = 1;
+	bool enabled = 2;
+	repeated .POGOProtos.Data.Combat.UnlockCondition unlock_condition = 3;
+	repeated .POGOProtos.Data.Combat.PokemonCondition pokemon_condition = 4;
+	string icon_url = 5;
+	int32 pokemon_count = 6;
+	repeated .POGOProtos.Enums.PokemonId banned_pokemon = 7;
+	.POGOProtos.Enums.BadgeType badge_type = 8;
+	int32 minigame_defense_chance_limit = 9;
+}

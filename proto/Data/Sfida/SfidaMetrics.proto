@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Sfida;
+
+message SfidaMetrics {
+	double distance_walked_km = 1;
+	int32 step_count = 2;
+	double calories_burned = 3;
+	int64 exercise_time_ms = 4;
+}

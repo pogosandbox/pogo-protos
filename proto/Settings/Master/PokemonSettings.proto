@@ -1,0 +1,65 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BuddySize.proto";
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/PokemonRarity.proto";
+import "POGOProtos/Enums/PokemonType.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Enums/PokemonFamilyId.proto";
+import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/EncounterAttributes.proto";
+import "POGOProtos/Settings/Master/Pokemon/EvolutionBranch.proto";
+
+message PokemonSettings {
+	.POGOProtos.Enums.PokemonId pokemon_id = 1;
+	float model_scale = 3;
+	.POGOProtos.Enums.PokemonType type = 4;
+	.POGOProtos.Enums.PokemonType type_2 = 5;
+	.POGOProtos.Settings.Master.Pokemon.CameraAttributes camera = 6;
+	.POGOProtos.Settings.Master.Pokemon.EncounterAttributes encounter = 7;
+	.POGOProtos.Settings.Master.Pokemon.StatsAttributes stats = 8;
+	repeated .POGOProtos.Enums.PokemonMove quick_moves = 9;
+	repeated .POGOProtos.Enums.PokemonMove cinematic_moves = 10;
+	repeated float animation_time = 11;
+	repeated .POGOProtos.Enums.PokemonId evolution_ids = 12;
+	int32 evolution_pips = 13;
+	.POGOProtos.Enums.PokemonRarity rarity = 14;
+	float pokedex_height_m = 15;
+	float pokedex_weight_kg = 16;
+	.POGOProtos.Enums.PokemonId parent_pokemon_id = 17;
+	float height_std_dev = 18;
+	float weight_std_dev = 19;
+	float km_distance_to_hatch = 20;
+	.POGOProtos.Enums.PokemonFamilyId family_id = 21;
+	int32 candy_to_evolve = 22;
+	float km_buddy_distance = 23;
+	.POGOProtos.Enums.BuddySize buddy_size = 24;
+	float model_height = 25;
+	repeated .POGOProtos.Settings.Master.Pokemon.EvolutionBranch evolution_branch = 26;
+	float model_scale_v2 = 27;
+	.POGOProtos.Enums.Form form = 28;
+	.POGOProtos.Enums.PokemonMove event_quick_move = 29;
+	.POGOProtos.Enums.PokemonMove event_cinematic_move = 30;
+	repeated float buddy_offset_male = 31;
+	repeated float buddy_offset_female = 32;
+	float buddy_scale = 33;
+	repeated float buddy_portrait_offset = 34;
+	.POGOProtos.Enums.Form parent_form = 35;
+	PokemonThirdMoveAttributes third_move = 36;
+	bool is_transferable = 37;
+	bool is_deployable = 38;
+	repeated float combat_shoulder_camera_angle = 39;
+	bool is_tradable = 40;
+	repeated float combat_default_camera_angle = 41;
+	repeated float combat_opponent_focus_camera_angle = 42;
+	repeated float combat_player_focus_camera_angle = 43;
+	repeated float combat_player_pokemon_position_offset = 44;
+
+	message PokemonThirdMoveAttributes {
+		int32 stardust_to_unlock = 1;
+		int32 candy_to_unlock = 2;
+	}
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Enums/CombatType.proto";
+
+message OpenCombatChallengeMessage {
+	.POGOProtos.Enums.CombatType type = 1;
+	string challenge_id = 2;
+	string combat_league_template_id = 3;
+	string opponent_player_id = 4;
+	repeated fixed64 attacking_pokemon_id = 5;
+}

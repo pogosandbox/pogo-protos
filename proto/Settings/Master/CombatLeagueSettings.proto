@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatLeagueSettings {
+	repeated string combat_league_template_id = 1;
+}

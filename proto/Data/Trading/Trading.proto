@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Data.Trading;
+
+import "POGOProtos/Data/Trading/TradingPlayer.proto";
+import "POGOProtos/Data/Friends/FriendshipLevelData.proto";
+
+message Trading {
+	TradingState state = 1;
+	uint64 expiration_ms = 2;
+	.POGOProtos.Data.Trading.TradingPlayer player = 3;
+	.POGOProtos.Data.Trading.TradingPlayer friend = 4;
+	int64 trading_s2_cell_id = 5;
+	string transaction_log = 6;
+	.POGOProtos.Data.Friends.FriendshipLevelData friendship_level_data = 7;
+	bool is_special_trading = 8;
+	.POGOProtos.Data.Friends.FriendshipLevelData pre_trading_friendship_level = 9;
+
+	enum TradingState {
+		UNSET = 0;
+		PRIMORDIAL = 1;
+		WAIT = 2;
+		ACTIVE = 3;
+		CONFIRMED = 4;
+		FINISHED = 5;
+	}
+}

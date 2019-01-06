@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonTradingType.proto";
+
+message FriendshipLevelMilestoneSettings {
+	int32 min_points_to_reach = 1;
+	int32 milestone_xp_reward = 2;
+	float attack_bonus_percentage = 3;
+	int32 raid_ball_bonus = 4;
+	repeated .POGOProtos.Enums.PokemonTradingType unlocked_trading = 5;
+	float trading_discount = 6;
+}

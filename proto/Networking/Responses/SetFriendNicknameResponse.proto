@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SetFriendNicknameResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_NOT_FRIENDS = 3;
+		ERROR_EXCEEDED_NICKNAME_LENGTH = 4;
+		ERROR_SOCIAL_UPDATE = 5;
+		ERROR_FILTERED_NICKNAME = 6;
+		ERROR_EXCEEDED_CHANGE_LIMIT = 7;
+	}
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Enums/CombatPlayerFinishState.proto";
+
+message GetNpcCombatRewardsMessage {
+	string combat_npc_trainer_template_id = 1;
+	.POGOProtos.Enums.CombatPlayerFinishState finish_state = 2;
+	repeated fixed64 attacking_pokemon_id = 3;
+	string combat_id = 4;
+}

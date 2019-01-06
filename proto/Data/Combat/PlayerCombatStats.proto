@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+message PlayerCombatStats {
+	// TODO Map<int, PlayerCombatBadgeStatsProto> badges = 1;
+
+	message PlayerCombatBadgeStatsProto {
+		int32 num_won = 1;
+		int32 num_total = 2;
+	}
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum CombatRewardStatus {
+	UNSET_REWARD_STATUS = 0;
+	REWARDS_GRANTED = 1;
+	MAX_REWARDS_RECEIVED = 2;
+	PLAYER_BAG_FULL = 3;
+}

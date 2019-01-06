@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum ArContext {
+	ENCOUNTER = 0;
+}

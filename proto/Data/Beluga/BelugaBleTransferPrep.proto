@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Beluga;
+
+import "POGOProtos/Data/Beluga/BelugaPokemon.proto";
+
+message BelugaBleTransferPrep {
+	repeated .POGOProtos.Data.Beluga.BelugaPokemon pokemon_list = 1;
+	bool eligble_for_item = 2;
+	int64 transaction_id = 3;
+	string beluga_id = 4;
+	string nonce = 5;
+}

@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/PlatformMetricData.proto";
+
+message BootTime {
+	.POGOProtos.Data.Telemetry.PlatformMetricData duration = 1;
+	BootPhase boot_phase = 2;
+
+	enum BootPhase {
+		UNDEFINED = 0;
+		TIME_TO_MAP = 1;
+		LOGO_SCREEN_TIME = 2;
+		MAIN_SCENE_LOAD_TIME = 3;
+		WAIT_FOR_AUTH = 4;
+		INIT_REMOTE_CONFIG_VERSIONS = 5;
+		INIT_BUNDLE_DIGEST = 6;
+		INIT_GMT = 7;
+		DOWNLOAD_I18N = 8;
+		DOWNLOAD_GLOBAL_ASSETS = 9;
+		REGISTER_PUSH_NOTIFICATION = 10;
+		INITIALIZE_UPSIGHT = 11;
+		INITIALIZE_CRITTERCISM = 12;
+		LOGIN_VERSION_CHECK = 13;
+		LOGIN_GET_PLAYER = 14;
+		LOGIN_AUTHENTICATION = 15;
+		MODAL_TIME = 16;
+	}
+}

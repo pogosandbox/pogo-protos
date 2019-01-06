@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Enums/CombatPlayerFinishState.proto";
+
+message CombatLogEntry {
+	Result result = 1;
+	.POGOProtos.Enums.CombatPlayerFinishState finish_state = 2;
+	.POGOProtos.Inventory.Loot rewards = 3;
+	string opponent = 4;
+	string combat_league_template_id = 5;
+	string npc_template_id = 6;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

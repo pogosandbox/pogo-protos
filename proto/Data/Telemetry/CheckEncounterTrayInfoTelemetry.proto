@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message CheckEncounterTrayInfoTelemetry {
+	bool berry_tray_info = 1;
+	bool ball_tray_info = 2;
+}

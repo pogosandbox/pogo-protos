@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message BackgroundModeGlobalSettings {
+	uint32 min_player_level_fitness = 1;
+}

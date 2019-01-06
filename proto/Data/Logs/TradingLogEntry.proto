@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Inventory/Loot.proto";
+
+message TradingLogEntry {
+	Result result = 1;
+	string friend_codename = 2;
+	.POGOProtos.Data.PokemonData trade_out_pokemon = 3;
+	.POGOProtos.Data.PokemonData trade_in_pokemon = 4;
+	.POGOProtos.Inventory.Loot rewards = 5;
+	.POGOProtos.Inventory.Loot price = 6;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

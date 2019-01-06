@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum VfxLevel {
+	NONE_VFX_LEVEL = 0;
+	START = 1;
+	NICE = 2;
+	GREAT = 3;
+	EXCELLENT = 4;
+}

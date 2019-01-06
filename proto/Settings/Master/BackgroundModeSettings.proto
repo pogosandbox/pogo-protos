@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BackgroundModeSettings {
+	double weekly_fitness_goal_level1_distance_km = 1;
+	double weekly_fitness_goal_level2_distance_km = 2;
+	double weekly_fitness_goal_level3_distance_km = 3;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message CombatGlobalSettings {
+	bool enable_combat = 1;
+	int32 maximum_daily_rewarded_battles = 2;
+	bool enable_combat_stat_stages = 3;
+	uint32 minimum_player_level = 4;
+	int32 maximum_daily_npc_rewarded_battles = 5;
+	int32 active_combat_update_interval_ms = 6;
+	int32 waiting_for_player_update_interval_ms = 7;
+	int32 ready_for_battle_update_interval_ms = 8;
+	int32 pre_move_submit_window_ms = 9;
+	int32 post_move_submit_window_ms = 10;
+	bool enable_sockets = 11;
+	bool enable_spin_minigame = 12;
+}

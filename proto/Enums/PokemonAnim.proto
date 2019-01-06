@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PokemonAnim {
+	NONE_POKEMON_ANIM = 0;
+	IDLE_01 = 1;
+	IDLE_02 = 2;
+	LAND = 3;
+	ATTACK_01 = 4;
+	ATTACK_02 = 5;
+	DAMAGED = 6;
+	STUNNED = 7;
+	LOOP = 8;
+	_MAX = 9;
+}

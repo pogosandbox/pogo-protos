@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Ditto;
+
+message LocationUpdateEventParams {
+	double latitude_deg = 1;
+	double longitude_deg = 2;
+	double altitude_m = 3;
+	double accuracy_m = 4;
+	double timestamp_s = 5;
+	uint32 provider_status = 6;
+	uint32 location_type = 7;
+}

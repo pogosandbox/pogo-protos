@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Data/Friends/FriendshipLevelData.proto";
+import "POGOProtos/Data/Gift/GiftBoxDetails.proto";
+
+message FriendshipData {
+	.POGOProtos.Data.Friends.FriendshipLevelData friendship_level_data = 1;
+	repeated .POGOProtos.Data.Gift.GiftBoxDetails giftbox_details = 2;
+	string codename = 3;
+	string nickname = 4;
+	int64 open_trade_expire_ms = 5;
+}

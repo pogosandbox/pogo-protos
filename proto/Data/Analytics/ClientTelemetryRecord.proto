@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Analytics;
+
+message ClientTelemetryRecord {
+	string record_id = 1;
+	bytes encoded_message = 2;
+	int64 client_timestamp_ms = 3;
+	int64 metric_id = 4;
+}

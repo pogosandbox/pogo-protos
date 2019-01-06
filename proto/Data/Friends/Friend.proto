@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+message Friend {
+	string player_id = 1;
+	string codename = 2;
+	string team = 3;
+	int32 score = 4;
+	bytes data_with_me = 5;
+	int64 version = 6;
+	int64 created_ms = 7;
+	string fb_user_id = 8;
+	bool is_facebook_friendship = 9;
+}

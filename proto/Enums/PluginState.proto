@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PluginState {
+	UNKNOWN_PLUGIN_STATE = 0;
+	INITIALIZED = 1;
+	STARTING = 2;
+	STARTED = 3;
+	RESUMED = 4;
+	PAUSED = 5;
+	STOPPED = 6;
+}

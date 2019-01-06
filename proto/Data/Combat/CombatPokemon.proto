@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message CombatPokemon {
+	fixed64 pokemon_id = 1;
+	.POGOProtos.Enums.PokemonId pokedex_id = 2;
+	int32 cp = 3;
+	float cp_multiplier = 4;
+	int32 stamina = 5;
+	int32 max_stamina = 6;
+	.POGOProtos.Enums.PokemonMove move1 = 7;
+	.POGOProtos.Enums.PokemonMove move2 = 8;
+	.POGOProtos.Enums.PokemonMove move3 = 9;
+	int32 energy = 10;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 11;
+	int32 individual_attack = 12;
+	int32 individual_defense = 13;
+	int32 individual_stamina = 14;
+	int32 attack_stat_stage = 15;
+	int32 defense_stat_stage = 16;
+	int32 battles_won = 17;
+	int32 battles_lost = 18;
+	string nickname = 19;
+}

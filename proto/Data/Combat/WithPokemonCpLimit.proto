@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+message WithPokemonCpLimit {
+	int32 min_cp = 1;
+	int32 max_cp = 2;
+}

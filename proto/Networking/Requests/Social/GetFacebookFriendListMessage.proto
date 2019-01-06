@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Social;
+
+message GetFacebookFriendListMessage {
+	string fb_access_token = 1;
+	int32 limit = 2;
+	string cursor = 3;
+}

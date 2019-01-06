@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Combat/CombatPlayerPreferences.proto";
+
+message SaveCombatPlayerPreferencesMessage {
+	.POGOProtos.Data.Combat.CombatPlayerPreferences preferences = 1;
+}

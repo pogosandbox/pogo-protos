@@ -1,0 +1,30 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/CombatRewardStatus.proto";
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Friends/LeveledUpFriends.proto";
+import "POGOProtos/Enums/CombatPlayerFinishState.proto";
+
+message GetCombatResultsResponse {
+	Result result = 1;
+	.POGOProtos.Enums.CombatRewardStatus reward_status = 2;
+	.POGOProtos.Inventory.Loot rewards = 3;
+	.POGOProtos.Data.Friends.LeveledUpFriends friend_level_up = 4;
+	int32 number_rewarded_battles_today = 5;
+	.POGOProtos.Enums.CombatPlayerFinishState combat_player_finish_state = 6;
+	CombatRematch combat_rematch = 7;
+
+	message CombatRematch {
+		string combat_rematch_id = 1;
+		string combat_league_template_id = 2;
+	}
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_COMBAT_STATE = 2;
+		ERROR_COMBAT_NOT_FOUND = 3;
+		ERROR_PLAYER_QUIT = 4;
+	}
+}

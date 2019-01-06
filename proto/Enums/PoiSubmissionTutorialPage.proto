@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PoiSubmissionTutorialPage {
+	WHAT_IS_POKESTOP = 0;
+	SUBMIT_FOR_REVIEW = 1;
+	HOW_TO_CHOOSE_A_LOCATION = 2;
+	DESCRIBE_A_LOCATION = 3;
+}

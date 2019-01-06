@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SendProbeResponse {
+	Result result = 1;
+	string id = 2;
+	int64 server_timestamp_ms = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+import "POGOProtos/Data/Inbox/ClientInbox.proto";
+
+message GetInboxResponse {
+	Result result = 1;
+	.POGOProtos.Data.Inbox.ClientInbox inbox = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILURE = 2;
+	}
+}

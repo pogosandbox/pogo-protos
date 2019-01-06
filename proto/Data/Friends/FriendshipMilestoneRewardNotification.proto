@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+message FriendshipMilestoneRewardNotification {
+	string friend_id = 1;
+	string friend_codename = 2;
+	int32 friendship_milestone_level = 3;
+	int64 xp_reward = 4;
+}

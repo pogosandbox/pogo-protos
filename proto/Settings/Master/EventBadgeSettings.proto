@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message EventBadgeSettings {
+	int64 valid_from_ms = 1;
+	int64 valid_to_ms = 2;
+	repeated .POGOProtos.Enums.BadgeType mutually_exclusive_badges = 3;
+}

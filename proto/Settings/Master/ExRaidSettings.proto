@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/FriendshipLevelMilestone.proto";
+
+message ExRaidSettings {
+	.POGOProtos.Enums.FriendshipLevelMilestone minimum_ex_raid_share_level = 1;
+}

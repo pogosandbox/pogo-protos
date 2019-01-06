@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SavePlayerSnapshotResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		TOO_SOON_TO_UPDATE = 2;
+		ERROR_FAILED_TO_UPDATE = 3;
+		ERROR_REQUEST_TIMED_OUT = 4;
+	}
+}

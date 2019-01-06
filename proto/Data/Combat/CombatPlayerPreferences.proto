@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+message CombatPlayerPreferences {
+	bool friends_combat_opt_out = 1;
+	bool nearby_combat_opt_in = 2;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/Costume.proto";
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message BelugaPokemonWhitelist {
+	int32 max_allowed_pokemon_pokedex_number = 1;
+	repeated .POGOProtos.Enums.PokemonId additional_pokemon_allowed = 2;
+	repeated .POGOProtos.Enums.Form forms_allowed = 3;
+	repeated .POGOProtos.Enums.Costume costumes_allowed = 4;
+}

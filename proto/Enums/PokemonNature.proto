@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PokemonNature {
+	NATURE_UNKNOWN = 0;
+	NATURE_STOIC = 1;
+	NATURE_ASSASSIN = 2;
+	NATURE_GUARDIAN = 3;
+	NATURE_RAIDER = 4;
+	NATURE_PROTECTOR = 5;
+	NATURE_SENTRY = 6;
+	NATURE_CHAMPION = 7;
+}

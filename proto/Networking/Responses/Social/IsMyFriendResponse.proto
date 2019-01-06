@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+message IsMyFriendResponse {
+	Result result = 1;
+	bool is_friend = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_PLAYER_NOT_FOUND_DELETED = 3;
+	}
+}

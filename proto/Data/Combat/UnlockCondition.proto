@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Enums/ConditionType.proto";
+import "POGOProtos/Data/Combat/WithPlayerLevel.proto";
+import "POGOProtos/Data/Combat/WithPokemonCpLimit.proto";
+import "POGOProtos/Data/Combat/WithPokemonType.proto";
+import "POGOProtos/Data/Combat/WithPokemonCategory.proto";
+
+message UnlockCondition {
+	.POGOProtos.Enums.ConditionType type = 1;
+	int32 min_pokemon_count = 2;
+	.POGOProtos.Data.Combat.WithPlayerLevel with_player_level = 3;
+	.POGOProtos.Data.Combat.WithPokemonCpLimit with_pokemon_cp_limit = 4;
+	.POGOProtos.Data.Combat.WithPokemonType with_pokemon_type = 5;
+	.POGOProtos.Data.Combat.WithPokemonCategory with_pokemon_category = 6;
+}

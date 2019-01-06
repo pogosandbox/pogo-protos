@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Enums/CombatType.proto";
+import "POGOProtos/Data/Combat/ChallengePlayer.proto";
+
+message CombatChallenge {
+	string challenge_id = 1;
+	.POGOProtos.Enums.CombatType type = 2;
+	string combat_league_template_id = 3;
+	.POGOProtos.Data.Combat.ChallengePlayer challenger = 5;
+	.POGOProtos.Data.Combat.ChallengePlayer opponent = 6;
+	CombatChallengeState state = 7;
+	int64 created_timestamp_ms = 8;
+	int64 expiration_timestamp_ms = 19;
+	string combat_id = 10;
+
+	enum CombatChallengeState {
+		UNSET = 0;
+		CREATED = 1;
+		OPENED = 2;
+		CANCELLED = 3;
+		ACCEPTED = 4;
+		DECLINED = 5;
+		READY = 6;
+		TIMEOUT = 7;
+	}
+}

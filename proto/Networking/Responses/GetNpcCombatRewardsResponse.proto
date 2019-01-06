@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/CombatRewardStatus.proto";
+import "POGOProtos/Inventory/Loot.proto";
+
+message GetNpcCombatRewardsResponse {
+	Result result = 1;
+	.POGOProtos.Enums.CombatRewardStatus reward_status = 2;
+	.POGOProtos.Inventory.Loot rewards = 3;
+	int32 number_rewarded_npc_battles_today = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALD_NUMBER_ATTACKING_POKEMON_IDS = 2;
+	}
+}

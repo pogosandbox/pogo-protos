@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Data.Fitness;
+
+message FitnessSample {
+	FitnessSampleType sample_type = 1;
+	int64 sample_start_timestamp_ms = 2;
+	int64 sample_end_timestamp_ms = 3;
+	double value = 4;
+	FitnessSourceType source_type = 5;
+
+	enum FitnessSampleType {
+		SAMPLE_UNSET = 0;
+		STEPS = 1;
+		WALKING_DISTANCE_METERS = 2;
+		WHEELCHAIR_DISTANCE_METERS = 3;
+		CALORIES_KCALS = 4;
+		WHEELCHAIR_PUSH_COUNT = 5;
+		EXERCISE_TIME_MI = 6;
+	}
+
+	enum FitnessSourceType {
+		SOURCE_UNSET = 0;
+		HEALTHKIT = 1;
+		GOOGLE_FIT = 2;
+	}
+}

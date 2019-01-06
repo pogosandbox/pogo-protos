@@ -1,0 +1,97 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Avatar/AvatarCustomization.proto";
+import "POGOProtos/Settings/Master/BadgeSettings.proto";
+import "POGOProtos/Settings/Master/CameraSettings.proto";
+import "POGOProtos/Settings/Master/EncounterSettings.proto";
+import "POGOProtos/Settings/Master/EquippedBadgeSettings.proto";
+import "POGOProtos/Settings/Master/FormSettings.proto";
+import "POGOProtos/Settings/Master/GymBattleSettings.proto";
+import "POGOProtos/Settings/Master/GymLevelSettings.proto";
+import "POGOProtos/Settings/Master/IapItemDisplay.proto";
+import "POGOProtos/Settings/Master/IapSettings.proto";
+import "POGOProtos/Settings/Master/ItemSettings.proto";
+import "POGOProtos/Settings/Master/MoveSequenceSettings.proto";
+import "POGOProtos/Settings/Master/MoveSettings.proto";
+import "POGOProtos/Settings/Master/PlayerLevelSettings.proto";
+import "POGOProtos/Settings/Master/PokemonSettings.proto";
+import "POGOProtos/Settings/Master/PokemonUpgradeSettings.proto";
+import "POGOProtos/Settings/Master/QuestSettings.proto";
+import "POGOProtos/Settings/Master/TypeEffectiveSettings.proto";
+import "POGOProtos/Settings/Master/GenderSettings.proto";
+import "POGOProtos/Settings/Master/GymBadgeGmtSettings.proto";
+import "POGOProtos/Settings/Master/WeatherAffinity.proto";
+import "POGOProtos/Settings/Master/WeatherBonus.proto";
+import "POGOProtos/Settings/Master/PokemonScaleSetting.proto";
+import "POGOProtos/Settings/Master/IapItemCategoryDisplay.proto";
+import "POGOProtos/Settings/Master/OnboardingSettings.proto";
+import "POGOProtos/Settings/Master/FriendshipLevelMilestoneSettings.proto";
+import "POGOProtos/Settings/Master/LuckyPokemonSettings.proto";
+import "POGOProtos/Settings/Master/ExRaidSettings.proto";
+import "POGOProtos/Settings/Master/BackgroundModeSettings.proto";
+import "POGOProtos/Settings/Master/CombatMoveSettings.proto";
+import "POGOProtos/Settings/Master/CombatSettings.proto";
+import "POGOProtos/Settings/Master/CombatStatStageSettings.proto";
+import "POGOProtos/Settings/Master/CombatNpcTrainer.proto";
+import "POGOProtos/Settings/Master/CombatNpcPersonality.proto";
+import "POGOProtos/Settings/Master/OnboardingV2Settings.proto";
+import "POGOProtos/Settings/Master/CombatLeagueSettings.proto";
+import "POGOProtos/Settings/Master/CombatLeague.proto";
+import "POGOProtos/Settings/Master/BelugaPokemonWhitelist.proto";
+
+message DownloadItemTemplatesResponse {
+	Result result = 1;
+	repeated ItemTemplate item_templates = 2;
+	uint64 timestamp_ms = 3;
+	int32 page_offset = 4;
+
+	message ItemTemplate {
+		string template_id = 1;
+		.POGOProtos.Settings.Master.PokemonSettings pokemon_settings = 2;
+		.POGOProtos.Settings.Master.ItemSettings item_settings = 3;
+		.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
+		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
+		.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
+		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10;
+		.POGOProtos.Settings.Master.CameraSettings camera = 11;
+		.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
+		.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;
+		.POGOProtos.Settings.Master.GymBattleSettings battle_settings = 14;
+		.POGOProtos.Settings.Master.EncounterSettings encounter_settings = 15;
+		.POGOProtos.Settings.Master.IapItemDisplay iap_item_display = 16;
+		.POGOProtos.Settings.Master.IapSettings iap_settings = 17;
+		.POGOProtos.Settings.Master.PokemonUpgradeSettings pokemon_upgrades = 18;
+		.POGOProtos.Settings.Master.EquippedBadgeSettings equipped_badges = 19;
+		.POGOProtos.Settings.Master.QuestSettings quest_settings = 20;
+		.POGOProtos.Data.Avatar.AvatarCustomization avatar_customization = 21;
+		.POGOProtos.Settings.Master.FormSettings form_settings = 22;
+		.POGOProtos.Settings.Master.GenderSettings gender_settings = 23;
+		.POGOProtos.Settings.Master.GymBadgeGmtSettings gym_badge_settings = 24;
+		.POGOProtos.Settings.Master.WeatherAffinity weather_affinities = 25;
+		.POGOProtos.Settings.Master.WeatherBonus weather_bonus_settings = 26;
+		.POGOProtos.Settings.Master.PokemonScaleSetting pokemon_scale_settings = 27;
+		.POGOProtos.Settings.Master.IapItemCategoryDisplay iap_category_display = 28;
+		.POGOProtos.Settings.Master.BelugaPokemonWhitelist beluga_pokemon_whitelist = 29;
+		.POGOProtos.Settings.Master.OnboardingSettings onboarding_settings = 30;
+		.POGOProtos.Settings.Master.FriendshipLevelMilestoneSettings friendship_milestone_settings = 31;
+		.POGOProtos.Settings.Master.LuckyPokemonSettings lucky_pokemon_settings = 32;
+		.POGOProtos.Settings.Master.CombatSettings combat_settings = 33;
+		.POGOProtos.Settings.Master.CombatLeagueSettings combat_league_settings = 34;
+		.POGOProtos.Settings.Master.CombatLeague combat_league = 35;
+		.POGOProtos.Settings.Master.ExRaidSettings ex_raid_settings = 36;
+		.POGOProtos.Settings.Master.CombatMoveSettings combat_move = 37;
+		.POGOProtos.Settings.Master.BackgroundModeSettings background_mode_settings = 38;
+		.POGOProtos.Settings.Master.CombatStatStageSettings combat_stat_stage_settings = 39;
+		.POGOProtos.Settings.Master.CombatNpcTrainer combat_npc_trainer = 40;
+		.POGOProtos.Settings.Master.CombatNpcPersonality combat_npc_personality = 41;
+		.POGOProtos.Settings.Master.OnboardingV2Settings onboarding_v2_settings = 42;
+	}
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		PAGE = 2;
+		RETRY = 3;
+	}
+}

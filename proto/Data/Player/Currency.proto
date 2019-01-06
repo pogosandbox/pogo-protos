@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message Currency {
+	string currency_type = 1;
+	int32 quantity = 2;
+	int32 fiat_purchased_quantity = 3;
+	string fiat_currency_type = 4;
+	int64 fiat_currency_cost_e6 = 5;
+}

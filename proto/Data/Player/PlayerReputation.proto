@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message PlayerReputation {
+	int64 account_age_ms = 1;
+	int64 player_level = 2;
+	repeated CheatReputation cheat_reputation = 3;
+	bool is_minor = 4;
+
+	enum CheatReputation {
+		UNSET = 0;
+		BOT = 1;
+		SPOOFER = 2;
+	}
+}

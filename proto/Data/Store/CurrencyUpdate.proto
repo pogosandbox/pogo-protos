@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Store;
+
+message CurrencyUpdate {
+	string currency_name = 1;
+	int32 currency_delta = 2;
+	int32 currency_balance = 3;
+	int32 fiat_purchased_balance = 4;
+}

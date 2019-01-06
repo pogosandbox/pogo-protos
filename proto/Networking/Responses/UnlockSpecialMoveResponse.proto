@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+
+message UnlockSpecialMoveResponse {
+	Result result = 1;
+	.POGOProtos.Data.PokemonData unlocked_pokemon = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_POKEMON_NOT_FOUND = 2;
+		ERROR_UNLOCK_NOT_AVAILABLE = 3;
+		ERROR_ALREADY_UNLOCKED = 4;
+		ERROR_INSUFFICIENT_RESOURCES = 5;
+		ERROR_DISABLED = 6;
+	}
+}

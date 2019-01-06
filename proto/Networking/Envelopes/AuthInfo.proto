@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Envelopes;
+
+message AuthInfo {
+    string provider = 1;
+    JWT token = 2;
+    AuthOptions options = 3;
+
+    message JWT {
+        string contents = 1;
+        int32 unknown2 = 2;
+    }
+
+    message AuthOptions {
+        bool prevent_account_creation = 1;
+    }
+}

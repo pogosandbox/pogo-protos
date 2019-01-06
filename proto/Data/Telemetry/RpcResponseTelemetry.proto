@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/RpcResponseTime.proto";
+
+message RpcResponseTelemetry {
+	float window_duration = 1;
+	repeated .POGOProtos.Data.Telemetry.RpcResponseTime response_timings = 2;
+}

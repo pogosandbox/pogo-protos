@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/PokemonTelemetry.proto";
+
+message EvolvePokemonTelemetry {
+	.POGOProtos.Data.Telemetry.PokemonTelemetry pokemon = 1;
+	.POGOProtos.Data.Telemetry.PokemonTelemetry evolved_pokemon = 2;
+}

@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/Combat.proto";
+
+message OpenCombatSessionResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.Combat combat = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INVALID_COMBAT_STATE = 2;
+		ERROR_COMBAT_SESSION_FULL = 3;
+		ERROR_POKEMON_NOT_IN_INVENTORY = 4;
+		ERROR_OPPONENT_NOT_IN_RANGE = 5;
+		ERROR_CHALLENGE_EXPIRED = 6;
+		ERROR_PLAYER_BELOW_MINIMUM_LEVEL = 7;
+		ERROR_OPPONENT_QUIT = 8;
+		ERROR_POKEMON_LINEUP_INELIGIBLE_FOR_LEAGUE = 9;
+		ERROR_COMBAT_LEAGUE_UNSPECIFIED = 10;
+		ERROR_ACCESS_DENIED = 11;
+	}
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message BackgroundModeClientSettings {
+	int64 maximum_sample_age_ms = 1;
+	bool accept_manual_fitness_samples = 2;
+	double minimum_location_accuracy_meters = 3;
+	int32 background_wake_up_interval_minutes = 4;
+	int32 max_upload_size_in_bytes = 5;
+	double min_enclosing_geofence_radius_m = 6;
+}

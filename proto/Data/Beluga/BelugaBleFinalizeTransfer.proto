@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Beluga;
+
+import "POGOProtos/Data/Beluga/BelugaBleTransferComplete.proto";
+
+message BelugaBleFinalizeTransfer {
+	.POGOProtos.Data.Beluga.BelugaBleTransferComplete beluga_transfer_complete = 1;
+	bytes server_signature = 2;
+}

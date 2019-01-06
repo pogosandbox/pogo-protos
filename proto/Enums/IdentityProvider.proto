@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum IdentityProvider {
+	UNSET_IDENTITY_PROVIDER = 0;
+	GOOGLE = 1;
+	PTC = 2;
+	FACEBOOK = 3;
+	BACKGROUND = 4;
+	INTERNAL = 5;
+	SFIDA = 6;
+	SUPER_AWESOME = 7;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/CombatChallenge.proto";
+
+message GetCombatChallengeResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.CombatChallenge challenge = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_CHALLENGE_NOT_FOUND = 2;
+	}
+}

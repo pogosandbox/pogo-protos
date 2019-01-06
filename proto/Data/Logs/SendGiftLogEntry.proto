@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+message SendGiftLogEntry {
+	Result result = 1;
+	string friend_codename = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

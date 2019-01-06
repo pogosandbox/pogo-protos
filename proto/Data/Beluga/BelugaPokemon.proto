@@ -1,0 +1,45 @@
+syntax = "proto3";
+package POGOProtos.Data.Beluga;
+
+import "POGOProtos/Enums/Costume.proto";
+import "POGOProtos/Enums/Gender.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Enums/TeamColor.proto";
+
+message BelugaPokemon {
+	string trainer_name = 1;
+	TrainerGender trainer_gender = 2;
+	.POGOProtos.Enums.TeamColor trainer_team = 3;
+	int32 trainer_level = 4;
+	int32 pokedex_id = 5;
+	int32 cp = 6;
+	float pokemon_level = 7;
+	int32 max_hp = 8;
+	double origin_lat = 9;
+	double origin_lng = 10;
+	float height = 11;
+	float weight = 12;
+	int32 individual_attack = 13;
+	int32 individual_defense = 14;
+	int32 individual_stamina = 15;
+	int32 creation_day = 16;
+	int32 creation_month = 17;
+	int32 creation_year = 18;
+	string nickname = 19;
+	.POGOProtos.Enums.Gender gender = 20;
+	.POGOProtos.Enums.Costume costume = 21;
+	PokemonForm form = 22;
+	bool shiny = 23;
+	.POGOProtos.Enums.PokemonMove move1 = 24;
+	.POGOProtos.Enums.PokemonMove move2 = 25;
+
+	enum PokemonForm {
+		FORM_UNSET = 0;
+		ALOLA = 1;
+	}
+
+	enum TrainerGender {
+		TRAINER_MALE = 0;
+		TRAINER_FEMALE = 1;
+	}
+}

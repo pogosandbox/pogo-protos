@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+message CombatMoveBuffs {
+	int32 attacker_attack_stat_stage_change = 1;
+	int32 attacker_defense_stat_stage_change = 2;
+	int32 target_attack_stat_stage_change = 3;
+	int32 target_defense_stat_stage_change = 4;
+}

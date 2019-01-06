@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PokemonCreateContext {
+	CREATE_CONTEXT_WILD = 0;
+	CREATE_CONTEXT_EGG = 1;
+	CREATE_CONTEXT_EVOLVE = 2;
+}

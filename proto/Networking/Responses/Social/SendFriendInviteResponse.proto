@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+message SendFriendInviteResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_ALREADY_A_FRIEND = 3;
+		ERROR_PLAYER_DOES_NOT_EXIST_DELETED = 4;
+		ERROR_PLAYER_INBOX_FULL = 5;
+		ERROR_PLAYER_OUTBOX_FULL = 6;
+		ERROR_SENDER_HAS_MAX_FRIENDS = 7;
+		ERROR_INVITE_ALREADY_SENT = 8;
+		ERROR_CANNOT_SEND_INVITES_TO_YOURSELF = 9;
+		ERROR_INVITE_ALREADY_RECEIVED = 10;
+		ERROR_RECEIVER_HAS_MAX_FRIENDS = 11;
+	}
+}

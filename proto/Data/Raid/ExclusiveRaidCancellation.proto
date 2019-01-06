@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Inventory/LootItem.proto";
+
+message ExclusiveRaidCancellation {
+	string fort_id = 1;
+	int64 start_time_ms = 2;
+	int64 end_time_ms = 3;
+	string image_url = 4;
+	double latitude = 5;
+	double longitude = 6;
+	string gym_name = 7;
+	repeated .POGOProtos.Inventory.LootItem rewards = 8;
+}

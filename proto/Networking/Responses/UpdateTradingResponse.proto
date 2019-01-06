@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Trading/Trading.proto";
+
+message UpdateTradingResponse {
+	Result result = 1;
+	.POGOProtos.Data.Trading.Trading trading = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_FRIEND_NOT_FOUND = 3;
+		ERROR_INVALID_PLAYER_ID = 4;
+		ERROR_INVALID_STATE = 5;
+		ERROR_STATE_HANDLER = 6;
+		ERROR_INVALID_POKEMON = 7;
+		ERROR_INSUFFICIENT_PAYMENT = 8;
+		ERROR_TRADING_EXPIRED = 9;
+		ERROR_TRADING_FINISHED = 10;
+	}
+}

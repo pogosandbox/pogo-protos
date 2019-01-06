@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data.Analytics;
+
+message ClientTelemetryClientSettings {
+	bool is_upload_enabled = 1;
+	int64 max_upload_size_in_bytes = 2;
+	int64 update_interval_in_sec = 3;
+	int64 settings_update_interval_in_sec = 4;
+	int64 max_envelope_queue_size = 5;
+	double sampling_probability = 6;
+	bool use_player_based_sampling = 7;
+	double player_hash = 8;
+	string player_external_omni_id = 9;
+	bool disable_omni_sending = 10;
+}

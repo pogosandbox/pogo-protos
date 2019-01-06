@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/Combat.proto";
+
+message QuitCombatResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.Combat combat = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_COMBAT_NOT_FOUND = 2;
+		ERROR_INVALID_COMBAT_STATE = 3;
+		ERROR_PLAYER_NOT_IN_COMBAT = 4;
+	}
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PresentationType {
+	UNKNOWN_PRESENTATION_TYPE = 0;
+	CATEGORY = 1;
+	SORT = 2;
+	SALE = 3;
+}

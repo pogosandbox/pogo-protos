@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Data/Friends/OutgoingFriendInvite.proto";
+import "POGOProtos/Data/Player/PlayerSummary.proto";
+
+message OutgoingFriendInviteDisplay {
+	.POGOProtos.Data.Friends.OutgoingFriendInvite invite = 1;
+	.POGOProtos.Data.Player.PlayerSummary player = 2;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetFriendshipMilestoneRewardsResponse {
+	Result result = 1;
+	int64 xp_reward = 2;
+	string friend_id = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_NOT_FRIENDS = 3;
+		ERROR_MILESTONE_ALREADY_AWARDED = 4;
+		ERROR_FAILED_TO_UPDATE = 5;
+	}
+}

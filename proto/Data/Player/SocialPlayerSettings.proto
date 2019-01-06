@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message SocialPlayerSettings {
+	bool disable_last_pokemon_caught = 1;
+}

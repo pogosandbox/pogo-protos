@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/CombatPlayerProfile.proto";
+
+message GetCombatPlayerProfileResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.CombatPlayerProfile profile = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_NOT_FOUND = 2;
+		ERROR_ACCESS_DENIED = 3;
+	}
+}

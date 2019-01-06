@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+import "POGOProtos/Data/PokemonDisplay.proto";
+
+message PlayerFriendDisplay {
+	.POGOProtos.Data.PokemonDisplay buddy = 1;
+	int32 buddy_display_pokemon_id = 2;
+	string buddy_pokemon_nickname = 3;
+	.POGOProtos.Data.PokemonDisplay last_pokemon_caught = 4;
+	int32 last_pokemon_caught_display_id = 5;
+	int64 last_pokemon_caught_timestamp = 6;
+	int32 buddy_candy_awarded = 7;
+}

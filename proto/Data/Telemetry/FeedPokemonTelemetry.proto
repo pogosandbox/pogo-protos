@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/PokemonTelemetry.proto";
+
+message FeedPokemonTelemetry {
+	int32 status = 1;
+	.POGOProtos.Data.Telemetry.PokemonTelemetry pokemon = 2;
+	string gym_id = 3;
+	int32 team = 4;
+	int32 defender_count = 5;
+	int32 motivation = 6;
+	int32 cp_now = 7;
+}

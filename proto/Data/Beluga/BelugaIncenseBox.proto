@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Beluga;
+
+message BelugaIncenseBox {
+	bool is_usable = 1;
+	int64 cool_down_finished_timestamp_ms = 2;
+}

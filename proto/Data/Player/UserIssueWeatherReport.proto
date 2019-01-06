@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message UserIssueWeatherReport {
+	string gameplayer_weather = 1;
+	bool alert_active = 2;
+	int32 severity = 3;
+	int32 user_report = 4;
+}

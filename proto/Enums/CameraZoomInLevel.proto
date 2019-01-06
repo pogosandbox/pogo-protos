@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum CameraZoomInLevel {
+	DEFAULT_CAMERA_ZOOM_IN_LEVEL = 0;
+	NICE_CAMERA_ZOOM_IN_LEVEL = 1;
+	GREAT_CAMERA_ZOOM_IN_LEVEL = 2;
+	EXCELLENT_CAMERA_ZOOM_IN_LEVEL = 3;
+}

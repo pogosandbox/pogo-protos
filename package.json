@@ -1,0 +1,41 @@
+{
+  "name": "pogo-protos",
+  "version": "2.31.0",
+  "description": "Pokémon Go Protobuf files from POGOProtos, wrapped up in a Node module",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pogosandbox/pogo-protos.git"
+  },
+  "keywords": [
+    "pokemon",
+    "pokemongo",
+    "pogo",
+    "api",
+    "protobuf",
+    "niantic",
+    "beta",
+    "v-next"
+  ],
+  "author": "niico",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pogosandbox/pogo-protos/issues"
+  },
+  "homepage": "https://github.com/pogosandbox/pogo-protos#readme",
+  "dependencies": {
+    "protobufjs": "^6.8.8"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  },
+  "typings": "./pogo-protos.d.ts",
+  "scripts": {
+    "test": "node test/test.js",
+    "build": "run-s compile minjs js ts",
+    "compile": "node proto/compile.js",
+    "minjs": "pbjs --keep-case -t static-module --no-verify --no-create --no-delimited --no-beautify --no-comments -o compiled.js ./proto/POGOProtos.proto",
+    "js": "pbjs --keep-case -t static-module --no-verify --no-create --no-delimited -o temp.js ./proto/POGOProtos.proto",
+    "ts": "pbts --no-comments -o compiled.d.ts temp.js"
+  }
+}

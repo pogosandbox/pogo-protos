@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message HelpshiftSettings {
+	uint32 min_player_level = 1;
+	uint32 default_player_level = 2;
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum CombatType {
+	COMBAT_TYPE_UNSET = 0;
+	SOLO = 1;
+	QR_CODE = 2;
+	FRIENDS = 3;
+	NEARBY_COMBAT = 4;
+}

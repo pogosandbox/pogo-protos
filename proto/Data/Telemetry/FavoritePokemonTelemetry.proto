@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Telemetry/PokemonTelemetry.proto";
+
+message FavoritePokemonTelemetry {
+	.POGOProtos.Data.Telemetry.PokemonTelemetry pokemon = 1;
+	bool favored = 2;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Data/Combat/CombatAction.proto";
+
+message UpdateCombatMessage {
+	string combat_id = 1;
+	.POGOProtos.Data.Combat.CombatAction action = 2;
+}

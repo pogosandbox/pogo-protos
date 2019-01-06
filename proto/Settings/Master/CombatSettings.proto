@@ -1,0 +1,34 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatSettings {
+	float round_duration_seconds = 1;
+	float turn_duration_seconds = 2;
+	float minigame_duration_seconds = 3;
+	float same_type_attack_bonus_multiplier = 4;
+	float fast_attack_bonus_multiplier = 5;
+	float charge_attack_bonus_multiplier = 6;
+	float defense_bonus_multiplier = 7;
+	float minigame_bonus_base_multiplier = 8;
+	float minigame_bonus_variable_multiplier = 9;
+	int32 max_energy = 10;
+	float defender_minigame_multiplier = 11;
+	float change_pokemon_duration_seconds = 12;
+	float minigame_submit_score_duration_seconds = 13;
+	float quick_swap_combat_start_available_seconds = 14;
+	float quick_swap_cooldown_duration_seconds = 15;
+	CombatOffensiveInputChallengeSettings offensive_input_challenge_settings = 16;
+	CombatDefensiveInputChallengeSettings defensive_input_challenge_settings = 17;
+
+	message CombatOffensiveInputChallengeSettings {
+		float score_per_tap = 1;
+		float score_decay_per_second = 2;
+		float max_score = 3;
+		float high_score_additional_decay_per_second = 4;
+		float max_time_additional_decay_per_second = 5;
+	}
+
+	message CombatDefensiveInputChallengeSettings {
+		float full_rotations_for_max_score = 1;
+	}
+}

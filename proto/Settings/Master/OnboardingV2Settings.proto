@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonId.proto";
+
+message OnboardingV2Settings {
+	bool enable_onboarding_v2 = 1;
+	repeated .POGOProtos.Enums.PokemonId pokedex_id = 2;
+	.POGOProtos.Enums.PokemonId onboarding_egg_pokemon = 3;
+	int32 egg_km_until_hatch = 4;
+}

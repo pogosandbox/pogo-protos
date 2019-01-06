@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/ShareExRaidPassResult.proto";
+import "POGOProtos/Data/Friends/FriendshipLevelData.proto";
+import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
+
+message ShareExRaidPassResponse {
+	.POGOProtos.Enums.ShareExRaidPassResult result = 1;
+	.POGOProtos.Data.Friends.FriendshipLevelData updated_friendship_data = 2;
+	.POGOProtos.Data.Player.PlayerPublicProfile friend_profile = 3;
+}

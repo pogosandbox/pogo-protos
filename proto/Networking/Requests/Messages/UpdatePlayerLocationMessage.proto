@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message UpdatePlayerLocationMessage {
+	string geofence_identifier = 1;
+	PingReason reason = 2;
+
+	enum PingReason {
+		UNSET = 0;
+		ENTRANCE_EVENT = 1;
+		EXIT_EVENT = 2;
+		DWELL_EVENT = 3;
+		VISIT_EVENT = 4;
+		FITNESS_WAKEUP = 5;
+		OTHER_WAKEUP = 6;
+	}
+}

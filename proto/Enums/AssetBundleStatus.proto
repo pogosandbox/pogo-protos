@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum AssetBundleStatus {
+	UNLOADED = 0;
+	LOADING = 1;
+	LOADED = 2;
+	FAILED_ASSET_BUNDLE_STATUS = 3;
+}

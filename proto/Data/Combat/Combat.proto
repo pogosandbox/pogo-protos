@@ -1,0 +1,32 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Data/Combat/CombatPlayer.proto";
+
+message Combat {
+	CombatState combat_state = 1;
+	string combat_id = 2;
+	.POGOProtos.Data.Combat.CombatPlayer player = 3;
+	.POGOProtos.Data.Combat.CombatPlayer opponent = 4;
+	int64 combat_start_ms = 5;
+	int64 combat_end_ms = 6;
+	int64 server_ms = 7;
+	int32 current_turn = 8;
+	int64 turn_start_ms = 9;
+	int64 minigame_end_ms = 10;
+	int64 minigame_submit_score_end_ms = 11;
+	int64 change_pokemon_end_ms = 12;
+	int64 quick_swap_cooldown_duration_ms = 13;
+
+	enum CombatState {
+		UNSET = 0;
+		WAITING_FOR_PLAYERS = 1;
+		READY = 2;
+		ACTIVE = 3;
+		SPECIAL_ATTACK = 4;
+		WAITING_FOR_CHANGE_POKEMON = 5;
+		FINISHED = 6;
+		PLAYER_QUIT = 7;
+		TIMEOUT = 8;
+	}
+}

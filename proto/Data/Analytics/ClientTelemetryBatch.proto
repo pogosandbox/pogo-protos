@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data.Analytics;
+
+import "POGOProtos/Data/Analytics/ClientTelemetryRecord.proto";
+
+message ClientTelemetryBatch {
+	TelemetryScopeId telemetry_scope_id = 1;
+	repeated .POGOProtos.Data.Analytics.ClientTelemetryRecord events = 2;
+	string api_version = 3;
+	string message_version = 4;
+
+	enum TelemetryScopeId {
+		UNSET = 0;
+		DITTO = 1;
+		GAME = 2;
+	}
+}
