@@ -14,8 +14,6 @@
     "api",
     "protobuf",
     "niantic",
-    "beta",
-    "v-next"
   ],
   "author": "niico",
   "license": "MIT",
