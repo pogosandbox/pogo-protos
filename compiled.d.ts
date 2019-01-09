@@ -9217,26 +9217,6 @@ export namespace POGOProtos {
                 public toJSON(): { [k: string]: any };
             }
 
-            interface IFortLureInfo {
-                fort_id?: (string|null);
-                encounter_id?: (number|Long|null);
-                active_pokemon_id?: (POGOProtos.Enums.PokemonId|null);
-                lure_expires_timestamp_ms?: (number|Long|null);
-            }
-
-            class FortLureInfo implements IFortLureInfo {
-                constructor(properties?: POGOProtos.Map.Fort.IFortLureInfo);
-                public fort_id: string;
-                public encounter_id: (number|Long);
-                public active_pokemon_id: POGOProtos.Enums.PokemonId;
-                public lure_expires_timestamp_ms: (number|Long);
-                public static encode(message: POGOProtos.Map.Fort.IFortLureInfo, writer?: $protobuf.Writer): $protobuf.Writer;
-                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Map.Fort.FortLureInfo;
-                public static fromObject(object: { [k: string]: any }): POGOProtos.Map.Fort.FortLureInfo;
-                public static toObject(message: POGOProtos.Map.Fort.FortLureInfo, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                public toJSON(): { [k: string]: any };
-            }
-
             interface IFortModifier {
                 item_id?: (POGOProtos.Inventory.Item.ItemId|null);
                 expiration_timestamp_ms?: (number|Long|null);

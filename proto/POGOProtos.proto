@@ -323,7 +323,6 @@ import public "Inventory/LootItem.proto";
 import public "Inventory/RaidTicket.proto";
 import public "Inventory/RaidTickets.proto";
 import public "Map/Fort/FortData.proto";
-import public "Map/Fort/FortLureInfo.proto";
 import public "Map/Fort/FortModifier.proto";
 import public "Map/Fort/FortRenderingType.proto";
 import public "Map/Fort/FortSponsor.proto";
