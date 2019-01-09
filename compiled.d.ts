@@ -9152,14 +9152,14 @@ export namespace POGOProtos {
                 longitude?: (number|null);
                 owned_by_team?: (POGOProtos.Enums.TeamColor|null);
                 guard_pokemon_id?: (POGOProtos.Enums.PokemonId|null);
-                guard_pokemon_cp?: (number|null);
+                guard_pokemon_level?: (number|null);
                 enabled?: (boolean|null);
                 type?: (POGOProtos.Map.Fort.FortType|null);
                 gym_points?: (number|Long|null);
                 is_in_battle?: (boolean|null);
                 active_fort_modifier?: (POGOProtos.Inventory.Item.ItemId[]|null);
-                lure_info?: (POGOProtos.Map.Fort.IFortLureInfo|null);
-                cooldown_complete_timestamp_ms?: (number|Long|null);
+                active_pokemon?: (POGOProtos.Map.Pokemon.IMapPokemon|null);
+                cooldown_complete_ms?: (number|Long|null);
                 sponsor?: (POGOProtos.Map.Fort.FortSponsor|null);
                 rendering_type?: (POGOProtos.Map.Fort.FortRenderingType|null);
                 deploy_lockout_end_ms?: (number|Long|null);
@@ -9186,14 +9186,14 @@ export namespace POGOProtos {
                 public longitude: number;
                 public owned_by_team: POGOProtos.Enums.TeamColor;
                 public guard_pokemon_id: POGOProtos.Enums.PokemonId;
-                public guard_pokemon_cp: number;
+                public guard_pokemon_level: number;
                 public enabled: boolean;
                 public type: POGOProtos.Map.Fort.FortType;
                 public gym_points: (number|Long);
                 public is_in_battle: boolean;
                 public active_fort_modifier: POGOProtos.Inventory.Item.ItemId[];
-                public lure_info?: (POGOProtos.Map.Fort.IFortLureInfo|null);
-                public cooldown_complete_timestamp_ms: (number|Long);
+                public active_pokemon?: (POGOProtos.Map.Pokemon.IMapPokemon|null);
+                public cooldown_complete_ms: (number|Long);
                 public sponsor: POGOProtos.Map.Fort.FortSponsor;
                 public rendering_type: POGOProtos.Map.Fort.FortRenderingType;
                 public deploy_lockout_end_ms: (number|Long);
@@ -9437,8 +9437,8 @@ export namespace POGOProtos {
             interface IMapPokemon {
                 spawn_point_id?: (string|null);
                 encounter_id?: (number|Long|null);
-                pokemon_id?: (POGOProtos.Enums.PokemonId|null);
-                expiration_timestamp_ms?: (number|Long|null);
+                pokedex_type_id?: (POGOProtos.Enums.PokemonId|null);
+                expiration_time_ms?: (number|Long|null);
                 latitude?: (number|null);
                 longitude?: (number|null);
                 pokemon_display?: (POGOProtos.Data.IPokemonDisplay|null);
@@ -9448,8 +9448,8 @@ export namespace POGOProtos {
                 constructor(properties?: POGOProtos.Map.Pokemon.IMapPokemon);
                 public spawn_point_id: string;
                 public encounter_id: (number|Long);
-                public pokemon_id: POGOProtos.Enums.PokemonId;
-                public expiration_timestamp_ms: (number|Long);
+                public pokedex_type_id: POGOProtos.Enums.PokemonId;
+                public expiration_time_ms: (number|Long);
                 public latitude: number;
                 public longitude: number;
                 public pokemon_display?: (POGOProtos.Data.IPokemonDisplay|null);
