@@ -18,9 +18,9 @@ enum SocialAction {
 	CREATE_INVITE_CODE = 10013;                                // Implemented
 	GET_FACEBOOK_FRIEND_LIST = 10014;                          // Implemented
 	UPDATE_FACEBOOK_STATUS = 10015;                            // Implemented
-	REGISTER_PUSH_NOTIFICATION_SOCIAL_ACTION = 10101;          // ???
+	REGISTER_PUSH_NOTIFICATION_SOCIAL_ACTION = 10101;          // Implemented
 	UNREGISTER_PUSH_NOTIFICATION_SOCIAL_ACTION = 10102;        // ???
 	UPDATE_NOTIFICATION = 10103;                               // Implemented
-	OPT_OUT_PUSH_NOTIFICATION_CATEGORY_SOCIAL_ACTION = 10104;  // ???
+	OPT_OUT_PUSH_NOTIFICATION_CATEGORY_SOCIAL_ACTION = 10104;  // Implemented
 	GET_INBOX = 10105;                                         // Implemented
 }

@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social;
+
+message OptOutPushNotificationCategoryResponse {
+	//
+}
