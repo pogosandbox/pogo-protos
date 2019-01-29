@@ -46,4 +46,5 @@ message PlayerStats {
 	.POGOProtos.Data.Combat.PlayerCombatStats combat_stats = 39;
 	int32 num_npc_combats_won = 40;
 	int32 num_npc_combats_total = 41;
+	int32 num_photobomb_seen = 42;
 }

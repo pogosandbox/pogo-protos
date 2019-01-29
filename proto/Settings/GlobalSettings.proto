@@ -31,6 +31,7 @@ import "POGOProtos/Settings/CombatChallengeGlobalSettings.proto";
 import "POGOProtos/Settings/PoiGlobalSettings.proto";
 import "POGOProtos/Settings/BackgroundModeGlobalSettings.proto";
 import "POGOProtos/Settings/ProbeSettings.proto";
+import "POGOProtos/Settings/PokemonGlobalSettings.proto";
 
 message GlobalSettings {
 	.POGOProtos.Settings.FortSettings fort_settings = 2;
@@ -66,4 +67,5 @@ message GlobalSettings {
 	.POGOProtos.Settings.PokecoinPurchaseDisplaySettings purchased_settings = 32;
 	.POGOProtos.Settings.HelpshiftSettings helpshift_settings = 33;
 	.POGOProtos.Settings.PoiGlobalSettings poi_settings = 35;
+	.POGOProtos.Settings.PokemonGlobalSettings pokemon_settings = 36;
 }

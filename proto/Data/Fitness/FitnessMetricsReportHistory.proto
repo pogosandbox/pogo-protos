@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Fitness;
+
+import "POGOProtos/Data/Fitness/FitnessMetrics.proto";
+
+message FitnessMetricsReportHistory {
+	repeated MetricsHistory weekly_history = 1;
+	repeated MetricsHistory daily_history = 2;
+
+	message MetricsHistory {
+		int64 bucket = 1;
+		.POGOProtos.Data.Fitness.FitnessMetrics metrics = 2;
+	}
+}

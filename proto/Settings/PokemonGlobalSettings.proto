@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message PokemonGlobalSettings {
+	bool enable_camo_shader = 1;
+}

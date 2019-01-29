@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GenerateGmapSignedUrlResponse {
+	Result result = 1;
+	string signed_url = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_NOT_VALID = 2;
+		ERROR_RATE_LIMITED = 3;
+		ERROR_MISSING_INPUT = 4;
+		ERROR_UNKNOWN = 5;
+	}
+}

@@ -105,6 +105,7 @@ message GetAvailableSubmissionsResponse {
 	bool has_valid_email = 3;
 	bool is_feature_enabled = 4;
 	int64 time_window_for_submissions_limit_ms = 5;
+	int32 max_poi_distance_in_meters = 6;
 }
 
 message PushNotificationRegistryResponse {
