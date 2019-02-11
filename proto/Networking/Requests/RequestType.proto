@@ -65,6 +65,7 @@ enum RequestType {
 	ATTACK_RAID = 166;                          // Implemented
 	AWARD_POKECOIN = 167;                       // ???
 	USE_ITEM_STARDUST_BOOST = 168;              // Implemented
+	REASSIGN_PLAYER = 169;                      // Implemented
 	GET_ASSET_DIGEST = 300;                     // Implemented
 	GET_DOWNLOAD_URLS = 301;                    // Implemented
 	CLAIM_CODENAME = 403;                       // Implemented
@@ -179,5 +180,5 @@ enum RequestType {
 	SET_IN_GAME_CURRENCY_EXCHANGE_RATE = 5032;  // Implemented
 	REQUEST_GEOFENCE_UPDATES = 5033;            // Implemented
 	UPDATE_PLAYER_LOCATION = 5034;              // Implemented
-	PROFANITY_FILTER_ACTION = 5035;             // ???
+	GENERATE_GMAP_SIGNED_URL = 5035;            // Implemented
 }

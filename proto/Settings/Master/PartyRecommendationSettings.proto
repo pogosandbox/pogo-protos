@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message PartyRecommendationSettings {
+	PartyRcommendationMode mode = 1;
+	float variance = 2;
+	float third_move_weight = 3;
+
+	enum PartyRcommendationMode {
+		UNSET = 0;
+		PARTY_RECOMMENDATION_MODE_1 = 1;
+		PARTY_RECOMMENDATION_MODE_2 = 2;
+		PARTY_RECOMMENDATION_MODE_3 = 3;
+		PARTY_RECOMMENDATION_MODE_4 = 4;
+	}
+}

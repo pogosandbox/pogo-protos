@@ -6,4 +6,5 @@ message CombatMoveBuffs {
 	int32 attacker_defense_stat_stage_change = 2;
 	int32 target_attack_stat_stage_change = 3;
 	int32 target_defense_stat_stage_change = 4;
+	float buff_activation_chance = 5;
 }

@@ -17,6 +17,7 @@ message GetRaidDetailsResponse {
 	bool received_rewards = 9;
 	int32 num_players_in_lobby = 10;
 	int64 server_ms = 11;
+	int32 server_instance = 12;
 
 	enum Result {
 		UNSET = 0;

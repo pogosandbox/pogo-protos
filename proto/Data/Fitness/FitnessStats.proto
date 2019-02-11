@@ -7,4 +7,6 @@ message FitnessStats {
 	int64 last_accumulated_timestamp_ms = 1;
 	.POGOProtos.Data.Fitness.FitnessMetrics accumulated = 2;
 	.POGOProtos.Data.Fitness.FitnessMetrics pending = 3;
+	double player_initial_walk_km = 4;
+	double player_total_walk_km = 5;
 }

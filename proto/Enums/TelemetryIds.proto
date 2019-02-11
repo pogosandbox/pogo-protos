@@ -77,6 +77,7 @@ enum ClientTelemetryIds {
 	PERMISSIONS_FLOW = 39;
 	DEVICE_SERVICE_TOGGLE = 40;
 	BOOT_TELEMETRY = 41;
+	AR_PHOTO_SESSION_TELEMETRY = 42;
 }
 
 enum AvatarCustomizationTelemetryIds {

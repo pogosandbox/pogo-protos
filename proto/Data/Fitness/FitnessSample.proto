@@ -22,5 +22,7 @@ message FitnessSample {
 		SOURCE_UNSET = 0;
 		HEALTHKIT = 1;
 		GOOGLE_FIT = 2;
+		APPLE_WATCH = 3;
+		GPS = 4;
 	}
 }

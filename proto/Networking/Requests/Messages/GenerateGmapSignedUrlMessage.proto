@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GenerateGmapSignedUrlMessage {
+	double latitude = 1;
+	double longitude = 2;
+	int32 width = 3;
+	int32 height = 4;
+	int32 zoom = 5;
+	string language_code = 6;
+	string country_code = 7;
+	string map_style = 8;
+	string map_type = 9;
+	string icon_params = 10;
+}

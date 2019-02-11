@@ -5,5 +5,6 @@ message CurrencyUpdate {
 	string currency_name = 1;
 	int32 currency_delta = 2;
 	int32 currency_balance = 3;
-	int32 fiat_purchased_balance = 4;
+	// no found https://github.com/Furtif/POGOProtos/commit/eefb7c2b69f001e7859ea5e080ed0717ab83944c#diff-c5fa6f78b7604cc11d7dae7520380112R1732
+	//int32 fiat_purchased_balance = 4;
 }

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum OnboardingArStatus {
+	UNSET_ONBOARDING_AR_STATUS = 0;
+	OFF = 1;
+	AR_STANDARD = 2;
+	AR_PLUS = 3;
+}
