@@ -1,6 +1,6 @@
 {
   "name": "pogo-protos",
-  "version": "2.31.1",
+  "version": "2.33.0",
   "description": "Pokémon Go Protobuf files from POGOProtos, wrapped up in a Node module",
   "main": "index.js",
   "repository": {
