@@ -14,7 +14,7 @@ message FitnessRecord {
 	.POGOProtos.Data.Fitness.FitnessMetricsReportHistory report_history = 5;
 
 	message HourlyReportsEntry {
-    int64 key = 1;
-    .POGOProtos.Data.Fitness.FitnessMetrics value = 2;
-  }
+		int64 key = 1;
+		.POGOProtos.Data.Fitness.FitnessMetrics value = 2;
+	}
 }
