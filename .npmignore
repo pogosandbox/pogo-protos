@@ -1,8 +1,8 @@
 .vscode
 node_modules
 old
-notused
-temp*.js
+/notused
+/temp*.js
 test
 .travis.yml
 *.md

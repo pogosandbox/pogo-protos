@@ -1694,7 +1694,7 @@ export namespace POGOProtos {
                 public week_offset_from_now: number;
                 public metrics?: (POGOProtos.Data.Fitness.IFitnessMetrics|null);
                 public game_data: Uint8Array;
-                public Window?: ("day_offset_from_now"|"week_offset_from_now"|"metrics");
+                public Window?: ("day_offset_from_now"|"week_offset_from_now");
                 public static encode(message: POGOProtos.Data.Fitness.IFitnessReport, writer?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Fitness.FitnessReport;
                 public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Fitness.FitnessReport;
