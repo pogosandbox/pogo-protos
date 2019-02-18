@@ -23,4 +23,6 @@ message PlayerAvatar {
 	string avatar_belt = 20;
 	string avatar_glasses = 21;
 	string avatar_necklace = 22;
+	string avatar_skin = 23;
+	string avatar_pose = 24;
 }

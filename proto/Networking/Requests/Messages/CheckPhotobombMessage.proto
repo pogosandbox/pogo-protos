@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message CheckPhotobombMessage {
+	fixed64 photo_pokemon_id = 1;
+}

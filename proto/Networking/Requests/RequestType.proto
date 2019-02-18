@@ -145,7 +145,12 @@ enum RequestType {
 	PROBE_DATA = 1021;                          // ???
 	COMBAT_DATA = 1022;                         // ???
 	COMBAT_CHALLENGE_DATA = 1023;               // ???
+	CHECK_PHOTOBOMB = 1101;                     // Implemented
+	CONFIRM_PHOTOBOMB = 1102;                   // Implemented
+	GET_PHOTOBOMB = 1103;                       // Implemented
+	ENCOUNTER_PHOTOBOMB = 1104;                 // Implemented
 	GET_SIGNED_GMAP_URL = 1105;                 // Implemented
+	CHANGE_TEAM = 1106;                         // Implemented
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // ???
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented

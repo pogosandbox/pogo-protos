@@ -49,5 +49,6 @@ message AvatarCustomization {
 		GLASSES = 11;
 		NECKLACE = 12;
 		SKIN = 13;
+		POSE = 14;
 	}
 }

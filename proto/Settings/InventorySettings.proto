@@ -7,4 +7,6 @@ message InventorySettings {
 	int32 base_pokemon = 3;
 	int32 base_bag_items = 4;
 	int32 base_eggs = 5;
+	int32 max_team_changes = 6;
+	int64 team_change_item_reset_period_in_days = 7;
 }

@@ -3,6 +3,7 @@ package POGOProtos.Data.Combat;
 
 import "POGOProtos/Data/Player/PlayerPublicProfile.proto";
 import "POGOProtos/Data/Location.proto";
+import "POGOProtos/Data/Combat/CombatPlayerPreferences.proto";
 
 message CombatPlayerProfile {
 	string player_id = 1;
@@ -10,4 +11,5 @@ message CombatPlayerProfile {
 	repeated string combat_league_template_id = 3;
 	fixed64 buddy_pokemon_id = 4;
 	.POGOProtos.Data.Location location = 5;
+	.POGOProtos.Data.Combat.CombatPlayerPreferences combat_player_preferences = 6;
 }

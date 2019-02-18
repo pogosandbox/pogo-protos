@@ -12,6 +12,7 @@ import "POGOProtos/Settings/Master/Pokemon/StatsAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/CameraAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/EncounterAttributes.proto";
 import "POGOProtos/Settings/Master/Pokemon/EvolutionBranch.proto";
+import "POGOProtos/Settings/Master/Pokemon/AnimationOverride.proto";
 
 message PokemonSettings {
 	.POGOProtos.Enums.PokemonId pokemon_id = 1;
@@ -57,6 +58,7 @@ message PokemonSettings {
 	repeated float combat_opponent_focus_camera_angle = 42;
 	repeated float combat_player_focus_camera_angle = 43;
 	repeated float combat_player_pokemon_position_offset = 44;
+	repeated .POGOProtos.Settings.Master.Pokemon.AnimationOverride photobomb_animation_overrides = 45;
 
 	message PokemonThirdMoveAttributes {
 		int32 stardust_to_unlock = 1;

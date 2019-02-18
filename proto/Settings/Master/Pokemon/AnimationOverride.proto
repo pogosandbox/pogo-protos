@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Pokemon;
+
+message AnimationOverride {
+	PokemonAnim animation = 1;
+	bool blacklist = 2;
+	float anim_min = 3;
+	float anim_max = 4;
+
+	enum PokemonAnim {
+		NONE = 0;
+		IDLE_01 = 1;
+		IDLE_02 = 2;
+		LAND = 3;
+		ATTACK_01 = 4;
+		ATTACK_02 = 5;
+		DAMAGED = 6;
+		STUNNED = 7;
+		LOOP = 8;
+	}
+}

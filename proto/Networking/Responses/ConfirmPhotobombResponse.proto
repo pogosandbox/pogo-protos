@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message ConfirmPhotobombResponse {
+	Status status = 1;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PHOTOBOMB_NOT_FOUND = 2;
+		ERROR_PHOTOBOMB_ALREADY_CONFIRMED = 3;
+		ERROR_UNKNOWN = 4;
+	}
+}
