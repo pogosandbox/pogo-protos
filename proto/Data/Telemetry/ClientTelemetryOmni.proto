@@ -44,6 +44,7 @@ import "POGOProtos/Data/Telemetry/DeviceServiceToggleTelemetry.proto";
 import "POGOProtos/Data/Telemetry/BootTelemetry.proto";
 import "POGOProtos/Data/Telemetry/OnboardingTelemetry.proto";
 import "POGOProtos/Data/Telemetry/LoginActionTelemetry.proto";
+import "POGOProtos/Data/Telemetry/ArPhotoSession.proto";
 import "POGOProtos/Settings/SocialClientSettings.proto";
 import "POGOProtos/Data/Player/UserAttributes.proto";
 
@@ -93,6 +94,7 @@ message ClientTelemetryOmni {
 		.POGOProtos.Data.Player.UserAttributes user_attributes = 42;
 		.POGOProtos.Data.Telemetry.OnboardingTelemetry onboarding_telemetry = 43;
 		.POGOProtos.Data.Telemetry.LoginActionTelemetry login_action_telemetry = 44;
+		.POGOProtos.Data.Telemetry.ArPhotoSession ar_photo_session_telemetry = 45;
 		.POGOProtos.Data.Telemetry.PlatformServerData server_data = 1001;
 	}
 }

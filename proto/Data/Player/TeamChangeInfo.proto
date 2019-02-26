@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Player;
+
+message TeamChangeInfo {
+	int64 last_acquired_time = 1;
+	int32 num_items_acquired = 2;
+}

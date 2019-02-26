@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ArPhotoSession {
+	ArType ar_type = 1;
+	Step furthest_step_completed = 2;
+	int32 num_photos_taken = 3;
+	int32 num_photos_shared = 4;
+
+	enum ArType {
+		UNSET = 0;
+		PLUS = 1;
+		CLASSIC = 2;
+	}
+
+	enum Step {
+		UNKNOWN = 0;
+		CAMERA_PERMISSION_GRANTED = 1;
+		ARPLUS_PLANE_FOUND = 2;
+		ARPLUS_POKEMON_PLACED = 3;
+		PHOTO_TAKEN = 4;
+		PHOTO_SHARED = 5;
+	}
+}

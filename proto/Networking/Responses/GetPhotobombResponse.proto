@@ -1,0 +1,24 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
+
+message GetPhotobombResponse {
+	Status status = 1;
+	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+	double lat = 3;
+	double lng = 4;
+	string encounter_location = 5;
+	fixed64 encounter_id = 6;
+	int64 disappear_time_ms = 7;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 8;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		PHOTOBOMB_NOT_AVAILABLE = 2;
+		ENCOUNTER_ALREADY_COMPLETED = 3;
+		ERROR_UNKNOWN = 4;
+	}
+}

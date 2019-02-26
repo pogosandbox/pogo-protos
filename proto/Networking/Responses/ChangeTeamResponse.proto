@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PlayerData.proto";
+
+message ChangeTeamResponse {
+	Status status = 1;
+	.POGOProtos.Data.PlayerData updated_player = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_SAME_TEAM = 2;
+		ERROR_ITEM_NOT_IN_INVENTORY = 3;
+		ERROR_WRONG_ITEM = 4;
+		ERROR_UNKNOWN = 5;
+	}
+}

@@ -4,6 +4,7 @@ package POGOProtos.Data.Combat;
 import "POGOProtos/Data/PokemonDisplay.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
 import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message CombatPokemon {
 	fixed64 pokemon_id = 1;
@@ -25,4 +26,5 @@ message CombatPokemon {
 	int32 battles_won = 17;
 	int32 battles_lost = 18;
 	string nickname = 19;
+	POGOProtos.Inventory.Item.ItemId pokeball = 20;
 }

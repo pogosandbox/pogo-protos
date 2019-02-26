@@ -8,6 +8,7 @@ import "POGOProtos/Data/Player/EquippedBadge.proto";
 import "POGOProtos/Data/Player/ContactSettings.proto";
 import "POGOProtos/Data/Store/CurrencyQuantity.proto";
 import "POGOProtos/Data/Player/SocialPlayerSettings.proto";
+import "POGOProtos/Data/Player/TeamChangeInfo.proto";
 import "POGOProtos/Data/BuddyPokemon.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Data/Combat/CombatPlayerPreferences.proto";
@@ -32,4 +33,5 @@ message PlayerData {
 	.POGOProtos.Data.Player.SocialPlayerSettings social_player_settings = 20;
 	.POGOProtos.Data.Combat.CombatPlayerPreferences combat_player_preferences = 21;
 	string player_support_id = 22;
+	.POGOProtos.Data.Player.TeamChangeInfo team_change_info = 23;
 }

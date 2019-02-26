@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message EncounterPhotobombResponse {
+	Result result = 1;
+	.POGOProtos.Data.PokemonData pokemon = 2;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
+	.POGOProtos.Inventory.Item.ItemId active_item = 4;
+	int32 arplus_attempts_until_flee = 5;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		NO_ENCOUNTER_AVAILABLE = 2;
+		POKEMON_INVENTORY_FULL = 3;
+		ERROR_UNKNOWN = 4;
+	}
+}
