@@ -4,4 +4,6 @@ package POGOProtos.Settings;
 message PokecoinPurchaseDisplaySettings {
 	bool feature_enabled = 1;
 	repeated string enabled_countries = 2;
+	repeated string enabled_currencies = 3;
+	bool use_pokecoin_purchase_display_gmt = 4;
 }

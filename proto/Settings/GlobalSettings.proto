@@ -33,6 +33,7 @@ import "POGOProtos/Settings/BackgroundModeGlobalSettings.proto";
 import "POGOProtos/Settings/ProbeSettings.proto";
 import "POGOProtos/Settings/PokemonGlobalSettings.proto";
 import "POGOProtos/Settings/ArPhotoGlobalSettings.proto";
+import "POGOProtos/Settings/AvatarGlobalSettings.proto";
 
 message GlobalSettings {
 	.POGOProtos.Settings.FortSettings fort_settings = 2;
@@ -70,4 +71,5 @@ message GlobalSettings {
 	.POGOProtos.Settings.ArPhotoGlobalSettings ar_photo_settings = 34;
 	.POGOProtos.Settings.PoiGlobalSettings poi_settings = 35;
 	.POGOProtos.Settings.PokemonGlobalSettings pokemon_settings = 36;
+	.POGOProtos.Settings.AvatarGlobalSettings avatar_settings = 37;
 }

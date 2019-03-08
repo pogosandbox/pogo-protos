@@ -8,4 +8,5 @@ message GetBuddyWalkedResponse {
 	.POGOProtos.Enums.PokemonFamilyId family_candy_id = 2;
 	int32 candy_earned_count = 3;
 	double km_remaining = 4;
+	double last_km_awarded = 5;
 }

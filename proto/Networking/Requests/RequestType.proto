@@ -149,7 +149,7 @@ enum RequestType {
 	CONFIRM_PHOTOBOMB = 1102;                   // Implemented
 	GET_PHOTOBOMB = 1103;                       // Implemented
 	ENCOUNTER_PHOTOBOMB = 1104;                 // Implemented
-	GET_SIGNED_GMAP_URL = 1105;                 // Implemented
+	GET_SIGNED_GMAP_URL_DEPRECATED = 1105;      // UnUsed - Implemented
 	CHANGE_TEAM = 1106;                         // Implemented
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // ???
