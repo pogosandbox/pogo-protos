@@ -17,6 +17,9 @@ message GymGetInfoResponse {
 	string checkin_image_url = 8;
 	.POGOProtos.Data.Raid.EventInfo event_info = 9;
 	.POGOProtos.Map.Weather.DisplayWeather display_weather = 10;
+	repeated string promo_image = 11;
+	repeated string promo_description = 12;
+	string call_to_action_link = 13;
 
 	enum Result {
 		UNSET = 0;

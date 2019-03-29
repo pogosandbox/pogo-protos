@@ -11,6 +11,7 @@ enum RequestType {
 	REGISTER_BACKGROUND_DEVICE = 8;             // Implemented
 	GET_PLAYER_DAY = 9;                         // Implemented
 	ACKNOWLEDGE_PUNISHMENT = 10;                // Implemented
+	GET_SERVER_TIME = 11;                       // Implemented
 	FORT_SEARCH = 101;                          // Implemented
 	ENCOUNTER = 102;                            // Implemented
 	CATCH_POKEMON = 103;                        // Implemented
@@ -151,6 +152,7 @@ enum RequestType {
 	ENCOUNTER_PHOTOBOMB = 1104;                 // Implemented
 	GET_SIGNED_GMAP_URL_DEPRECATED = 1105;      // UnUsed - Implemented
 	CHANGE_TEAM = 1106;                         // Implemented
+	GET_WEB_TOKEN = 1107;                       // Implemented
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // ???
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented

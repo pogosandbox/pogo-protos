@@ -7,4 +7,6 @@ message GetRaidDetailsMessage {
 	repeated int32 lobby_id = 3;
 	double player_lat_degrees = 4;
 	double player_lng_degrees = 5;
+	double gym_lat_degrees = 6;
+	double gym_lng_degrees = 7;
 }

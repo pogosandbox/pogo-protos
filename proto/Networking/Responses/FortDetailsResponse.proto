@@ -24,4 +24,6 @@ message FortDetailsResponse {
 	bool close_soon = 14;
 	string checkin_image_url = 15;
 	.POGOProtos.Data.Raid.EventInfo event_info = 16;
+	repeated string promo_description = 17;
+	string call_to_action_link = 18;
 }

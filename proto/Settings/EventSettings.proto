@@ -3,4 +3,7 @@ package POGOProtos.Settings;
 
 message EventSettings {
 	repeated string condolence_ribbon_country = 1;
+	bool enable_event_link = 2;
+	bool enable_event_link_for_children = 3;
+	string event_webtoken_server_url = 4;
 }

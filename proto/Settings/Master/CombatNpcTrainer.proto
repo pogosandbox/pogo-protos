@@ -14,4 +14,6 @@ message CombatNpcTrainer {
 	repeated .POGOProtos.Data.NpcPokemon available_pokemon = 8;
 	string trainer_title = 9;
 	string trainer_quote = 10;
+	string icon_url = 11;
+	string backdrop_url = 12;
 }
