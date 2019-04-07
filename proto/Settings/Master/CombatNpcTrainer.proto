@@ -15,5 +15,5 @@ message CombatNpcTrainer {
 	string trainer_title = 9;
 	string trainer_quote = 10;
 	string icon_url = 11;
-	string backdrop_url = 12;
+	string backdrop_image_bundle = 12;
 }
