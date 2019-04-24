@@ -7,14 +7,9 @@ import "POGOProtos/Data/Fitness/FitnessMetrics.proto";
 import "POGOProtos/Data/Fitness/FitnessMetricsReportHistory.proto";
 
 message FitnessRecord {
-	repeated HourlyReportsEntry hourly_reports = 1;
+	map<int64, .POGOProtos.Data.Fitness.FitnessMetrics> hourly_reports = 1;
 	repeated .POGOProtos.Data.Fitness.FitnessSample raw_samples = 2;
 	int64 last_aggregation_timestamp_ms = 3;
 	.POGOProtos.Data.Fitness.FitnessStats fitness_stats = 4;
 	.POGOProtos.Data.Fitness.FitnessMetricsReportHistory report_history = 5;
-
-	message HourlyReportsEntry {
-		int64 key = 1;
-		.POGOProtos.Data.Fitness.FitnessMetrics value = 2;
-	}
 }
