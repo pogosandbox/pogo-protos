@@ -13,4 +13,9 @@ message EvolutionBranch {
 	float km_buddy_distance_requirement = 4;
 	.POGOProtos.Enums.Form form = 5;
 	.POGOProtos.Enums.Gender gender_requirement = 6;
+	.POGOProtos.Inventory.Item.ItemId lure_item_requirement = 8;
+	bool must_be_buddy = 9;
+	bool only_daytime = 10;
+	bool only_nighttime = 11;
+	int32 priority = 12;
 }

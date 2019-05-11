@@ -11,5 +11,8 @@ enum PokemonAnim {
 	DAMAGED = 6;
 	STUNNED = 7;
 	LOOP = 8;
-	_MAX = 9;
+	SLEEP_01 = 9;
+	SLEEP_02 = 10;
+	SLEEP_WAIT = 11;
+	_MAX = 12;
 }

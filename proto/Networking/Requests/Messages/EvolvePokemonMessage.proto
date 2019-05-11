@@ -2,8 +2,13 @@ syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
 import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/Form.proto";
 
 message EvolvePokemonMessage {
 	fixed64 pokemon_id = 1;
 	.POGOProtos.Inventory.Item.ItemId evolution_item_requirement = 2;
+	.POGOProtos.Enums.PokemonId target_pokemon_id = 3;
+	.POGOProtos.Enums.Form target_pokemon_form = 4;
+	bool use_special = 5;
 }

@@ -17,5 +17,9 @@ message ClientQuest {
 		repeated QuestDisplay subdisplay = 6;
 		bool story_ending_quest = 7;
 		string story_ending_description = 8;
+		string tag_color = 9;
+		string tag_string = 10;
+		string sponsor_string = 11;
+		string partner_id = 12;
 	}
 }

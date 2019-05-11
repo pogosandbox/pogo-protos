@@ -153,6 +153,7 @@ enum RequestType {
 	GET_SIGNED_GMAP_URL_DEPRECATED = 1105;      // UnUsed - Implemented
 	CHANGE_TEAM = 1106;                         // Implemented
 	GET_WEB_TOKEN = 1107;                       // Implemented
+	COMPLETE_SNAPSHOT_SESSION = 1110;           // Implemented
 	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented
 	UNREGISTER_PUSH_NOTIFICATION = 5001;        // ???
 	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented
@@ -188,4 +189,5 @@ enum RequestType {
 	REQUEST_GEOFENCE_UPDATES = 5033;            // Implemented
 	UPDATE_PLAYER_LOCATION = 5034;              // Implemented
 	GENERATE_GMAP_SIGNED_URL = 5035;            // Implemented
+	GET_GMAP_SETTINGS = 5036;                   // Implemented
 }

@@ -6,6 +6,8 @@ enum DeviceServiceTelemetryIds {
 	FITNESS = 1;
 	SMART_WATCH = 2;
 	SFIDA_DEVICE_SERVICE = 3;
+	AWARENESS = 4;
+	ADVENTURE_SYNC = 5;
 }
 
 enum PermissionContextTelemetryIds {
@@ -16,6 +18,7 @@ enum PermissionContextTelemetryIds {
 	SMART_WATCH_INSTALLED = 4;
 	SFIDA_SESSION_STARTED = 5;
 	SETTINGS_TOGGLE = 6;
+	NEARBY_PANEL_OPENED = 7;
 }
 
 enum PermissionFlowStepTelemetryIds {
@@ -23,6 +26,7 @@ enum PermissionFlowStepTelemetryIds {
 	INITIAL_PROMPT = 1;
 	FITNESS_PERMISSION = 2;
 	LOCATION_PERMISSION = 3;
+	ACTIVITY_PERMISSIONS = 4;
 }
 
 enum AssetTelemetryIds {

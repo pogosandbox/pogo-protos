@@ -30,4 +30,5 @@ enum PlatformRequestType {
 	REGISTER_DOWNSTREAM_SERVER_ACTIONS = 30;  // Implemented
 	DOWNSTREAM_SERVER_ACTIONS = 31;           // ???
 	TEMP_TEST_RESULT = 101;                   // ???
+	GET_GMAP_SETTINGS = 5036;                 // Implemented
 }

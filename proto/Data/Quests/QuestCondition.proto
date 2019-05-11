@@ -28,6 +28,11 @@ message QuestCondition {
 		WithBadgeType with_badge_type = 15;
 		WithPlayerLevel with_player_level = 16;
 		WithWinBattleStatus with_win_battle_status = 17;
+		WithUniquePokemon with_unique_pokemon = 18;
+		WithNpcCombat with_npc_combat = 19;
+		WithPvpCombat with_pvp_combat = 20;
+		WithLocation with_location = 21;
+		WithDistance with_distance = 22;
 	}
 
 	enum ConditionType {
@@ -52,6 +57,32 @@ message QuestCondition {
 		WITH_WIN_BATTLE_STATUS = 18;
 		WITH_NEW_FRIEND = 19;
 		WITH_DAYS_IN_A_ROW = 20;
+		WITH_UNIQUE_POKEMON = 21;
+		WITH_NPC_COMBAT = 22;
+		WITH_PVP_COMBAT = 23;
+		WITH_LOCATION = 24;
+		WITH_DISTANCE = 25;
+	}
+
+	message WithUniquePokemon {
+	}
+
+	message WithPvpCombat {
+		bool requires_win = 1;
+		repeated string combat_league_template_id = 2;
+	}
+
+	message WithNpcCombat {
+		bool requires_win = 1;
+		repeated string combat_npc_trainer_id = 2;
+	}
+
+	message WithLocation {
+		repeated int64 s2_cell_id = 1;
+	}
+
+	message WithDistance {
+		double distance_km = 1;
 	}
 
 	message WithPokemonType {
