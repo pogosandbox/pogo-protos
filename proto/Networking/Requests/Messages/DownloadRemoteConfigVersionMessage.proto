@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
 import "POGOProtos/Enums/Platform.proto";
+import "POGOProtos/Enums/Store.proto";
 
 message DownloadRemoteConfigVersionMessage {
 	.POGOProtos.Enums.Platform platform = 1;
@@ -9,4 +10,5 @@ message DownloadRemoteConfigVersionMessage {
 	string device_model = 3;
 	string locale = 4;
 	uint32 app_version = 5;
+	.POGOProtos.Enums.Store store = 6;
 }

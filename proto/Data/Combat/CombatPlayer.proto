@@ -16,4 +16,5 @@ message CombatPlayer {
 	.POGOProtos.Data.Combat.CombatAction minigame_action = 8;
 	int64 quick_swap_available_ms = 9;
 	int32 minigame_defense_chances_left = 10;
+	string combat_npc_personality_id = 11;
 }

@@ -43,6 +43,7 @@ import "POGOProtos/Settings/Master/PartyRecommendationSettings.proto";
 import "POGOProtos/Settings/Master/SmeargleMovesSettings.proto";
 import "POGOProtos/Settings/Master/PokecoinPurchaseDisplayGmt.proto";
 import "POGOProtos/Settings/Master/AdventureSyncV2Gmt.proto";
+import "POGOProtos/Settings/Master/LoadingScreen.proto";
 
 message DownloadItemTemplatesResponse {
 	Result result = 1;
@@ -94,6 +95,7 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.SmeargleMovesSettings smeargle_moves_settings = 44;
 		.POGOProtos.Settings.Master.PokecoinPurchaseDisplayGmt pokecoin_purchase_display_gmt = 45;
 		.POGOProtos.Settings.Master.AdventureSyncV2Gmt adventure_sync_v2_gmt = 46;
+		.POGOProtos.Settings.Master.LoadingScreen loading_screen_settings = 47;
 	}
 
 	enum Result {

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum Store {
+	STORE_UNSET = 0;
+	STORE_APPLE = 1;
+	STORE_GOOGLE = 2;
+	STORE_SAMSUNG = 3;
+}

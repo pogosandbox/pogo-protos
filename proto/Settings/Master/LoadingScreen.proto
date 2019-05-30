@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message LoadingScreen {
+	string url = 1;
+	int64 display_after_timestamp_ms = 2;
+	map<string, string> color_settings = 3;
+}

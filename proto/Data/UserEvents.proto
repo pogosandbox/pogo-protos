@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+message UserEvents {
+	int32 catch_streak = 1;
+	int32 spin_streak = 2;
+	int32 field_research_stamp_progress = 3;
+	int32 level_up = 4;
+	bool sent_friend_request = 5;
+}
