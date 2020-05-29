@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Vasa;
-
-import "POGOProtos/Map/Fort/SponsoredDetails.proto";
-
-message AdDetails {
-	.POGOProtos.Map.Fort.SponsoredDetails.ImageTextCreative image_text_creative = 1;
-	bytes encrypted_ad_token = 2;
-}

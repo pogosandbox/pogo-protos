@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Titan.Responses;
+
+import "POGOProtos/Networking/Requests/Titan/AvailableSubmissionsPerSubmissionType.proto";
+
+message GetAvailableSubmissionsResponse {
+	int32 submissions_left = 1;
+	int32 min_player_level = 2;
+	bool has_valid_email = 3;
+	bool is_feature_enabled = 4;
+	int64 time_window_for_submissions_limit_ms = 5;
+	int32 max_poi_distance_in_meters = 6;
+	repeated string blacklisted_os = 7;
+	repeated .POGOProtos.Networking.Requests.Titan.AvailableSubmissionsPerSubmissionType availability_result_per_type = 8;
+}

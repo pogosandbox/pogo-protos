@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameFitness;
+
+import "POGOProtos/Networking/Requests/Game/GameFitness/GameFitnessAction.proto";
+
+message GameFitnessActionRequest {
+	.POGOProtos.Networking.Requests.Game.GameFitness.GameFitnessAction request_type = 1;
+	bytes request_message = 2;
+}

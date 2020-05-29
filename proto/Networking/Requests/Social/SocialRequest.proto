@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Social;
+
+import "POGOProtos/Networking/Requests/Social/SocialAction.proto";
+
+message SocialRequest {
+	.POGOProtos.Networking.Requests.Social.SocialAction social_action = 1;
+	bytes request_message = 2;
+}

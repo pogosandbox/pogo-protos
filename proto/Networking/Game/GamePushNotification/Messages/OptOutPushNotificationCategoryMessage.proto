@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Game.GamePushNotification.Messages;
-
-message OptOutPushNotificationCategoryMessage {
-	repeated string categories = 1;
-}

@@ -1,0 +1,53 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Platform;
+
+enum PlatformRequestType {
+	UNKNOWN_PLATFORM_CLIENT_ACTION = 0;         // No implementation required
+	REGISTER_PUSH_NOTIFICATION = 5000;          // Implemented
+	UNREGISTER_PUSH_NOTIFICATION = 5001;        // ???
+	UPDATE_NOTIFICATION_STATUS = 5002;          // Implemented
+	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 5003;  // Implemented
+	DOWNLOAD_GAME_MASTER_TEMPLATES = 5004;      // Implemented
+	GET_INVENTORY = 5005;                       // Implemented
+	REDEEM_PASSCODE = 5006;                     // Implemented
+	PING = 5007;                                // Implemented
+	ADD_LOGIN_ACTION = 5008;                    // Implemented
+	REMOVE_LOGIN_ACTION = 5009;                 // Implemented
+	LIST_LOGIN_ACTION = 5010;                   // Implemented
+	ADD_NEW_POI = 5011;                         // Implemented
+	PROXY_SOCIAL_ACTION = 5012;                 // Implemented
+	DEPRECATED_CLIENT_TELEMETRY = 5013;         // ???
+	GET_AVAILABLE_SUBMISSIONS = 5014;           // Implemented
+	GET_SIGNED_URL_FOR_PHOTO_UPLOAD = 5015;     // ???
+	REPLACE_LOGIN_ACTION = 5016;                // Implemented
+	PROXY_SOCIAL_SIDE_CHANNEL_ACTION = 5017;    // Implemented
+	COLLECT_CLIENT_TELEMETRY = 5018;            // ???
+	PURCHASE_SKU = 5019;                        // Implemented
+	GET_AVAILABLE_SKUS_AND_BALANCES = 5020;     // Implemented
+	REDEEM_GOOGLE_RECEIPT = 5021;               // Implemented
+	REDEEM_APPLE_RECEIPT = 5022;                // Implemented
+	REDEEM_DESKTOP_RECEIPT = 5023;              // ???
+	UPDATE_FITNESS_METRICS = 5024;              // ???
+	GET_FITNESS_REPORT = 5025;                  // Implemented
+	GET_CLIENT_TELEMETRY_SETTINGS = 5026;       // Implemented
+	PING_ASYNC = 5027;                          // ???
+	REGISTER_BACKGROUND_SERVICE = 5028;         // ???
+	GET_CLIENT_BGMODE_SETTINGS = 5029;          // Implemented
+	PING_DOWNSTREAM = 5030;                     // ???
+	SET_IN_GAME_CURRENCY_EXCHANGE_RATE = 5032;  // Implemented
+	REQUEST_GEOFENCE_UPDATES = 5033;            // Implemented
+	UPDATE_PLAYER_LOCATION = 5034;              // Implemented
+	GENERATE_GMAP_SIGNED_URL = 5035;            // Implemented
+	GET_GMAP_SETTINGS = 5036;                   // Implemented
+	REDEEM_SAMSUNG_RECEIPT = 5037;              // Implemented
+	ADD_NEW_ROUTE = 5038;                       // ??? maybe same POGOProtos.Networking.Titan.Messages.SubmitNewRouteMessage
+	GET_OUTSTANDING_WARNINGS = 5039;            // Implemented
+	ACKNOWLEDGE_WARNINGS = 5040;                // Implemented
+	SUBMIT_POI_IMAGE = 5041;                    // Implemented
+	SUBMIT_POI_TEXT_METADATA_UPDATE = 5042;     // Implemented
+	SUBMIT_POI_LOCATION_UPDATE = 5043;          // Implemented
+	SUBMIT_POI_TAKEDOWN_REQUEST = 5044;         // Implemented
+	GET_WEB_TOKEN_ACTION = 5045;                // Implemented
+	GET_ADVENTURE_SYNC_SETTINGS = 5046;         // Implemented
+	UPDATE_ADVENTURE_SYNC_SETTINGS = 5047;      // Implemented
+}

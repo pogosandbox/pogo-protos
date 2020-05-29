@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Game.GameAnticheat;
-
-enum GameAnticheatAction {
-	UNKNOWN_GAME_ANTICHEAT_ACTION = 0;  // No implementation required
-	GET_OUTSTANDING_WARNINGS = 200000;  // Implemented
-	ACKNOWLEDGE_WARNINGS = 200001;      // Implemented
-}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameGmTemplates;
+
+import "POGOProtos/Networking/Requests/Game/GameGmTemplates/GameGmTemplatesAction.proto";
+
+message GameGmTemplatesActionRequest {
+	.POGOProtos.Networking.Requests.Game.GameGmTemplates.GameGmTemplatesAction request_type = 1;
+	bytes request_message = 2;
+}

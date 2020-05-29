@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameTelemetry;
+
+enum GameTelemetryAction {
+	UNKNOWN_GAME_TELEMETRY_ACTION = 0;       // No implementation required
+	COLLECT_CLIENT_TELEMETRY = 610000;       // ???
+	GET_CLIENT_TELEMETRY_SETTINGS = 610001;  // Implemented
+}

@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GamePlayer;
+
+enum GamePlayerAction {
+	UNKNOWN_GAME_PLAYER_ACTION = 0;  // No implementation required
+	GET_INVENTORY = 380000;          // Implemented
+}

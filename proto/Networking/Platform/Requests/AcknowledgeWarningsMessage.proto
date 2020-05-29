@@ -1,8 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Platform.Requests;
-
-import "POGOProtos/Enums/PlatformWarningType.proto";
-
-message AcknowledgeWarningsMessage {
-	repeated .POGOProtos.Enums.PlatformWarningType warning = 1;
-}

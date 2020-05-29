@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameLocationAwareness;
+
+import "POGOProtos/Networking/Requests/Game/GameLocationAwareness/GameLocationAwarenessAction.proto";
+
+message GameLocationAwarenessActionRequest {
+	.POGOProtos.Networking.Requests.Game.GameLocationAwareness.GameLocationAwarenessAction request_type = 1;
+	bytes request_message = 2;
+}

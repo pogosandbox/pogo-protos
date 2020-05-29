@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Game.GamePushNotification;
-
-enum GamePushNotificationAction {
-	UNKNOWN_GAME_PUSH_NOTIFICATION_ACTION = 0;    // No implementation required
-	REGISTER_PUSH_NOTIFICATION = 320000;          // Implemented
-	UNREGISTER_PUSH_NOTIFICATION = 320001;        // ???
-	OPT_OUT_PUSH_NOTIFICATION_CATEGORY = 320002;  // Implemented
-}

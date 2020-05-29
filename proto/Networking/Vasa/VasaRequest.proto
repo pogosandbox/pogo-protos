@@ -1,9 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Vasa;
-
-import "POGOProtos/Networking/Vasa/VasaClientAction.proto";
-
-message SocialRequest {
-	.POGOProtos.Networking.Vasa.VasaClientAction.ActionEnum vasa_action = 1;
-	bytes request_message = 2;
-}

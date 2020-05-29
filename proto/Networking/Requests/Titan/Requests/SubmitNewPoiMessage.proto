@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Titan.Requests;
+
+message SubmitNewPoiMessage {
+	string title = 1;
+	string long_description = 2;
+	int32 lat_e6 = 4;
+	int32 lng_e6 = 5;
+	string supporting_statement = 14;
+	bool async_file_upload = 18;
+}

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameAccountRegistry;
+
+import "POGOProtos/Networking/Requests/Game/GameAccountRegistry/GameAccountRegistryActions.proto";
+
+message GameAccountRegistryActionsRequest {
+	.POGOProtos.Networking.Requests.Game.GameAccountRegistry.GameAccountRegistryActions request_type = 1;
+	bytes request_message = 2;
+}

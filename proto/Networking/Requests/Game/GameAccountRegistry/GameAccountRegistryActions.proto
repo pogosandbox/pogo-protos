@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Game.GameAccountRegistry;
+
+enum GameAccountRegistryActions {
+	UNKNOWN_GAME_ACCOUNT_REGISTRY_ACTION = 0;  // No implementation required
+	ADD_LOGIN_ACTION = 600000;                 // Implemented
+	REMOVE_LOGIN_ACTION = 600001;              // Implemented
+	LIST_LOGIN_ACTION = 600002;                // Implemented
+	REPLACE_LOGIN_ACTION = 600003;             // Implemented
+}

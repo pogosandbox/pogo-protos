@@ -62,7 +62,7 @@ import "POGOProtos/Data/Buddy/BuddyMultiplayerConnectionFailed.proto";
 import "POGOProtos/Data/Buddy/BuddyMultiplayerConnectionSucceeded.proto";
 import "POGOProtos/Data/Buddy/BuddyMultiplayerTimeToGetSession.proto";
 import "POGOProtos/Data/Telemetry/ARBuddyMultiplayerSessionTelemetry.proto";
-import "POGOProtos/Networking/Platform/PlatformCommonFilter.proto";
+import "POGOProtos/Networking/Requests/Platform/PlatformCommonFilter.proto";
 import "POGOProtos/Data/Telemetry/MonodepthDownloadTelemetry.proto";
 import "POGOProtos/Data/Telemetry/ArMappingTelemetry.proto";
 import "POGOProtos/Data/Telemetry/RemoteRaidTelemetry.proto";
@@ -135,5 +135,5 @@ message ClientTelemetryOmni {
 	}
 
 	.POGOProtos.Data.Telemetry.PlatformServerData server_data = 1001;
-	.POGOProtos.Networking.Platform.PlatformCommonFilter common_filters = 1002;
+	.POGOProtos.Networking.Requests.Platform.PlatformCommonFilter common_filters = 1002;
 }

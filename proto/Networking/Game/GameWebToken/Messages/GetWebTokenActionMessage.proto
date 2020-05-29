@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Game.GameWebToken.Messages;
-
-message GetWebTokenActionMessage {
-	string client_id = 1;
-}

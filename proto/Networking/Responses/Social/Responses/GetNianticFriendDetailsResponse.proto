@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses.Social.Responses;
+
+message GetNianticFriendDetailsResponse {
+	Result result = 1;
+	repeated NianticFriendDetails niantic_friend_details = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+		ERROR_EXCEEDS_MAX_PLAYERS_PER_QUERY = 3;
+		ERROR_SOCIAL_GRAPH_IMPORT_OPT_OUT = 4;
+	}
+
+	message NianticFriendDetails {
+		string player_id = 1;
+		string friend_code = 2;
+		bytes public_data = 3;
+	}
+}

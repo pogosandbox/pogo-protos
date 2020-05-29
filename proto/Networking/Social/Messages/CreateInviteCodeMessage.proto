@@ -1,6 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Social.Messages;
-
-message CreateInviteCodeMessage {
-	bool force_generate_code = 1;
-}
