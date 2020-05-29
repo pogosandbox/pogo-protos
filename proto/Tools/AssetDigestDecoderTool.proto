@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Tools;
+
+message AssetDigestDecoderTool {
+	repeated AssetDigestEntry digest = 1;
+	uint64 timestamp_ms = 2;
+	Result result = 3;
+	int32 page_offset = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		PAGE = 2;
+		RETRY = 3;
+	}
+
+	message AssetDigestEntry {
+		string asset_id = 1;
+		string bundle_name = 2;
+		int64 version = 3;
+		fixed32 checksum = 4;
+		int32 size = 5;
+		bytes key = 6;
+	}
+}
