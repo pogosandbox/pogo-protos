@@ -3651,6 +3651,53 @@ export namespace POGOProtos {
             }
         }
 
+        namespace Platform {
+
+            interface IInternalAuth {
+                email?: (string|null);
+                player_id?: (string|null);
+                app_id?: (string|null);
+                key?: (string|null);
+            }
+
+            class InternalAuth implements IInternalAuth {
+                constructor(properties?: POGOProtos.Data.Platform.IInternalAuth);
+                public email: string;
+                public player_id: string;
+                public app_id: string;
+                public key: string;
+                public static encode(message: POGOProtos.Data.Platform.IInternalAuth, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Platform.InternalAuth;
+                public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Platform.InternalAuth;
+                public static toObject(message: POGOProtos.Data.Platform.InternalAuth, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public toJSON(): { [k: string]: any };
+            }
+
+            interface IPlatformCommonFilter {
+                application_identifier?: (string|null);
+                operating_system_name?: (string|null);
+                device_model?: (string|null);
+                locale_country_code?: (string|null);
+                locale_language_code?: (string|null);
+                sampling_probability?: (number|null);
+            }
+
+            class PlatformCommonFilter implements IPlatformCommonFilter {
+                constructor(properties?: POGOProtos.Data.Platform.IPlatformCommonFilter);
+                public application_identifier: string;
+                public operating_system_name: string;
+                public device_model: string;
+                public locale_country_code: string;
+                public locale_language_code: string;
+                public sampling_probability: number;
+                public static encode(message: POGOProtos.Data.Platform.IPlatformCommonFilter, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Platform.PlatformCommonFilter;
+                public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Platform.PlatformCommonFilter;
+                public static toObject(message: POGOProtos.Data.Platform.PlatformCommonFilter, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
         namespace Player {
 
             interface ICurrency {
@@ -6772,7 +6819,7 @@ export namespace POGOProtos {
                 ar_mapping_telemetry?: (POGOProtos.Data.Telemetry.IArMappingTelemetry|null);
                 remote_raid_telemetry?: (POGOProtos.Data.Telemetry.IRemoteRaidTelemetry|null);
                 server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
-                common_filters?: (POGOProtos.Networking.Requests.Platform.IPlatformCommonFilter|null);
+                common_filters?: (POGOProtos.Data.Platform.IPlatformCommonFilter|null);
             }
 
             class ClientTelemetryOmni implements IClientTelemetryOmni {
@@ -6841,7 +6888,7 @@ export namespace POGOProtos {
                 public ar_mapping_telemetry?: (POGOProtos.Data.Telemetry.IArMappingTelemetry|null);
                 public remote_raid_telemetry?: (POGOProtos.Data.Telemetry.IRemoteRaidTelemetry|null);
                 public server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
-                public common_filters?: (POGOProtos.Networking.Requests.Platform.IPlatformCommonFilter|null);
+                public common_filters?: (POGOProtos.Data.Platform.IPlatformCommonFilter|null);
                 public TelemetryData?: ("boot_time"|"frame_rate"|"generic_click_telemetry"|"map_events_telemetry"|"spin_pokestop_telemetry"|"profile_page_telemetry"|"shopping_page_telemetry"|"encounter_pokemon_telemetry"|"catch_pokemon_telemetry"|"deploy_pokemon_telemetry"|"feed_pokemon_telemetry"|"evolve_pokemon_telemetry"|"release_pokemon_telemetry"|"nickname_pokemon_telemetry"|"news_page_telemetry"|"item_telemetry"|"battle_party_telemetry"|"passcode_redeem_telemetry"|"link_login_telemetry"|"raid_telemetry"|"push_notification_telemetry"|"avatar_customization_telemetry"|"read_point_of_interest_description_telemetry"|"web_telemetry"|"change_ar_telemetry"|"weather_detail_click_telemetry"|"user_issue_weather_report"|"pokemon_inventory_telemetry"|"social_telemetry"|"check_encounter_info_telemetry"|"pokemon_go_plus_telemetry"|"rpc_timing_telemetry"|"social_gift_count_telemetry"|"asset_bundle_telemetry"|"asset_poi_download_telemetry"|"asset_stream_download_telemetry"|"asset_stream_cache_culled_telemetry"|"rpc_socket_timing_telemetry"|"permissions_flow"|"device_service_toggle"|"boot_telemetry"|"user_attributes"|"onboarding_telemetry"|"login_action_telemetry"|"ar_photo_session_telemetry"|"invasion_telemetry"|"combat_minigame_telemetry"|"leave_point_of_interest_telemetry"|"view_point_of_interest_image_telemetry"|"combat_hub_entrance_telemetry"|"leave_interaction_range_telemetry"|"shopping_page_click_telemetry"|"shopping_page_scroll_telemetry"|"device_specifications_telemetry"|"screen_resolution_telemetry"|"ar_buddy_multiplayer_session_telemetry"|"buddy_multiplayer_connection_failed_telemetry"|"buddy_multiplayer_connection_succeeded_telemetry"|"buddy_multiplayer_time_to_get_session_telemetry"|"player_hud_notification_click_telemetry"|"monodepth_download_telemetry"|"ar_mapping_telemetry"|"remote_raid_telemetry");
                 public static encode(message: POGOProtos.Data.Telemetry.IClientTelemetryOmni, writer?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Telemetry.ClientTelemetryOmni;
@@ -8257,6 +8304,149 @@ export namespace POGOProtos {
             }
         }
 
+        namespace Titan {
+
+            interface IAvailableSubmissionsPerSubmissionType {
+                player_submission_type?: (POGOProtos.Enums.PlayerSubmissionType|null);
+                submissions_left?: (number|null);
+                min_player_level?: (number|null);
+                is_feature_enabled?: (boolean|null);
+                time_window_for_submissions_limit_ms?: (number|Long|null);
+                max_poi_distance_in_meters?: (number|null);
+                blacklisted_os?: (string[]|null);
+            }
+
+            class AvailableSubmissionsPerSubmissionType implements IAvailableSubmissionsPerSubmissionType {
+                constructor(properties?: POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType);
+                public player_submission_type: POGOProtos.Enums.PlayerSubmissionType;
+                public submissions_left: number;
+                public min_player_level: number;
+                public is_feature_enabled: boolean;
+                public time_window_for_submissions_limit_ms: (number|Long);
+                public max_poi_distance_in_meters: number;
+                public blacklisted_os: string[];
+                public static encode(message: POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Titan.AvailableSubmissionsPerSubmissionType;
+                public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Titan.AvailableSubmissionsPerSubmissionType;
+                public static toObject(message: POGOProtos.Data.Titan.AvailableSubmissionsPerSubmissionType, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public toJSON(): { [k: string]: any };
+            }
+
+            interface ITitanGameClientTelemetryOmni {
+                poi_submission_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry|null);
+                poi_submission_photo_upload_error_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry|null);
+                player_metadata_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry|null);
+                server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
+            }
+
+            class TitanGameClientTelemetryOmni implements ITitanGameClientTelemetryOmni {
+                constructor(properties?: POGOProtos.Data.Titan.ITitanGameClientTelemetryOmni);
+                public poi_submission_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry|null);
+                public poi_submission_photo_upload_error_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry|null);
+                public player_metadata_telemetry?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry|null);
+                public server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
+                public TelemetryData?: ("poi_submission_telemetry"|"poi_submission_photo_upload_error_telemetry"|"player_metadata_telemetry"|"server_data");
+                public static encode(message: POGOProtos.Data.Titan.ITitanGameClientTelemetryOmni, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni;
+                public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni;
+                public static toObject(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public toJSON(): { [k: string]: any };
+            }
+
+            namespace TitanGameClientTelemetryOmni {
+
+                interface IPoiPlayerMetadataTelemetry {
+                    device_model?: (string|null);
+                    device_os?: (string|null);
+                }
+
+                class PoiPlayerMetadataTelemetry implements IPoiPlayerMetadataTelemetry {
+                    constructor(properties?: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry);
+                    public device_model: string;
+                    public device_os: string;
+                    public static encode(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry;
+                    public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry;
+                    public static toObject(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public toJSON(): { [k: string]: any };
+                }
+
+                interface IPoiSubmissionPhotoUploadErrorTelemetry {
+                    error_id?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry.PoiSubmissionPhotoUploadErrorIds|null);
+                    image_type?: (POGOProtos.Enums.PoiImageType|null);
+                    error_message?: (string|null);
+                }
+
+                class PoiSubmissionPhotoUploadErrorTelemetry implements IPoiSubmissionPhotoUploadErrorTelemetry {
+                    constructor(properties?: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry);
+                    public error_id: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry.PoiSubmissionPhotoUploadErrorIds;
+                    public image_type: POGOProtos.Enums.PoiImageType;
+                    public error_message: string;
+                    public static encode(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry;
+                    public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry;
+                    public static toObject(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace PoiSubmissionPhotoUploadErrorTelemetry {
+
+                    enum PoiSubmissionPhotoUploadErrorIds {
+                        UNSET = 0,
+                        POI_PHOTO_UPLOAD_ERROR = 1,
+                        POI_PHOTO_UPLOAD_TIMEOUT = 2
+                    }
+                }
+
+                interface IPoiSubmissionTelemetry {
+                    gui_event_id?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiSubmissionGuiEventId|null);
+                    image_type?: (POGOProtos.Enums.PoiImageType|null);
+                    camera_step_id?: (POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiCameraStepIds|null);
+                }
+
+                class PoiSubmissionTelemetry implements IPoiSubmissionTelemetry {
+                    constructor(properties?: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry);
+                    public gui_event_id: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiSubmissionGuiEventId;
+                    public image_type: POGOProtos.Enums.PoiImageType;
+                    public camera_step_id: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiCameraStepIds;
+                    public static encode(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
+                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry;
+                    public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry;
+                    public static toObject(message: POGOProtos.Data.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                    public toJSON(): { [k: string]: any };
+                }
+
+                namespace PoiSubmissionTelemetry {
+
+                    enum PoiCameraStepIds {
+                        UNSET = 0,
+                        ENTER = 1,
+                        RETAKE = 2,
+                        CONFIRM = 3,
+                        EXIT = 4
+                    }
+
+                    enum PoiSubmissionGuiEventId {
+                        UNKNOWN = 0,
+                        POI_NOMINATION_ENTER = 1,
+                        POI_TUTORIAL_COMPLETE = 2,
+                        POI_MAP_CHANGEDVIEW_MAP = 3,
+                        POI_MAP_CHANGEDVIEW_SATELLITE = 4,
+                        POI_MAP_CENTER_LOCATION = 5,
+                        POI_LOCATION_SET = 6,
+                        POI_PHOTO_CAMERA_ENTER = 7,
+                        POI_PHOTO_CAMERA_EXIT = 8,
+                        POI_TITLE_ENTERED = 9,
+                        POI_DESCRIPTION_ENTER = 10,
+                        POI_DETAILS_CONFIRM = 11,
+                        POI_SUPPORTINGINFO_ENTER = 12,
+                        POI_SUBMIT_BUTTON_HIT = 13,
+                        POI_EXIT_BUTTON_HIT = 14
+                    }
+                }
+            }
+        }
+
         namespace Token {
 
             interface IAppleToken {
@@ -8525,6 +8715,25 @@ export namespace POGOProtos {
                 public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Trading.TradingPokemon;
                 public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Trading.TradingPokemon;
                 public static toObject(message: POGOProtos.Data.Trading.TradingPokemon, options?: $protobuf.IConversionOptions): { [k: string]: any };
+                public toJSON(): { [k: string]: any };
+            }
+        }
+
+        namespace Vasa {
+
+            interface IAdDetails {
+                image_text_creative?: (POGOProtos.Map.Fort.SponsoredDetails.IImageTextCreative|null);
+                encrypted_ad_token?: (Uint8Array|null);
+            }
+
+            class AdDetails implements IAdDetails {
+                constructor(properties?: POGOProtos.Data.Vasa.IAdDetails);
+                public image_text_creative?: (POGOProtos.Map.Fort.SponsoredDetails.IImageTextCreative|null);
+                public encrypted_ad_token: Uint8Array;
+                public static encode(message: POGOProtos.Data.Vasa.IAdDetails, writer?: $protobuf.Writer): $protobuf.Writer;
+                public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Data.Vasa.AdDetails;
+                public static fromObject(object: { [k: string]: any }): POGOProtos.Data.Vasa.AdDetails;
+                public static toObject(message: POGOProtos.Data.Vasa.AdDetails, options?: $protobuf.IConversionOptions): { [k: string]: any };
                 public toJSON(): { [k: string]: any };
             }
         }
@@ -19562,50 +19771,6 @@ export namespace POGOProtos {
 
             namespace Platform {
 
-                interface IInternalAuth {
-                    email?: (string|null);
-                    player_id?: (string|null);
-                    app_id?: (string|null);
-                    key?: (string|null);
-                }
-
-                class InternalAuth implements IInternalAuth {
-                    constructor(properties?: POGOProtos.Networking.Requests.Platform.IInternalAuth);
-                    public email: string;
-                    public player_id: string;
-                    public app_id: string;
-                    public key: string;
-                    public static encode(message: POGOProtos.Networking.Requests.Platform.IInternalAuth, writer?: $protobuf.Writer): $protobuf.Writer;
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Platform.InternalAuth;
-                    public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Platform.InternalAuth;
-                    public static toObject(message: POGOProtos.Networking.Requests.Platform.InternalAuth, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                    public toJSON(): { [k: string]: any };
-                }
-
-                interface IPlatformCommonFilter {
-                    application_identifier?: (string|null);
-                    operating_system_name?: (string|null);
-                    device_model?: (string|null);
-                    locale_country_code?: (string|null);
-                    locale_language_code?: (string|null);
-                    sampling_probability?: (number|null);
-                }
-
-                class PlatformCommonFilter implements IPlatformCommonFilter {
-                    constructor(properties?: POGOProtos.Networking.Requests.Platform.IPlatformCommonFilter);
-                    public application_identifier: string;
-                    public operating_system_name: string;
-                    public device_model: string;
-                    public locale_country_code: string;
-                    public locale_language_code: string;
-                    public sampling_probability: number;
-                    public static encode(message: POGOProtos.Networking.Requests.Platform.IPlatformCommonFilter, writer?: $protobuf.Writer): $protobuf.Writer;
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Platform.PlatformCommonFilter;
-                    public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Platform.PlatformCommonFilter;
-                    public static toObject(message: POGOProtos.Networking.Requests.Platform.PlatformCommonFilter, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                    public toJSON(): { [k: string]: any };
-                }
-
                 interface IPlatformRequest {
                     platform_request_type?: (POGOProtos.Networking.Requests.Platform.PlatformRequestType|null);
                     request_message?: (Uint8Array|null);
@@ -21049,32 +21214,6 @@ export namespace POGOProtos {
 
             namespace Titan {
 
-                interface IAvailableSubmissionsPerSubmissionType {
-                    player_submission_type?: (POGOProtos.Enums.PlayerSubmissionType|null);
-                    submissions_left?: (number|null);
-                    min_player_level?: (number|null);
-                    is_feature_enabled?: (boolean|null);
-                    time_window_for_submissions_limit_ms?: (number|Long|null);
-                    max_poi_distance_in_meters?: (number|null);
-                    blacklisted_os?: (string[]|null);
-                }
-
-                class AvailableSubmissionsPerSubmissionType implements IAvailableSubmissionsPerSubmissionType {
-                    constructor(properties?: POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType);
-                    public player_submission_type: POGOProtos.Enums.PlayerSubmissionType;
-                    public submissions_left: number;
-                    public min_player_level: number;
-                    public is_feature_enabled: boolean;
-                    public time_window_for_submissions_limit_ms: (number|Long);
-                    public max_poi_distance_in_meters: number;
-                    public blacklisted_os: string[];
-                    public static encode(message: POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType, writer?: $protobuf.Writer): $protobuf.Writer;
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Titan.AvailableSubmissionsPerSubmissionType;
-                    public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Titan.AvailableSubmissionsPerSubmissionType;
-                    public static toObject(message: POGOProtos.Networking.Requests.Titan.AvailableSubmissionsPerSubmissionType, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                    public toJSON(): { [k: string]: any };
-                }
-
                 namespace Requests {
 
                     interface IGenerateGmapSignedUrlMessage {
@@ -21245,139 +21384,9 @@ export namespace POGOProtos {
                         public toJSON(): { [k: string]: any };
                     }
                 }
-
-                interface ITitanGameClientTelemetryOmni {
-                    poi_submission_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry|null);
-                    poi_submission_photo_upload_error_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry|null);
-                    player_metadata_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry|null);
-                    server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
-                }
-
-                class TitanGameClientTelemetryOmni implements ITitanGameClientTelemetryOmni {
-                    constructor(properties?: POGOProtos.Networking.Requests.Titan.ITitanGameClientTelemetryOmni);
-                    public poi_submission_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry|null);
-                    public poi_submission_photo_upload_error_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry|null);
-                    public player_metadata_telemetry?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry|null);
-                    public server_data?: (POGOProtos.Data.Telemetry.IPlatformServerData|null);
-                    public TelemetryData?: ("poi_submission_telemetry"|"poi_submission_photo_upload_error_telemetry"|"player_metadata_telemetry"|"server_data");
-                    public static encode(message: POGOProtos.Networking.Requests.Titan.ITitanGameClientTelemetryOmni, writer?: $protobuf.Writer): $protobuf.Writer;
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni;
-                    public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni;
-                    public static toObject(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                    public toJSON(): { [k: string]: any };
-                }
-
-                namespace TitanGameClientTelemetryOmni {
-
-                    interface IPoiPlayerMetadataTelemetry {
-                        device_model?: (string|null);
-                        device_os?: (string|null);
-                    }
-
-                    class PoiPlayerMetadataTelemetry implements IPoiPlayerMetadataTelemetry {
-                        constructor(properties?: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry);
-                        public device_model: string;
-                        public device_os: string;
-                        public static encode(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiPlayerMetadataTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
-                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry;
-                        public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry;
-                        public static toObject(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiPlayerMetadataTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                        public toJSON(): { [k: string]: any };
-                    }
-
-                    interface IPoiSubmissionPhotoUploadErrorTelemetry {
-                        error_id?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry.PoiSubmissionPhotoUploadErrorIds|null);
-                        image_type?: (POGOProtos.Enums.PoiImageType|null);
-                        error_message?: (string|null);
-                    }
-
-                    class PoiSubmissionPhotoUploadErrorTelemetry implements IPoiSubmissionPhotoUploadErrorTelemetry {
-                        constructor(properties?: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry);
-                        public error_id: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry.PoiSubmissionPhotoUploadErrorIds;
-                        public image_type: POGOProtos.Enums.PoiImageType;
-                        public error_message: string;
-                        public static encode(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionPhotoUploadErrorTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
-                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry;
-                        public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry;
-                        public static toObject(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionPhotoUploadErrorTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                        public toJSON(): { [k: string]: any };
-                    }
-
-                    namespace PoiSubmissionPhotoUploadErrorTelemetry {
-
-                        enum PoiSubmissionPhotoUploadErrorIds {
-                            UNSET = 0,
-                            POI_PHOTO_UPLOAD_ERROR = 1,
-                            POI_PHOTO_UPLOAD_TIMEOUT = 2
-                        }
-                    }
-
-                    interface IPoiSubmissionTelemetry {
-                        gui_event_id?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiSubmissionGuiEventId|null);
-                        image_type?: (POGOProtos.Enums.PoiImageType|null);
-                        camera_step_id?: (POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiCameraStepIds|null);
-                    }
-
-                    class PoiSubmissionTelemetry implements IPoiSubmissionTelemetry {
-                        constructor(properties?: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry);
-                        public gui_event_id: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiSubmissionGuiEventId;
-                        public image_type: POGOProtos.Enums.PoiImageType;
-                        public camera_step_id: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry.PoiCameraStepIds;
-                        public static encode(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.IPoiSubmissionTelemetry, writer?: $protobuf.Writer): $protobuf.Writer;
-                        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry;
-                        public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry;
-                        public static toObject(message: POGOProtos.Networking.Requests.Titan.TitanGameClientTelemetryOmni.PoiSubmissionTelemetry, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                        public toJSON(): { [k: string]: any };
-                    }
-
-                    namespace PoiSubmissionTelemetry {
-
-                        enum PoiCameraStepIds {
-                            UNSET = 0,
-                            ENTER = 1,
-                            RETAKE = 2,
-                            CONFIRM = 3,
-                            EXIT = 4
-                        }
-
-                        enum PoiSubmissionGuiEventId {
-                            UNKNOWN = 0,
-                            POI_NOMINATION_ENTER = 1,
-                            POI_TUTORIAL_COMPLETE = 2,
-                            POI_MAP_CHANGEDVIEW_MAP = 3,
-                            POI_MAP_CHANGEDVIEW_SATELLITE = 4,
-                            POI_MAP_CENTER_LOCATION = 5,
-                            POI_LOCATION_SET = 6,
-                            POI_PHOTO_CAMERA_ENTER = 7,
-                            POI_PHOTO_CAMERA_EXIT = 8,
-                            POI_TITLE_ENTERED = 9,
-                            POI_DESCRIPTION_ENTER = 10,
-                            POI_DETAILS_CONFIRM = 11,
-                            POI_SUPPORTINGINFO_ENTER = 12,
-                            POI_SUBMIT_BUTTON_HIT = 13,
-                            POI_EXIT_BUTTON_HIT = 14
-                        }
-                    }
-                }
             }
 
             namespace Vasa {
-
-                interface IAdDetails {
-                    image_text_creative?: (POGOProtos.Map.Fort.SponsoredDetails.IImageTextCreative|null);
-                    encrypted_ad_token?: (Uint8Array|null);
-                }
-
-                class AdDetails implements IAdDetails {
-                    constructor(properties?: POGOProtos.Networking.Requests.Vasa.IAdDetails);
-                    public image_text_creative?: (POGOProtos.Map.Fort.SponsoredDetails.IImageTextCreative|null);
-                    public encrypted_ad_token: Uint8Array;
-                    public static encode(message: POGOProtos.Networking.Requests.Vasa.IAdDetails, writer?: $protobuf.Writer): $protobuf.Writer;
-                    public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Requests.Vasa.AdDetails;
-                    public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Requests.Vasa.AdDetails;
-                    public static toObject(message: POGOProtos.Networking.Requests.Vasa.AdDetails, options?: $protobuf.IConversionOptions): { [k: string]: any };
-                    public toJSON(): { [k: string]: any };
-                }
 
                 namespace Requests {
 
@@ -24032,7 +24041,7 @@ export namespace POGOProtos {
                             time_window_for_submissions_limit_ms?: (number|Long|null);
                             max_poi_distance_in_meters?: (number|null);
                             blacklisted_os?: (string[]|null);
-                            availability_result_per_type?: (POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
+                            availability_result_per_type?: (POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
                         }
 
                         class GetAvailableSubmissionsResponse implements IGetAvailableSubmissionsResponse {
@@ -24044,7 +24053,7 @@ export namespace POGOProtos {
                             public time_window_for_submissions_limit_ms: (number|Long);
                             public max_poi_distance_in_meters: number;
                             public blacklisted_os: string[];
-                            public availability_result_per_type: POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[];
+                            public availability_result_per_type: POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[];
                             public static encode(message: POGOProtos.Networking.Responses.Game.GamePoi.Responses.IGetAvailableSubmissionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
                             public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Responses.Game.GamePoi.Responses.GetAvailableSubmissionsResponse;
                             public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Responses.Game.GamePoi.Responses.GetAvailableSubmissionsResponse;
@@ -27338,7 +27347,7 @@ export namespace POGOProtos {
                         time_window_for_submissions_limit_ms?: (number|Long|null);
                         max_poi_distance_in_meters?: (number|null);
                         blacklisted_os?: (string[]|null);
-                        availability_result_per_type?: (POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
+                        availability_result_per_type?: (POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
                     }
 
                     class GetAvailableSubmissionsResponse implements IGetAvailableSubmissionsResponse {
@@ -27350,7 +27359,7 @@ export namespace POGOProtos {
                         public time_window_for_submissions_limit_ms: (number|Long);
                         public max_poi_distance_in_meters: number;
                         public blacklisted_os: string[];
-                        public availability_result_per_type: POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[];
+                        public availability_result_per_type: POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[];
                         public static encode(message: POGOProtos.Networking.Responses.Platform.Responses.IGetAvailableSubmissionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
                         public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Responses.Platform.Responses.GetAvailableSubmissionsResponse;
                         public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Responses.Platform.Responses.GetAvailableSubmissionsResponse;
@@ -30187,7 +30196,7 @@ export namespace POGOProtos {
                         time_window_for_submissions_limit_ms?: (number|Long|null);
                         max_poi_distance_in_meters?: (number|null);
                         blacklisted_os?: (string[]|null);
-                        availability_result_per_type?: (POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
+                        availability_result_per_type?: (POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[]|null);
                     }
 
                     class GetAvailableSubmissionsResponse implements IGetAvailableSubmissionsResponse {
@@ -30199,7 +30208,7 @@ export namespace POGOProtos {
                         public time_window_for_submissions_limit_ms: (number|Long);
                         public max_poi_distance_in_meters: number;
                         public blacklisted_os: string[];
-                        public availability_result_per_type: POGOProtos.Networking.Requests.Titan.IAvailableSubmissionsPerSubmissionType[];
+                        public availability_result_per_type: POGOProtos.Data.Titan.IAvailableSubmissionsPerSubmissionType[];
                         public static encode(message: POGOProtos.Networking.Responses.Titan.Responses.IGetAvailableSubmissionsResponse, writer?: $protobuf.Writer): $protobuf.Writer;
                         public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): POGOProtos.Networking.Responses.Titan.Responses.GetAvailableSubmissionsResponse;
                         public static fromObject(object: { [k: string]: any }): POGOProtos.Networking.Responses.Titan.Responses.GetAvailableSubmissionsResponse;

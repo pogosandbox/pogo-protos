@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Networking.Requests.Vasa;
+package POGOProtos.Data.Vasa;
 
 import "POGOProtos/Map/Fort/SponsoredDetails.proto";
 
