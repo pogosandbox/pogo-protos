@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Enums/EnumWrapper.proto";
+
+message InvasionVictoryLogEntry {
+	.POGOProtos.Inventory.Loot rewards = 1;
+	.POGOProtos.Enums.EnumWrapper.InvasionCharacter invasion_npc = 2;
+}

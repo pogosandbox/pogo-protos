@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message SendRaidInvitationResponse {
+	Result result = 1;
+	int32 num_friend_invites_remaining = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NO_PERMISSION = 2;
+		ERROR_GYM_NOT_FOUND = 3;
+		ERROR_LOBBY_NOT_FOUND = 4;
+		ERROR_PAST_CUT_OFF_TIME = 5;
+		ERROR_NO_INVITES_REMAINING = 6;
+		ERROR_LOBBY_FULL = 7;
+		ERROR_INVITER_NOT_FOUND = 8;
+	}
+}

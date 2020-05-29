@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message WallabySettings {
+	bool enable = 1;
+	float activity_length_s = 2;
+	uint32 test_mask = 3;
+}

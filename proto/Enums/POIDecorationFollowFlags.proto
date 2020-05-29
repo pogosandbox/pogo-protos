@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum POIDecorationFollowFlags {
+	POIDECORATIONFOLLOWFLAGS_AUTO_INVALID = 0;
+	FOLLOW_X = 1;
+	FOLLOW_Y = 2;
+	FOLLOW_Z = 4;
+}

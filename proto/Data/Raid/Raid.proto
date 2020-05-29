@@ -14,4 +14,6 @@ message Raid {
 	bool received_default_rewards = 8;
 	bool incremented_raid_friends = 9;
 	int64 completed_battle_ms = 10;
+	int32 num_friend_invites = 11;
+	bool is_remote = 12;
 }

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Data/Capture/CaptureProbability.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message VsSeekerRewardEncounterResponse {
+	Result result = 1;
+	.POGOProtos.Data.PokemonData pokemon = 2;
+	.POGOProtos.Data.Capture.CaptureProbability capture_probability = 3;
+	.POGOProtos.Inventory.Item.ItemId active_item = 4;
+	fixed64 encounter_id = 5;
+
+	enum Result {
+		VS_SEEKER_ENCOUNTER_UNKNOWN = 0;
+		VS_SEEKER_ENCOUNTER_SUCCESS = 1;
+		VS_SEEKER_ENCOUNTER_ALREADY_FINISHED = 2;
+		ERROR_PLAYER_NOT_ENOUGH_VICTORIES = 3;
+		ERROR_POKEMON_INVENTORY_FULL = 4;
+		ERROR_REDEEM_ITEM = 5;
+	}
+}

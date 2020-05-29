@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Data/Player/PlayerAvatar.proto";
+
+message InvasionNpcDisplaySettings {
+	string trainer_name = 1;
+	.POGOProtos.Data.Player.PlayerAvatar avatar = 2;
+	string trainer_title = 3;
+	string trainer_quote = 4;
+	string icon_url = 5;
+	string backdrop_image_bundle = 6;
+	string model_name = 7;
+	string tutorial_on_loss_string = 8;
+	bool is_male = 9;
+}

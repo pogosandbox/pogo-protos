@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+message InGamePurchaseDetails {
+	string ingame_type = 1;
+	int64 ingame_price = 2;
+	int64 remaining_ingame_balance = 3;
+}

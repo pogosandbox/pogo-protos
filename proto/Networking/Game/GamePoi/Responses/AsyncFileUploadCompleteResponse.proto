@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Responses;
+
+message AsyncFileUploadCompleteResponse {
+	ErrorStatus error = 1;
+
+	enum ErrorStatus {
+		UNSET = 0;
+		SERVER_UPDATE_FAILED = 1;
+		MISSING_SUBMISSION_ID = 2;
+		MISSING_SUBMISSION_TYPE = 3;
+		MISSING_UPLOAD_STATUS = 4;
+	}
+}

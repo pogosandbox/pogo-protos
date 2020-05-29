@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BuddyEmotionLevel.proto";
+import "POGOProtos/Enums/BuddyAnimation.proto";
+
+message BuddyEmotionLevelSettings {
+	.POGOProtos.Enums.BuddyEmotionLevel emotion_level = 1;
+	int32 min_emotion_points_required = 2;
+	.POGOProtos.Enums.BuddyAnimation emotion_animation = 3;
+	int64 decay_prevention_duration_ms = 4;
+}

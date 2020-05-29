@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message AccountSettings {
+	bool opt_out_social_graph_import = 1;
+}

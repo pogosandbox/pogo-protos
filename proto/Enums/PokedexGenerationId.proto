@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PokedexGenerationId {
+	GEN1 = 0;
+	GEN2 = 1;
+	GEN3 = 2;
+	GEN4 = 3;
+	GEN5 = 4;
+	GEN6 = 5;
+	GEN7 = 6;
+	GEN8 = 7;
+	POKEDEX_GEN_ID_MELTAN = 1001;
+}

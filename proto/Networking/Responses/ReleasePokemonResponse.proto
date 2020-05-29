@@ -4,6 +4,7 @@ package POGOProtos.Networking.Responses;
 message ReleasePokemonResponse {
 	Result result = 1;
 	int32 candy_awarded = 2;
+	int32 xl_candy_awarded = 3;
 
 	enum Result {
 		UNSET = 0;

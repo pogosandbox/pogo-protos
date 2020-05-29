@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message CommonTelemetryBootTime {
+	string boot_phase = 1;
+	int64 duration_ms = 2;
+}

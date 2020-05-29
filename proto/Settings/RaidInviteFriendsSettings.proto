@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message RaidInviteFriendsSettings {
+	int32 raid_invite_min_level = 1;
+}

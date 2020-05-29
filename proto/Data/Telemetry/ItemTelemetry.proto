@@ -6,4 +6,7 @@ import "POGOProtos/Enums/TelemetryIds.proto";
 message ItemTelemetry {
 	.POGOProtos.Enums.ItemUseTelemetryIds item_use_click_id = 1;
 	int32 item_id = 2;
+	bool equipped = 3;
+	bool from_inventory = 4;
+	string item_id_string = 5;
 }

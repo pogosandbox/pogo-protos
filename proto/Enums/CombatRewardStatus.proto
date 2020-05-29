@@ -6,4 +6,5 @@ enum CombatRewardStatus {
 	REWARDS_GRANTED = 1;
 	MAX_REWARDS_RECEIVED = 2;
 	PLAYER_BAG_FULL = 3;
+	NO_REWARDS = 4;
 }

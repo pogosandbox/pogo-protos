@@ -6,4 +6,10 @@ message PokemonUpgradeSettings {
 	int32 allowed_levels_above_player = 2;
 	repeated int32 candy_cost = 3;
 	repeated int32 stardust_cost = 4;
+	float shadow_stardust_multiplier = 5;
+	float shadow_candy_multiplier = 6;
+	float purified_stardust_multiplier = 7;
+	float purified_candy_multiplier = 8;
+	int32 max_normal_upgrade_level = 9;
+	int32 default_cp_boost_additional_level = 10;
 }

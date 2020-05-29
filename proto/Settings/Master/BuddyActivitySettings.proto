@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BuddyActivity.proto";
+import "POGOProtos/Enums/BuddyActivityCategory.proto";
+
+message BuddyActivitySettings {
+	.POGOProtos.Enums.BuddyActivity activity = 1;
+	.POGOProtos.Enums.BuddyActivityCategory activity_category = 2;
+	int32 max_times_per_day = 3;
+	int32 num_points_per_action = 4;
+	int32 num_emotion_points_per_action = 5;
+	int64 emotion_cooldown_duration_ms = 6;
+}

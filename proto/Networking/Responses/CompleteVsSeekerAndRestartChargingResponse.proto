@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Settings/Master/Item/VsSeekerAttributes.proto";
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Combat/CombatSeasonResult.proto";
+import "POGOProtos/Data/Combat/CombatBaseStats.proto";
+
+message CompleteVsSeekerAndRestartChargingResponse {
+	Result result = 1;
+	.POGOProtos.Settings.Master.Item.VsSeekerAttributes vs_seeker = 2;
+	.POGOProtos.Inventory.Loot loot_proto = 3;
+	.POGOProtos.Data.Combat.CombatSeasonResult current_season_result = 4;
+	int32 previous_rank = 5;
+	float previous_rating = 6;
+	.POGOProtos.Data.Combat.CombatBaseStats stats_at_rank_start = 7;
+	repeated string avatar_template_id_rewarded = 8;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_VS_SEEKER_NOT_FOUND = 2;
+		ERROR_VS_SEEKER_ALREADY_STARTED_CHARGING = 3;
+		ERROR_VS_SEEKER_ALREADY_FULLY_CHARGED = 4;
+		ERROR_VS_SEEKER_PLAYER_IN_WRONG_SEASON = 5;
+		ERROR_PLAYER_INVENTORY_FULL = 6;
+		ERROR_PLAYER_HAS_UNCLAIMED_REWARDS = 7;
+	}
+}

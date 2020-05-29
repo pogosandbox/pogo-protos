@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message IncidentGlobalSettings {
+	int32 min_player_level = 1;
+	int32 min_player_level_for_v2 = 2;
+}

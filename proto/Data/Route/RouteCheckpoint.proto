@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Route;
+
+message RouteCheckpoint {
+	oneof Type {
+		RoutePoi poi = 1;
+		RouteGuidepost guidepost = 2;
+	}
+
+	message RoutePoi {
+		string poi_id = 1;
+	}
+
+	message RouteGuidepost {
+		LocationE6 location = 1;
+	}
+
+	message RouteImage {
+		oneof Source {
+			string image_id = 1;
+			string image_context = 2;
+		}
+	}
+
+	message LocationE6 {
+		int32 latitude_e6 = 1;
+		int32 longitude_e6 = 2;
+	}
+}

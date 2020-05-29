@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BuddyHungerSettings {
+	int32 num_hunger_points_required_for_full = 1;
+	int32 decay_points_per_bucket = 2;
+	int64 milliseconds_per_bucket = 3;
+	int64 cooldown_duration_ms = 4;
+	int64 decay_duration_after_full_ms = 5;
+}

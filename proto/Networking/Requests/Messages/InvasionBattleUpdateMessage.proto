@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Map/Fort/IncidentLookup.proto";
+
+message InvasionBattleUpdateMessage {
+	.POGOProtos.Map.Fort.IncidentLookup incident_lookup = 1;
+	int32 step = 2;
+	repeated PokemonStaminaUpdate health_update = 3;
+	bool complete_battle = 4;
+	UpdateType update_type = 5;
+
+	message PokemonStaminaUpdate {
+		fixed64 pokemon_id = 1;
+		int32 updated_stamina = 2;
+	}
+
+	enum UpdateType {
+		POKEMON_HEALTH = 0;
+		WIN_BATTLE = 1;
+		LOSE_BATTLE = 2;
+	}
+}

@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/Analytics/ClientTelemetryCommonFilter.proto";
+import "POGOProtos/Data/Telemetry/CommonTelemetryBootTime.proto";
+import "POGOProtos/Data/Telemetry/CommonTelemetryShopClick.proto";
+import "POGOProtos/Data/Telemetry/CommonTelemetryShopView.proto";
+import "POGOProtos/Data/Telemetry/ServerRecordMetadata.proto";
+import "POGOProtos/Data/Telemetry/CommonTelemetryLogIn.proto";
+import "POGOProtos/Data/Telemetry/PoiSubmissionTelemetry.proto";
+import "POGOProtos/Data/Telemetry/PoiSubmissionPhotoUploadErrorTelemetry.proto";
+
+message ApprovedCommonTelemetry {
+	oneof TelemetryData {
+		.POGOProtos.Data.Telemetry.CommonTelemetryBootTime boot_time = 1;
+		.POGOProtos.Data.Telemetry.CommonTelemetryShopClick shop_click = 2;
+		.POGOProtos.Data.Telemetry.CommonTelemetryShopView shop_view = 3;
+		.POGOProtos.Data.Telemetry.PoiSubmissionTelemetry poi_submission_telemetry = 4;
+		.POGOProtos.Data.Telemetry.PoiSubmissionPhotoUploadErrorTelemetry poi_submission_photo_upload_error_telemetry = 5;
+		.POGOProtos.Data.Telemetry.CommonTelemetryLogIn log_in = 6;
+	}
+
+	.POGOProtos.Data.Telemetry.ServerRecordMetadata server_data = 7;
+	.POGOProtos.Data.Analytics.ClientTelemetryCommonFilter common_filters = 8;
+}

@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+import "POGOProtos/Data/VsSeeker/VsSeekerRewardTrack.proto";
+
+message VsSeekerAttributes {
+	VsSeekerStatus vs_seeker_status = 1;
+	double start_km_walked = 2;
+	double target_km_walked = 3;
+	int32 battle_granted_remaining = 4;
+	int32 max_battles_in_set = 6;
+	.POGOProtos.Data.VsSeeker.VsSeekerRewardTrack reward_track = 7;
+	string battle_now_sku_id = 8;
+	bool additional_battles_granted = 9;
+
+	enum VsSeekerStatus {
+		UNSET = 0;
+		STARTED_CHARGING = 1;
+		FULLY_CHARGED = 2;
+		ACTIVATED = 3;
+	}
+}

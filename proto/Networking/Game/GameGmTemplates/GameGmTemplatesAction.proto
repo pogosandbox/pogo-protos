@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameGmTemplates;
+
+enum GameGmTemplatesAction {
+	UNKNOWN_GAME_GM_TEMPLATES_ACTION = 0;     // No implementation required
+	DOWNLOAD_GAME_MASTER_TEMPLATES = 340000;  // Implemented
+}

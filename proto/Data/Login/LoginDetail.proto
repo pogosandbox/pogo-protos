@@ -6,4 +6,5 @@ import "POGOProtos/Enums/IdentityProvider.proto";
 message LoginDetail {
 	.POGOProtos.Enums.IdentityProvider identity_provider = 1;
 	string email = 2;
+	string auth_provider_id = 3;
 }

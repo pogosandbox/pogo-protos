@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePushNotification.Responses;
+
+message OptOutPushNotificationCategoryResponse {
+	//
+}

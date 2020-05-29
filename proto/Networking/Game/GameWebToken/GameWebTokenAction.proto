@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameWebToken;
+
+enum GameWebTokenAction {
+	UNKNOWN_GAME_WEB_TOKEN_ACTION = 0;  // No implementation required
+	GET_WEB_TOKEN_ACTION = 370000;      // Implemented
+}

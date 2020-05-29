@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Social.Messages;
+
+message OptOutPushNotificationCategoryMessage {
+	repeated string categories = 1;
+}

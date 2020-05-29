@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Social;
+
+message Social {
+	enum AppKey {
+		INVALID = 0;
+		INGRESS = 1;
+		HOLOHOLO = 2;
+		LEXICON = 3;
+	}
+}

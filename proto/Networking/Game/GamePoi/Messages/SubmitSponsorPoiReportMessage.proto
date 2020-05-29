@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Messages;
+
+message SubmitSponsorPoiReportMessage {
+	string poi_id = 1;
+	SponsorPoiInvalidReason invalid_reason = 2;
+	string additional_details = 3;
+
+	enum SponsorPoiInvalidReason {
+		SPONSOR_POI_REASON_UNSPECIFIED = 0;
+		SPONSOR_POI_REASON_DOES_NOT_EXIST = 1;
+		SPONSOR_POI_REASON_NOT_SAFE = 2;
+		SPONSOR_POI_REASON_NOT_TRUTHFUL = 3;
+		SPONSOR_POI_REASON_NOT_FAMILY_FRIENDLY = 4;
+		SPONSOR_POI_REASON_OFFENSIVE_CONTENT = 5;
+	}
+}

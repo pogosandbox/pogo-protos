@@ -6,10 +6,10 @@ import "POGOProtos/Data/PokemonDisplay.proto";
 
 message BuddyPokemonLogEntry {
 	Result result = 1;
-	.POGOProtos.Enums.PokemonId pokemon_id = 2;
+	.POGOProtos.Enums.PokemonId pokemon_type = 2;
 	int32 amount = 3;
 	.POGOProtos.Data.PokemonDisplay pokemon_display = 4;
-	fixed64 pokemon = 5;
+	fixed64 pokemon_id = 5;
 
 	enum Result {
 		UNSET = 0;

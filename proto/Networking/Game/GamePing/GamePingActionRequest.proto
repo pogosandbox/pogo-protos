@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePing;
+
+import "POGOProtos/Networking/Game/GamePing/GamePingAction.proto";
+
+message GamePingActionRequest {
+	.POGOProtos.Networking.Game.GamePing.GamePingAction request_type = 1;
+	bytes request_message = 2;
+}

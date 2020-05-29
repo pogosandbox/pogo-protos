@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Sticker;
+
+message RedeemedSticker {
+	string sticker_id = 1;
+	int32 count = 2;
+}

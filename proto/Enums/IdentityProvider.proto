@@ -10,4 +10,9 @@ enum IdentityProvider {
 	INTERNAL = 5;
 	SFIDA = 6;
 	SUPER_AWESOME = 7;
+	DEVELOPER = 8;
+	SHARED_SECRET = 9;
+	POSEIDON = 10;
+	NINTENDO = 11;
+	APPLE = 12;
 }

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Map/Fort/InvasionStatus.proto";
+import "POGOProtos/Data/Combat/Combat.proto";
+
+message InvasionOpenCombatSessionResponse {
+	.POGOProtos.Map.Fort.InvasionStatus.Status status = 1;
+	.POGOProtos.Data.Combat.Combat combat = 2;
+}

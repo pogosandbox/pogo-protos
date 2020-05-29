@@ -1,0 +1,40 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ArMappingTelemetry {
+	ArMappingEventId ar_mapping_telemetry_id = 1;
+	ArMappingEntryPoint source = 2;
+	float recording_length_seconds = 3;
+	float time_elapsed_seconds = 4;
+	float percent_encoded = 5;
+	int64 data_size_bytes = 6;
+
+	enum ArMappingEntryPoint {
+		UNKNOWN_ENTRY = 0;
+		POI_EDIT_MENU = 1;
+		POI_EDIT_TITLE = 2;
+		POI_EDIT_DESCRIPTION = 3;
+		POI_ADD_PHOTO = 4;
+		POI_EDIT_LOCATION = 5;
+		POI_NOMINATION = 6;
+	}
+
+	enum ArMappingEventId {
+		UNKNOWN = 0;
+		ENTER_STATE = 1;
+		OPT_IN_ACCEPT = 2;
+		OPT_IN_DENY = 3;
+		OPT_IN_SETTINGS = 4;
+		OPT_OUT_SETTINGS = 5;
+		EXIT_FROM_RECORDING = 6;
+		START_RECORDING = 7;
+		STOP_RECORDING = 8;
+		CANCEL_ENCODING = 9;
+		UPLOAD_NOW = 10;
+		UPLOAD_LATER = 11;
+		CANCEL_UPLOAD = 12;
+		START_UPLOAD_SETTINGS = 13;
+		UPLOAD_SUCCESS = 14;
+		OPT_IN_LEARN_MORE = 15;
+	}
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message DeviceSpecificationsTelemetry {
+	int32 device_width = 1;
+	int32 device_height = 2;
+	int32 camera_width = 3;
+	int32 camera_height = 4;
+	float camera_focal_length_fx = 5;
+	float camera_focal_length_fy = 6;
+	int32 camera_refresh_rate = 7;
+}

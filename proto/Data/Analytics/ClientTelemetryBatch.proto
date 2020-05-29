@@ -6,12 +6,15 @@ import "POGOProtos/Data/Analytics/ClientTelemetryRecord.proto";
 message ClientTelemetryBatch {
 	TelemetryScopeId telemetry_scope_id = 1;
 	repeated .POGOProtos.Data.Analytics.ClientTelemetryRecord events = 2;
-	string api_version = 3;
-	string message_version = 4;
+	repeated .POGOProtos.Data.Analytics.ClientTelemetryRecord metrics = 3;
+	string api_version = 4;
+	string message_version = 5;
 
 	enum TelemetryScopeId {
 		UNSET = 0;
 		DITTO = 1;
 		GAME = 2;
+		TITAN = 3;
+		COMMON = 4;
 	}
 }

@@ -1,0 +1,37 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/PoiImageType.proto";
+
+message PoiSubmissionTelemetry {
+	PoiSubmissionGuiEventId gui_event_id = 1;
+	.POGOProtos.Enums.PoiImageType image_type = 2;
+	PoiCameraStepIds camera_step_id = 3;
+
+	enum PoiSubmissionGuiEventId {
+		UNKNOWN = 0;
+		POI_NOMINATION_ENTER = 1;
+		POI_TUTORIAL_COMPLETE = 2;
+		POI_MAP_CHANGEDVIEW_MAP = 3;
+		POI_MAP_CHANGEDVIEW_SATELLITE = 4;
+		POI_MAP_CENTER_LOCATION = 5;
+		POI_LOCATION_SET = 6;
+		POI_PHOTO_CAMERA_ENTER = 7;
+		POI_PHOTO_CAMERA_EXIT = 8;
+		POI_TITLE_ENTERED = 9;
+		POI_DESCRIPTION_ENTER = 10;
+		POI_DETAILS_CONFIRM = 11;
+		POI_SUPPORTINGINFO_ENTER = 12;
+		POI_SUBMIT_BUTTON_HIT = 13;
+		POI_EXIT_BUTTON_HIT = 14;
+		POI_NOMINATION_GUIDELINES_HIT = 15;
+	}
+
+	enum PoiCameraStepIds {
+		UNSET = 0;
+		ENTER = 1;
+		RETAKE = 2;
+		CONFIRM = 3;
+		EXIT = 4;
+	}
+}

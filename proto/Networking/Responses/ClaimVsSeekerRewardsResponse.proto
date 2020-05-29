@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/Loot.proto";
+
+message ClaimVsSeekerRewardsResponse {
+	Result result = 1;
+	.POGOProtos.Inventory.Loot rewards = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_REDEEM_POKEMON = 2;
+		ERROR_PLAYER_NOT_ENOUGH_VICTORIES = 3;
+		ERROR_REWARD_ALREADY_CLAIMED = 4;
+		ERROR_INVENTORY_FULL = 5;
+	}
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Buddy/BuddyGift.proto";
+import "POGOProtos/Data/Buddy/BuddyObservedData.proto";
+import "POGOProtos/Data/Buddy/BuddyStatsShownHearts.proto";
+
+message OpenBuddyGiftResponse {
+	Result result = 1;
+	.POGOProtos.Data.Buddy.BuddyGift buddy_gift = 2;
+	.POGOProtos.Data.Buddy.BuddyObservedData observed_data = 4;
+	.POGOProtos.Data.Buddy.BuddyStatsShownHearts.BuddyShownHeartType shown_hearts = 5;
+
+	enum Result {
+		UNSET = 0;
+		ERROR_BUDDY_NOT_VALID = 1;
+		SUCCESS_ADDED_LOOT_TO_INVENTORY = 2;
+		SUCCESS_ADDED_SOUVENIR_TO_COLLECTIONS = 3;
+		ERROR_BUDDY_HAS_NOT_PICKED_UP_ANY_SOUVENIRS = 4;
+		ERROR_INVENTORY_IS_FULL = 5;
+		ERROR_BUDDY_NOT_ON_MAP = 6;
+	}
+}

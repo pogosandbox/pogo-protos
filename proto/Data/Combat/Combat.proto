@@ -17,6 +17,7 @@ message Combat {
 	int64 minigame_submit_score_end_ms = 11;
 	int64 change_pokemon_end_ms = 12;
 	int64 quick_swap_cooldown_duration_ms = 13;
+	int64 state_change_delay_until_turn = 14;
 
 	enum CombatState {
 		UNSET = 0;

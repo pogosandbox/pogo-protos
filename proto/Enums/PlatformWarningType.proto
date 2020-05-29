@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PlatformWarningType {
+	PLATFORM_WARNING_UNSET = 0;
+	PLATFORM_WARNING_STRIKE1 = 1;
+	PLATFORM_WARNING_STRIKE2 = 2;
+	PLATFORM_WARNING_STRIKE3 = 3;
+}

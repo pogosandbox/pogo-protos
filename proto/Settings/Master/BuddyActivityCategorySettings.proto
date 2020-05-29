@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BuddyActivityCategory.proto";
+
+message BuddyActivityCategorySettings {
+	.POGOProtos.Enums.BuddyActivityCategory activity_category = 1;
+	int32 max_points_per_day = 2;
+}

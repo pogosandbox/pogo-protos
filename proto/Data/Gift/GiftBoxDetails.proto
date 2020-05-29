@@ -1,6 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Data.Gift;
 
+import "POGOProtos/Data/Sticker/StickerSent.proto";
+
 message GiftBoxDetails {
 	fixed64 giftbox_id = 1;
 	string sender_id = 2;
@@ -16,4 +18,5 @@ message GiftBoxDetails {
 	int64 sent_timestamp = 12;
 	fixed64 delivery_pokemon_id = 13;
 	bool is_sponsored = 14;
+	repeated .POGOProtos.Data.Sticker.StickerSent stickers_sent = 15;
 }

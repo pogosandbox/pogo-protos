@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum BuddyLevel {
+	BUDDY_LEVEL_UNSET = 0;
+	BUDDY_LEVEL_0 = 1;
+	BUDDY_LEVEL_1 = 2;
+	BUDDY_LEVEL_2 = 3;
+	BUDDY_LEVEL_3 = 4;
+	BUDDY_LEVEL_4 = 5;
+	BUDDY_LEVEL_5 = 6;
+}

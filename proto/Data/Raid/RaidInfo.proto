@@ -14,4 +14,7 @@ message RaidInfo {
 	bool complete = 7;
 	bool is_exclusive = 8;
 	bool is_raid_hidden = 9;
+	bool is_scheduled_raid = 10;
+	bool is_free = 11;
+	string campaign_id = 12;
 }

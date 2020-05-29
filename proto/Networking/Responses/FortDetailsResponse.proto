@@ -6,6 +6,7 @@ import "POGOProtos/Data/Raid/EventInfo.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Map/Fort/FortType.proto";
 import "POGOProtos/Map/Fort/FortModifier.proto";
+import "POGOProtos/Map/Fort/SponsoredDetails.proto";
 
 message FortDetailsResponse {
 	string fort_id = 1;
@@ -24,4 +25,7 @@ message FortDetailsResponse {
 	bool close_soon = 14;
 	string checkin_image_url = 15;
 	.POGOProtos.Data.Raid.EventInfo event_info = 16;
+	repeated string promo_description = 17;
+	string call_to_action_link = 18;
+	.POGOProtos.Map.Fort.SponsoredDetails sponsored_details = 19;
 }

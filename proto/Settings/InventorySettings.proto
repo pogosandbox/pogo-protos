@@ -9,4 +9,6 @@ message InventorySettings {
 	int32 base_eggs = 5;
 	int32 max_team_changes = 6;
 	int64 team_change_item_reset_period_in_days = 7;
+	int64 max_item_boost_duration_ms = 8;
+	int32 default_sticker_max_count = 9;
 }

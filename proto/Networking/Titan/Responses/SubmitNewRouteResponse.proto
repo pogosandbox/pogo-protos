@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan.Responses;
+
+message SubmitNewRouteResponse {
+	Status status = 1;
+
+	enum Status {
+		STATUS_UNSPECIFIED = 0;
+		SUCCESS = 1;
+		INTERNAL_ERROR = 2;
+		TOO_MANY_RECENT_SUBMISSIONS = 3;
+		MINOR = 4;
+		NOT_AVAILABLE = 5;
+		INVALID_INPUT = 6;
+		MISSING_IMAGE = 7;
+		INVALID_CHECKPOINT = 8;
+		INVALID_ROUTE_LENGTH = 9;
+		DUPLICATE_CHECKPOINTS = 10;
+		ALREADY_SUBMITTED = 11;
+	}
+}

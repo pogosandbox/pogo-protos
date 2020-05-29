@@ -1,14 +1,7 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import "POGOProtos/Data/Fitness/FitnessReport.proto";
-
 message GetFitnessReportResponse {
-	Status status = 1;
-	repeated .POGOProtos.Data.Fitness.FitnessReport daily_reports = 2;
-	repeated .POGOProtos.Data.Fitness.FitnessReport weekly_reports = 3;
-	int64 week_reset_timestamp_since_monday_ms = 4;
-
 	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;

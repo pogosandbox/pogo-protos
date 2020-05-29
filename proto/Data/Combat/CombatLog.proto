@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Combat;
+
+import "POGOProtos/Data/Combat/CombatSeasonResult.proto";
+import "POGOProtos/Data/VsSeeker/VsSeekerBattleResult.proto";
+
+message CombatLog {
+	.POGOProtos.Data.Combat.CombatSeasonResult lifetime_results = 1;
+	.POGOProtos.Data.Combat.CombatSeasonResult current_season_results = 2;
+	repeated .POGOProtos.Data.VsSeeker.VsSeekerBattleResult current_vs_seeker_set_results = 4;
+	CombatSeasonResult previous_season_results = 5;
+}

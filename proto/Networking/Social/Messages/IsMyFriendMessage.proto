@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Social.Messages;
+
+message IsMyFriendMessage {
+	string player_id = 1;
+}

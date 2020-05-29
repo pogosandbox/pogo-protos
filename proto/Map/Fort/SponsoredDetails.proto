@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Map.Fort;
+
+message SponsoredDetails {
+	repeated string promo_image_url = 1;
+	repeated string promo_description = 2;
+	string call_to_action_link = 3;
+	PromoButtonMessageType promo_button_message_type = 4;
+	string campaign_id = 5;
+	ImageTextCreative promo_image_creative = 6;
+
+	enum PromoButtonMessageType {
+		UNSET = 0;
+		LEARN_MORE = 1;
+		OFFER = 2;
+	}
+
+	message ImageTextCreative {
+		string name = 1;
+		string title = 2;
+		string description = 3;
+		string preview_image_url = 4;
+		string fullscreen_image_url = 5;
+		string cta_link = 6;
+	}
+}

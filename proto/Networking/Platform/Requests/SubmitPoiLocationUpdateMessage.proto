@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+import "POGOProtos/Data/Route/RouteCheckpoint.proto";
+
+message SubmitPoiLocationUpdateMessage {
+	string poi_id = 1;
+	.POGOProtos.Data.Route.RouteCheckpoint.LocationE6 location = 2;
+}

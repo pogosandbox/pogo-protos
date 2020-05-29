@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonData.proto";
+
+message PurifyPokemonResponse {
+	Status status = 1;
+	.POGOProtos.Data.PokemonData purified_pokemon = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_INSUFFICIENT_FUNDS = 3;
+		ERROR_POKEMON_DEPLOYED = 4;
+		ERROR_POKEMON_NOT_FOUND = 5;
+		ERROR_POKEMON_NOT_SHADOW = 6;
+	}
+}

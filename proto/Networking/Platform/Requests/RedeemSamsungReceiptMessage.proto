@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+message RedeemSamsungReceiptMessage {
+	string purchase_data = 1;
+	string purchase_id = 2;
+	string purchase_currency = 3;
+	int64 price_paid_e6_long = 4;
+}

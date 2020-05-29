@@ -16,6 +16,8 @@ message QuestReward {
 		string avatar_template_id = 6;
 		string quest_template_id = 7;
 		PokemonEncounterReward pokemon_encounter = 8;
+		int32 pokecoin = 9;
+		string sticker_id = 12;
 	}
 
 	enum Type {
@@ -27,6 +29,8 @@ message QuestReward {
 		AVATAR_CLOTHING = 5;
 		QUEST = 6;
 		POKEMON_ENCOUNTER = 7;
+		POKECOIN = 8;
+		STICKER = 11;
 	}
 
 	message ItemReward {

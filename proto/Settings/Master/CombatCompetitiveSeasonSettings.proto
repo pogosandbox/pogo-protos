@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatCompetitiveSeasonSettings {
+	repeated uint64 season_end_time_timestamp = 1;
+	float rating_adjustment_percentage = 2;
+	float ranking_adjustment_percentage = 3;
+}

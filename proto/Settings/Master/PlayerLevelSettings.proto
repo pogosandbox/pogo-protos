@@ -9,4 +9,5 @@ message PlayerLevelSettings {
 	int32 max_encounter_player_level = 5;
 	int32 max_raid_encounter_player_level = 6;
 	int32 max_quest_encounter_player_level = 7;
+	int32 max_vs_seeker_encounter_player_level = 8;
 }

@@ -1,8 +1,13 @@
 syntax = "proto3";
 package POGOProtos.Data;
 
+import "POGOProtos/Data/Quests/Quest.proto";
+
 message BuddyPokemon {
-	fixed64 id = 1;
+	fixed64 buddy_pokemon_id = 1;
 	double start_km_walked = 2;
 	double last_km_awarded = 3;
+	.POGOProtos.Data.Quests.Quest.DailyCounter daily_buddy_swaps = 4;
+	int64 last_km_awarded_ms = 5;
+	bool best_buddies_backfilled = 6;
 }

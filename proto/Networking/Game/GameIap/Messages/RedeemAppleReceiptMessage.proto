@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameIap.Messages;
+
+message RedeemAppleReceiptMessage {
+	string receipt = 1;
+	string purchase_currency = 2;
+	int32 price_paid_e6 = 3;
+	int64 price_paid_e6_long = 4;
+}

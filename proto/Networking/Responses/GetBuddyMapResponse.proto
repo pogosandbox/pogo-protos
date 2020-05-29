@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Buddy/BuddyObservedData.proto";
+
+message GetBuddyMapResponse {
+	Result result = 1;
+	int64 expiration_ms = 2;
+	int64 applied_ms = 3;
+	.POGOProtos.Data.Buddy.BuddyObservedData observed_data = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_BUDDY_NOT_VALID = 2;
+	}
+}

@@ -7,4 +7,5 @@ message GymGetInfoMessage {
 	double player_lng_degrees = 3;
 	double gym_lat_degrees = 4;
 	double gym_lng_degrees = 5;
+	string inviter_id = 6;
 }

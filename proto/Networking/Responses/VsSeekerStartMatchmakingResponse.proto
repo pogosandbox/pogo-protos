@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/CombatChallenge.proto";
+
+message VsSeekerStartMatchmakingResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.CombatChallenge challenge = 2;
+	string queue_id = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS_OPPONENT_FOUND = 1;
+		SUCCESS_QUEUED = 2;
+		ERROR_NO_BATTLE_PASSES_LEFT = 3;
+		ERROR_ALREADY_IN_QUEUE = 4;
+		ERROR_VS_SEEKER_PLAYER_IN_WRONG_SEASON = 5;
+		ERROR_PLAYER_HAS_NO_VS_SEEKER = 6;
+		ERROR_ACCESS_DENIED = 7;
+		ERROR_POKEMON_LINEUP_INELIGIBLE_FOR_LEAGUE = 8;
+		ERROR_VS_SEEKER_NOT_ACTIVATED = 9;
+		ERROR_TEMPORARILY_UNAVAILABLE = 10;
+		ERROR_EXCEEDED_LIMIT = 11;
+	}
+}

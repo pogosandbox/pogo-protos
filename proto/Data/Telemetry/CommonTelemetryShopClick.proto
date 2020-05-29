@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Data/InGamePurchaseDetails.proto";
+
+message CommonTelemetryShopClick {
+	string shopping_page_click_id = 1;
+	string sku_id = 2;
+	string item_id = 3;
+	string consolidated_item_id = 4;
+	string currency = 5;
+	int64 fiat_price = 6;
+	repeated .POGOProtos.Data.InGamePurchaseDetails in_game_purchase_details = 7;
+	bool is_item_free_fiat = 8;
+	bool is_item_free_ingame = 9;
+	int64 time_elapsed_since_enter_page = 10;
+	string root_store_page_session_id = 11;
+	int64 pair_id = 12;
+	string store_page_name = 13;
+	string root_store_page_name = 14;
+	AccessType access_type = 15;
+	string fiat_formatted_price = 16;
+
+	enum AccessType {
+		UNSPECIFIED = 0;
+		PASSIVE = 1;
+		ACTIVE = 2;
+	}
+}

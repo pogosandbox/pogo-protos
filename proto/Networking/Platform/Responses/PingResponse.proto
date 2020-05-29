@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+message PingResponse {
+	string user_info = 1;
+	string server_info = 2;
+	string random_response_bytes = 3;
+	string return_value = 4;
+}

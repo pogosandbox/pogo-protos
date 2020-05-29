@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message AdventureSyncV2Gmt {
+	bool feature_enabled = 1;
+}

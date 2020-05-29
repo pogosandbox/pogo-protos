@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RemoteGiftPingResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		STILL_IN_COOL_DOWN = 2;
+		BUDDY_NOT_SET = 3;
+		ERROR_INVENTORY_FULL = 4;
+		ERROR_NO_REMOTE_GIFTS = 5;
+	}
+}

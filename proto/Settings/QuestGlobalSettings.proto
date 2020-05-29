@@ -4,4 +4,5 @@ package POGOProtos.Settings;
 message QuestGlobalSettings {
 	bool enable_quests = 1;
 	int32 max_challenge_quests = 2;
+	bool enable_show_sponsor_name = 3;
 }

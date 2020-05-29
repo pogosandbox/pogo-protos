@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum ArToggleContext {
+	ENCOUNTER = 0;
+}

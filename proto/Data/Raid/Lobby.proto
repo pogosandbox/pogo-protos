@@ -17,4 +17,5 @@ message Lobby {
 	int64 creation_ms = 11;
 	int32 battle_plfe_instance = 12;
 	.POGOProtos.Enums.WeatherCondition weather_condition = 13;
+	repeated string invited_player_ids = 14;
 }

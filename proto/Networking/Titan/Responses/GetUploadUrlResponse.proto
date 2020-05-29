@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan.Responses;
+
+message GetUploadUrlResponse {
+	Status status = 1;
+	string signed_url = 2;
+	string supporting_image_signed_url = 3;
+	map<string, string> context_signed_urls = 4;
+
+	enum Status {
+		UNSET = 0;
+		FAILURES = 1;
+		SUCCESS = 2;
+		MISSING_IMAGE_CONTEXTS = 3;
+		DUPLICATE_IMAGE_CONTEXTS = 4;
+	}
+}

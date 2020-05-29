@@ -3,4 +3,5 @@ package POGOProtos.Settings;
 
 message PoiGlobalSettings {
 	bool is_enabled = 1;
+	repeated string player_submission_type_enabled = 2;
 }

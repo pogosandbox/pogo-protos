@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePasscode;
+
+import "POGOProtos/Networking/Game/GamePasscode/GamePasscodeAction.proto";
+
+message GamePasscodeActionRequest {
+	.POGOProtos.Networking.Game.GamePasscode.GamePasscodeAction request_type = 1;
+	bytes request_message = 2;
+}

@@ -4,6 +4,6 @@ package POGOProtos.Data.Battle;
 message BattleParty {
 	string name = 1;
 	int32 team_number = 2;
-	repeated uint64 ids = 3;
+	repeated fixed64 ids = 3;
 	string combat_league_id = 4;
 }

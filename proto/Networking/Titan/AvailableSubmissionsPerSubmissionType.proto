@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan;
+
+import "POGOProtos/Enums/PlayerSubmissionType.proto";
+
+message AvailableSubmissionsPerSubmissionType {
+	.POGOProtos.Enums.PlayerSubmissionType player_submission_type = 1;
+	int32 submissions_left = 2;
+	int32 min_player_level = 3;
+	bool is_feature_enabled = 4;
+	int64 time_window_for_submissions_limit_ms = 5;
+	int32 max_poi_distance_in_meters = 6;
+	repeated string blacklisted_os = 7;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message LeaveBuddyMultiplayerSessionResponse {
+	Result result = 1;
+
+	enum Result {
+		LEAVE_SUCCESS = 0;
+		LEAVE_NOT_IN_LOBBY = 1;
+		LEAVE_LOBBY_NOT_FOUND = 2;
+		LEAVE_UNKNOWN_ERROR = 3;
+	}
+}

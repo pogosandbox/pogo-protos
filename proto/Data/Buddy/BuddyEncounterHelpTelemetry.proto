@@ -1,0 +1,13 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+import "POGOProtos/Enums/EncounterType.proto";
+
+message BuddyEncounterHelpTelemetry {
+	int32 pokemon_id = 1;
+	int32 cp = 2;
+	string encounter_type = 3;
+	bool ar_classic_enabled = 4;
+	bool ar_plus_enabled = 5;
+	.POGOProtos.Enums.EncounterType encounter = 6;
+}

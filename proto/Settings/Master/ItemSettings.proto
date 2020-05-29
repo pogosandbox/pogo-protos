@@ -15,6 +15,8 @@ import "POGOProtos/Settings/Master/Item/EggIncubatorAttributes.proto";
 import "POGOProtos/Settings/Master/Item/ExperienceBoostAttributes.proto";
 import "POGOProtos/Settings/Master/Item/InventoryUpgradeAttributes.proto";
 import "POGOProtos/Settings/Master/Item/StardustBoostAttributes.proto";
+import "POGOProtos/Settings/Master/Item/IncidentTicketAttributes.proto";
+import "POGOProtos/Settings/Master/Item/GlobalEventTicketAttributes.proto";
 
 message ItemSettings {
 	.POGOProtos.Inventory.Item.ItemId item_id = 1;
@@ -36,4 +38,7 @@ message ItemSettings {
 	.POGOProtos.Settings.Master.Item.EggIncubatorAttributes egg_incubator = 14;
 	.POGOProtos.Settings.Master.Item.FortModifierAttributes fort_modifier = 15;
 	.POGOProtos.Settings.Master.Item.StardustBoostAttributes stardust_boost = 16;
+	.POGOProtos.Settings.Master.Item.IncidentTicketAttributes incident_ticket = 17;
+	.POGOProtos.Settings.Master.Item.GlobalEventTicketAttributes global_event_ticket = 18;
+	bool ignore_inventory_space = 19;
 }

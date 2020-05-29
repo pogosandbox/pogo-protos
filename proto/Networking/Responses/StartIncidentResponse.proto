@@ -1,0 +1,55 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/EnumWrapper.proto";
+import "POGOProtos/Map/Fort/FortData.proto";
+
+message StartIncidentResponse {
+	Status status = 1;
+	ClientIncident incident = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_NOT_IN_RANGE = 2;
+		ERROR_INCIDENT_COMPLETED = 3;
+		ERROR_INCIDENT_NOT_FOUND = 4;
+		ERROR_PLAYER_BELOW_MIN_LEVEL = 5;
+		ERROR = 6;
+	}
+
+	message ClientIncident {
+		string incident_id = 1;
+		string fort_id = 2;
+		string fort_name = 3;
+		string pokestop_image_uri = 4;
+		int32 current_step = 5;
+		repeated ClientIncidentStep step = 6;
+		.POGOProtos.Map.Fort.FortData.PokestopIncidentDisplay completion_display = 7;
+
+		message ClientIncidentStep {
+			oneof ClientIncidentStep {
+				ClientInvasionBattleStep invasion_battle = 1;
+				ClientInvasionEncounterStep invasion_encounter = 2;
+				ClientPokestopNpcDialogueStep pokestop_dialogue = 3;
+			}
+
+			message ClientInvasionBattleStep {
+				.POGOProtos.Enums.EnumWrapper.InvasionCharacter character = 1;
+			}
+
+			message ClientInvasionEncounterStep {
+			}
+
+			message ClientPokestopNpcDialogueStep {
+				repeated ClientDialogueLine dialogue_line = 1;
+
+				message ClientDialogueLine {
+					string text = 1;
+					.POGOProtos.Enums.EnumWrapper.InvasionCharacter character = 2;
+					.POGOProtos.Enums.EnumWrapper.InvasionCharacterExpression expression = 3;
+				}
+			}
+		}
+	}
+}

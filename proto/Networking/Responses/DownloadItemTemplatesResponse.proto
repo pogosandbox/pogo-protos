@@ -41,21 +41,50 @@ import "POGOProtos/Settings/Master/CombatLeague.proto";
 import "POGOProtos/Settings/Master/BelugaPokemonWhitelist.proto";
 import "POGOProtos/Settings/Master/PartyRecommendationSettings.proto";
 import "POGOProtos/Settings/Master/SmeargleMovesSettings.proto";
+import "POGOProtos/Settings/Master/PokecoinPurchaseDisplayGmt.proto";
+import "POGOProtos/Settings/Master/AdventureSyncV2Gmt.proto";
+import "POGOProtos/Settings/Master/LoadingScreen.proto";
+import "POGOProtos/Settings/Master/InvasionNpcDisplaySettings.proto";
+import "POGOProtos/Settings/Master/CombatType.proto";
+import "POGOProtos/Settings/Master/LimitedPurchaseSkuSettings.proto";
+import "POGOProtos/Settings/Master/InvasionAvailabilitySettings.proto";
+import "POGOProtos/Settings/Master/CombatCompetitiveSeasonSettings.proto";
+import "POGOProtos/Settings/Master/CombatRankingSettings.proto";
+import "POGOProtos/Settings/Master/VsSeekerClientSettings.proto";
+import "POGOProtos/Settings/Master/BattleHubOrderSettings.proto";
+import "POGOProtos/Settings/Master/BattleHubBadgeSettings.proto";
+import "POGOProtos/Settings/Master/PlatypusRolloutSettings.proto";
+import "POGOProtos/Data/VsSeeker/VsSeekerLoot.proto";
+import "POGOProtos/Data/VsSeeker/VsSeekerPokemonRewards.proto";
+import "POGOProtos/Settings/Master/BuddyLevelSettings.proto";
+import "POGOProtos/Settings/Master/BuddyActivityCategorySettings.proto";
+import "POGOProtos/Settings/Master/BuddyActivitySettings.proto";
+import "POGOProtos/Settings/Master/BuddySwapSettings.proto";
+import "POGOProtos/Settings/Master/BuddyEncounterCameoSettings.proto";
+import "POGOProtos/Settings/Master/BuddyEmotionLevelSettings.proto";
+import "POGOProtos/Settings/Master/BuddyInteractionSettings.proto";
+import "POGOProtos/Settings/Master/MapBuddySettings.proto";
+import "POGOProtos/Settings/Master/BuddyWalkSettings.proto";
+import "POGOProtos/Settings/Master/BuddyHungerSettings.proto";
+import "POGOProtos/Settings/Master/AvatarGroupOrderSettings.proto";
+import "POGOProtos/Settings/Master/MonodepthSettings.proto";
+import "POGOProtos/Settings/Master/RaidClientSettings.proto";
+import "POGOProtos/Data/Sticker/StickerMetadata.proto";
 
 message DownloadItemTemplatesResponse {
 	Result result = 1;
-	repeated ItemTemplate item_templates = 2;
+	repeated GameMasterClientTemplate item_template = 2;
 	uint64 timestamp_ms = 3;
 	int32 page_offset = 4;
 
-	message ItemTemplate {
+	message GameMasterClientTemplate {
 		string template_id = 1;
-		.POGOProtos.Settings.Master.PokemonSettings pokemon_settings = 2;
-		.POGOProtos.Settings.Master.ItemSettings item_settings = 3;
-		.POGOProtos.Settings.Master.MoveSettings move_settings = 4;
-		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence_settings = 5;
+		.POGOProtos.Settings.Master.PokemonSettings pokemon = 2;
+		.POGOProtos.Settings.Master.ItemSettings item = 3;
+		.POGOProtos.Settings.Master.MoveSettings move = 4;
+		.POGOProtos.Settings.Master.MoveSequenceSettings move_sequence = 5;
 		.POGOProtos.Settings.Master.TypeEffectiveSettings type_effective = 8;
-		.POGOProtos.Settings.Master.BadgeSettings badge_settings = 10;
+		.POGOProtos.Settings.Master.BadgeSettings badge = 10;
 		.POGOProtos.Settings.Master.CameraSettings camera = 11;
 		.POGOProtos.Settings.Master.PlayerLevelSettings player_level = 12;
 		.POGOProtos.Settings.Master.GymLevelSettings gym_level = 13;
@@ -90,6 +119,40 @@ message DownloadItemTemplatesResponse {
 		.POGOProtos.Settings.Master.OnboardingV2Settings onboarding_v2_settings = 42;
 		.POGOProtos.Settings.Master.PartyRecommendationSettings party_recommendation_settings = 43;
 		.POGOProtos.Settings.Master.SmeargleMovesSettings smeargle_moves_settings = 44;
+		.POGOProtos.Settings.Master.PokecoinPurchaseDisplayGmt pokecoin_purchase_display_gmt = 45;
+		.POGOProtos.Settings.Master.AdventureSyncV2Gmt adventure_sync_v2_gmt = 46;
+		.POGOProtos.Settings.Master.LoadingScreen loading_screen_settings = 47;
+		.POGOProtos.Settings.Master.InvasionNpcDisplaySettings invasion_npc_display_settings = 48;
+		.POGOProtos.Settings.Master.CombatCompetitiveSeasonSettings combat_competitive_season_settings = 49;
+		.POGOProtos.Settings.Master.CombatRankingSettings combat_ranking_proto_settings = 50;
+		.POGOProtos.Settings.Master.CombatType combat_type = 51;
+		.POGOProtos.Settings.Master.BuddyLevelSettings buddy_level_settings = 52;
+		.POGOProtos.Settings.Master.BuddyActivityCategorySettings buddy_activity_category_settings = 53;
+		.POGOProtos.Settings.Master.BuddyActivitySettings buddy_activity_settings = 54;
+		.POGOProtos.Settings.Master.BuddySwapSettings buddy_swap_settings = 56;
+		.POGOProtos.Settings.Master.VsSeekerClientSettings vs_seeker_client_settings = 58;
+		.POGOProtos.Settings.Master.BuddyEncounterCameoSettings buddy_encounter_cameo_settings = 59;
+		.POGOProtos.Settings.Master.LimitedPurchaseSkuSettings limited_purchase_sku_settings = 60;
+		.POGOProtos.Settings.Master.BuddyEmotionLevelSettings buddy_emotion_level_settings = 61;
+		.POGOProtos.Settings.Master.InvasionAvailabilitySettings pokestop_invasion_availability_settings = 62;
+		.POGOProtos.Settings.Master.BuddyInteractionSettings buddy_interaction_settings = 63;
+		.POGOProtos.Data.VsSeeker.VsSeekerLoot vs_seeker_loot_proto = 64;
+		.POGOProtos.Data.VsSeeker.VsSeekerPokemonRewards vs_seeker_pokemon_rewards = 65;
+		.POGOProtos.Settings.Master.BattleHubOrderSettings battle_hub_order_settings = 66;
+		.POGOProtos.Settings.Master.BattleHubBadgeSettings battle_hub_badge_settings = 67;
+		.POGOProtos.Settings.Master.MapBuddySettings map_buddy_settings = 68;
+		.POGOProtos.Settings.Master.BuddyWalkSettings buddy_walk_settings = 69;
+		.POGOProtos.Settings.Master.PlatypusRolloutSettings platypus_rollout_settings = 70;
+		.POGOProtos.Settings.Master.BuddyHungerSettings buddy_hunger_settings = 72;
+		ProjectVacation project_vacation = 73;
+		.POGOProtos.Settings.Master.AvatarGroupOrderSettings avatar_group_order_settings = 76;
+		.POGOProtos.Settings.Master.MonodepthSettings monodepth_settings = 78;
+		.POGOProtos.Settings.Master.RaidClientSettings raid_settings_proto = 81;
+		.POGOProtos.Data.Sticker.StickerMetadata sticker_metadata = 85;
+
+		message ProjectVacation {
+			bool enable2020 = 1;
+		}
 	}
 
 	enum Result {

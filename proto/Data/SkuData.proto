@@ -1,0 +1,35 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+message SkuData {
+	string id = 1;
+	bool is_enabled = 2;
+	repeated SkuContent content = 3;
+	repeated SkuPrice price = 4;
+	SkuPaymentType payment_type = 5;
+	int64 last_modified_timestamp_ms = 6;
+	repeated SkuPresentationData presentation_data = 7;
+	int64 enabled_window_start_ms = 8;
+	int64 enabled_window_end_ms = 9;
+
+	enum SkuPaymentType {
+		UNSET = 0;
+		THIRD_PARTY = 1;
+		IN_GAME = 2;
+	}
+
+	message SkuContent {
+		string item_type = 1;
+		int32 quantity = 2;
+	}
+
+	message SkuPrice {
+		string currency_type = 1;
+		int32 price = 2;
+	}
+
+	message SkuPresentationData {
+		string key = 1;
+		string value = 2;
+	}
+}

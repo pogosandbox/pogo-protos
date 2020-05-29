@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+import "POGOProtos/Settings/AdventureSyncSettings.proto";
+
+message UpdateAdventureSyncSettingsMessage {
+	.POGOProtos.Settings.AdventureSyncSettings adventure_sync_settings = 1;
+}

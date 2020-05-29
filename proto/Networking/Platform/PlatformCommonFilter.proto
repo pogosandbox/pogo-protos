@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform;
+
+message PlatformCommonFilter {
+	string application_identifier = 1;
+	string operating_system_name = 2;
+	string device_model = 3;
+	string locale_country_code = 4;
+	string locale_language_code = 5;
+	double sampling_probability = 6;
+}

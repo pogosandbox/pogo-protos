@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message EnabledPokemonSettings {
+	repeated Range enabled_pokemon_range = 3;
+
+	message Range {
+		int32 start = 1;
+		int32 end = 2;
+	}
+}

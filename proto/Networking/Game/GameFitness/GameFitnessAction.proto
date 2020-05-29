@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameFitness;
+
+enum GameFitnessAction {
+	UNKNOWN_GAME_FITNESS_ACTION = 0;             // No implementation required
+	UPDATE_FITNESS_METRICS = 640000;             // Implemented
+	GET_FITNESS_REPORT = 640001;                 // Implemented
+	GET_ADVENTURE_SYNC_SETTINGS = 640002;        // Implemented
+	UPDATE_ADVENTURE_SYNC_SETTINGS = 640003;     // Implemented
+	UPDATE_ADVENTURE_SYNC_FITNESS = 640004;      // Implemented
+	GET_ADVENTURE_SYNC_FITNESS_REPORT = 640005;  // Implemented
+}

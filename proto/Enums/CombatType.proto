@@ -7,4 +7,6 @@ enum CombatType {
 	QR_CODE = 2;
 	FRIENDS = 3;
 	NEARBY_COMBAT = 4;
+	SOLO_INVASION = 5;
+	VS_SEEKER = 6;
 }

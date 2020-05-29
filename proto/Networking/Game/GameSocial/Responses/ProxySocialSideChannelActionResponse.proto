@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameSocial.Responses;
+
+message ProxySocialSideChannelActionResponse {
+	Status status = 1;
+	string assigned_host = 2;
+	bytes payload = 3;
+
+	enum Status {
+		UNSET = 0;
+		COMPLETED = 1;
+		COMPLETED_AND_REASSIGNED = 2;
+		ACTION_NOT_FOUND = 3;
+		ASSIGNMENT_ERROR = 4;
+		PROXY_UNAUTHORIZED_ERROR = 5;
+		INTERNAL_ERROR = 6;
+		BAD_REQUEST = 7;
+		ACCESS_DENIED = 8;
+		TIMEOUT_ERROR = 9;
+		RATE_LIMITED = 10;
+	}
+}

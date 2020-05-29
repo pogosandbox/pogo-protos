@@ -10,4 +10,6 @@ message JoinLobbyMessage {
 	double player_lng_degrees = 6;
 	double gym_lat_degrees = 7;
 	double gym_lng_degrees = 8;
+	bool use_remote_pass = 9;
+	string inviter_id = 10;
 }

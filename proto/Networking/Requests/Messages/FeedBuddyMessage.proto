@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message FeedBuddyMessage {
+	.POGOProtos.Inventory.Item.ItemId item = 1;
+	int32 count = 2;
+}

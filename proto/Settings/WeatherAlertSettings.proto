@@ -1,0 +1,43 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+import "POGOProtos/Map/Weather/WeatherAlert.proto";
+
+message WeatherAlertSettings {
+	bool warn_weather = 1;
+	.POGOProtos.Map.Weather.WeatherAlert.Severity default_severity = 2;
+	repeated AlertIgnoreSettings ignores = 3;
+	repeated AlertEnforceSettings enforces = 4;
+
+	message AlertEnforceSettings {
+		message EnforceCondition {
+			repeated string color = 1;
+			repeated string type = 2;
+			repeated string category = 3;
+		}
+
+		string country_code = 1;
+		EnforceCondition when = 2;
+	}
+
+	message AlertIgnoreSettings {
+		message OverrideCondition {
+			repeated string color = 1;
+			repeated string type = 2;
+		}
+
+		string country_code = 1;
+		OverrideCondition when = 2;
+	}
+
+	message EnforceCondition {
+		repeated string color = 1;
+		repeated string type = 2;
+		repeated string category = 3;
+	}
+
+	message OverrideCondition {
+		repeated string color = 1;
+		repeated string type = 2;
+	}
+}

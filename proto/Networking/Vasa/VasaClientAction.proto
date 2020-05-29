@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Vasa;
+
+message VasaClientAction {
+	enum ActionEnum {
+		INVALID_VASA_CLIENT_ACTION = 0;
+		COLLECT_ADID = 8000;
+	}
+}

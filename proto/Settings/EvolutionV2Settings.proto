@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message EvolutionV2Settings {
+	bool is_enabled = 1;
+}

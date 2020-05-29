@@ -17,6 +17,11 @@ import "POGOProtos/Data/Logs/DeclineExRaidPassLogEntry.proto";
 import "POGOProtos/Data/Logs/FitnessRewardsLogEntry.proto";
 import "POGOProtos/Data/Logs/BelugaDailyTransferLogEntry.proto";
 import "POGOProtos/Data/Logs/CombatLogEntry.proto";
+import "POGOProtos/Data/Logs/PurifyPokemonLogEntry.proto";
+import "POGOProtos/Data/Logs/InvasionVictoryLogEntry.proto";
+import "POGOProtos/Data/Logs/VsSeekerSetLogEntry.proto";
+import "POGOProtos/Data/Logs/VsSeekerCompleteSeasonLogEntry.proto";
+import "POGOProtos/Data/Logs/VsSeekerWinRewardsLogEntry.proto";
 
 message ActionLogEntry {
 	int64 timestamp_ms = 1;
@@ -39,5 +44,10 @@ message ActionLogEntry {
 		.POGOProtos.Data.Logs.DeclineExRaidPassLogEntry decline_ex_raid_pass = 16;
 		.POGOProtos.Data.Logs.FitnessRewardsLogEntry fitness_rewards = 17;
 		.POGOProtos.Data.Logs.CombatLogEntry combat = 18;
+		.POGOProtos.Data.Logs.PurifyPokemonLogEntry purify_pokemon = 19;
+		.POGOProtos.Data.Logs.InvasionVictoryLogEntry invasion_victory = 20;
+		.POGOProtos.Data.Logs.VsSeekerSetLogEntry vs_seeker_set = 21;
+		.POGOProtos.Data.Logs.VsSeekerCompleteSeasonLogEntry vs_seeker_complete_season = 22;
+		.POGOProtos.Data.Logs.VsSeekerWinRewardsLogEntry vs_seeker_win_rewards = 23;
 	}
 }

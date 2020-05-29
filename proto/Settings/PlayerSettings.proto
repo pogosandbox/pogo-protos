@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message PlayerSettings {
+	bool opt_out_online_status = 1;
+}

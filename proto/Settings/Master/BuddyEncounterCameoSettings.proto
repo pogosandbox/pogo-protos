@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BuddyEncounterCameoSettings {
+	float buddy_wild_encounter_cameo_chance_percent = 1;
+	float buddy_quest_encounter_cameo_chance_percent = 2;
+	float buddy_raid_encounter_cameo_chance_percent = 3;
+	float buddy_invasion_encounter_cameo_chance_percent = 4;
+	bool buddy_on_map_required = 5;
+}

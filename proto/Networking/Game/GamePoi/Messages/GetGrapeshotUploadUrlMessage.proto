@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Messages;
+
+import "POGOProtos/Enums/PlayerSubmissionType.proto";
+
+message GetGrapeshotUploadUrlMessage {
+	.POGOProtos.Enums.PlayerSubmissionType submission_type = 1;
+	string submission_id = 2;
+	repeated string file_upload_context = 3;
+}

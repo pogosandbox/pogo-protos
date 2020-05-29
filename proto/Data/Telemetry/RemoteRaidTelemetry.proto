@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message RemoteRaidTelemetry {
+	RemoteRaidTelemetryIds remote_raid_telemetry_id = 1;
+	RemoteRaidJoinSource remote_raid_join_source = 2;
+	RemoteRaidInviteAcceptSource remote_raid_invite_accept_source = 3;
+
+	enum RemoteRaidTelemetryIds {
+		UNDEFINED_REMOTE_RAID_EVENT = 0;
+		REMOTE_RAID_LOBBY_ENTER = 1;
+		REMOTE_RAID_INVITE_SENT = 2;
+		REMOTE_RAID_INVITE_ACCEPTED = 3;
+		REMOTE_RAID_INVITE_REJECTED = 4;
+	}
+
+	enum RemoteRaidJoinSource {
+		UNDEFINED_REMOTE_RAID_JOIN_SOURCE = 0;
+		REMOTE_RAID_USED_MAP = 1;
+		REMOTE_RAID_NEARBY_GUI = 2;
+		REMOTE_RAID_INVITED_BY_FRIEND = 3;
+	}
+
+	enum RemoteRaidInviteAcceptSource {
+		UNDEFINED_REMOTE_RAID_INVITE_ACCEPT_SOURCE = 0;
+		REMOTE_RAID_IN_APP = 1;
+		REMOTE_RAID_PUSH_NOTIFICATION = 2;
+	}
+}

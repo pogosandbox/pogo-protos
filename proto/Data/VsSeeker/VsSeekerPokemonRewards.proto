@@ -1,0 +1,46 @@
+syntax = "proto3";
+package POGOProtos.Data.VsSeeker;
+
+import "POGOProtos/Data/VsSeeker/VsSeekerRewardTrack.proto";
+import "POGOProtos/Data/Quests/QuestReward.proto";
+
+message VsSeekerPokemonRewards {
+	repeated PokemonUnlock available_pokemon = 1;
+	.POGOProtos.Data.VsSeeker.VsSeekerRewardTrack reward_track = 2;
+
+	message OverrideIvRange {
+		oneof OverrideType {
+			Range range = 1;
+			bool zero = 2;
+		}
+
+		message Range {
+			int64 min = 1;
+			int64 max = 2;
+		}
+	}
+
+	message PokemonUnlock {
+		oneof RewardType {
+			.POGOProtos.Data.Quests.QuestReward.PokemonEncounterReward pokemon = 1;
+			LimitedEditionPokemonEncounterReward limited_pokemon_reward = 2;
+			LimitedEditionPokemonEncounterReward guaranteed_limited_pokemon_reward = 3;
+		}
+
+		int32 unlocked_at_rank = 4;
+		float weight = 5;
+		OverrideIvRange attack_iv_override = 6;
+		OverrideIvRange defense_iv_override = 7;
+		OverrideIvRange stamina_iv_override = 8;
+
+		message LimitedEditionPokemonEncounterReward {
+			.POGOProtos.Data.Quests.QuestReward.PokemonEncounterReward pokemon = 1;
+			string identifier = 2;
+
+			oneof Limit {
+				int32 lifetime_max_count = 3;
+				int32 per_competitive_combat_season_max_count = 4;
+			}
+		}
+	}
+}

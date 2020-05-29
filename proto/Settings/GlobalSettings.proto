@@ -33,6 +33,21 @@ import "POGOProtos/Settings/BackgroundModeGlobalSettings.proto";
 import "POGOProtos/Settings/ProbeSettings.proto";
 import "POGOProtos/Settings/PokemonGlobalSettings.proto";
 import "POGOProtos/Settings/ArPhotoGlobalSettings.proto";
+import "POGOProtos/Settings/AvatarGlobalSettings.proto";
+import "POGOProtos/Settings/EvolutionV2Settings.proto";
+import "POGOProtos/Settings/KoalaSettings.proto";
+import "POGOProtos/Settings/KangarooSettings.proto";
+import "POGOProtos/Settings/IncidentGlobalSettings.proto";
+import "POGOProtos/Settings/InputSettings.proto";
+import "POGOProtos/Settings/GmtSettings.proto";
+import "POGOProtos/Settings/BuddyGlobalSettings.proto";
+import "POGOProtos/Settings/ArdkConfigSettings.proto";
+import "POGOProtos/Settings/PlannedDowntimeSettings.proto";
+import "POGOProtos/Settings/EnabledPokemonSettings.proto";
+import "POGOProtos/Settings/PokemonBulkUpgradeSettings.proto";
+import "POGOProtos/Settings/ArMappingSettings.proto";
+import "POGOProtos/Settings/RaidInviteFriendsSettings.proto";
+import "POGOProtos/Settings/DailyEncounterGlobalSettings.proto";
 
 message GlobalSettings {
 	.POGOProtos.Settings.FortSettings fort_settings = 2;
@@ -70,4 +85,20 @@ message GlobalSettings {
 	.POGOProtos.Settings.ArPhotoGlobalSettings ar_photo_settings = 34;
 	.POGOProtos.Settings.PoiGlobalSettings poi_settings = 35;
 	.POGOProtos.Settings.PokemonGlobalSettings pokemon_settings = 36;
+	.POGOProtos.Settings.AvatarGlobalSettings avatar_settings = 37;
+	.POGOProtos.Settings.EvolutionV2Settings evolution_v2_settings = 38;
+	.POGOProtos.Settings.IncidentGlobalSettings incident_settings = 39;
+	.POGOProtos.Settings.KoalaSettings koala_settings = 40;
+	.POGOProtos.Settings.KangarooSettings kangaroo_settings = 41;
+	.POGOProtos.Settings.BuddyGlobalSettings buddy_settings = 43;
+	.POGOProtos.Settings.InputSettings input_settings = 44;
+	.POGOProtos.Settings.GmtSettings gmt_settings = 45;
+	bool use_local_time_action = 47;
+	.POGOProtos.Settings.ArdkConfigSettings ardk_config_settings = 48;
+	.POGOProtos.Settings.EnabledPokemonSettings enabled_pokemon = 49;
+	.POGOProtos.Settings.PokemonBulkUpgradeSettings pokemon_bulk_upgrade_settings = 50;
+	.POGOProtos.Settings.PlannedDowntimeSettings planned_downtime_settings = 51;
+	.POGOProtos.Settings.ArMappingSettings ar_mapping_settings = 52;
+	.POGOProtos.Settings.RaidInviteFriendsSettings raid_invite_friends_settings = 53;
+	.POGOProtos.Settings.DailyEncounterGlobalSettings daily_encounter_settings = 54;
 }

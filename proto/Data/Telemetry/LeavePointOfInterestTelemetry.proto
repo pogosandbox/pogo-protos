@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Map/Fort/FortType.proto";
+
+message LeavePointOfInterestTelemetry {
+	string result = 1;
+	string fort_id = 2;
+	.POGOProtos.Map.Fort.FortType fort_type = 3;
+	int64 client_timestamp = 4;
+	string partner_id = 5;
+	int64 time_spent = 6;
+	string campaign_id = 7;
+}

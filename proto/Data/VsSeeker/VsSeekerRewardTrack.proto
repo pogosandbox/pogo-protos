@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.VsSeeker;
+
+enum VsSeekerRewardTrack {
+	FREE = 0;
+	PREMIUM = 1;
+}

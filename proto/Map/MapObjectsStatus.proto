@@ -5,4 +5,5 @@ enum MapObjectsStatus {
 	UNSET_STATUS = 0;
 	SUCCESS = 1;
 	LOCATION_UNSET = 2;
+	ERROR = 3;
 }

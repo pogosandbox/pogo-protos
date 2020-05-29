@@ -18,4 +18,7 @@ message GymBattleSettings {
 	int32 swap_duration_ms = 14;
 	float dodge_damage_reduction_percent = 15;
 	int32 minimum_raid_player_level = 16;
+	float shadow_pokemon_attack_bonus_multiplier = 17;
+	float shadow_pokemon_defense_bonus_multiplier = 18;
+	float purified_pokemon_attack_multiplier_vs_shadow = 19;
 }

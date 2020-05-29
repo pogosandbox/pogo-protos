@@ -6,4 +6,5 @@ message DailyQuestSettings {
 	int32 streak_length = 2;
 	float bonus_multiplier = 3;
 	float streak_bonus_multiplier = 4;
+	bool disable = 5;
 }

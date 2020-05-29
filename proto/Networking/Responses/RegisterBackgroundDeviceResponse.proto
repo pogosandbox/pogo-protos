@@ -1,15 +1,19 @@
 syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
-import "POGOProtos/Data/BackgroundToken.proto";
-
 message RegisterBackgroundDeviceResponse {
-	Status status = 1;
-	.POGOProtos.Data.BackgroundToken token = 2;
+	//Status status = 1;
+	BackgroundToken token = 1;
 
 	enum Status {
 		UNSET = 0;
 		SUCCESS = 1;
 		ERROR = 2;
+	}
+
+	message BackgroundToken {
+		bytes token = 1;
+		int64 expiration_time = 2;
+		bytes iv = 3;
 	}
 }

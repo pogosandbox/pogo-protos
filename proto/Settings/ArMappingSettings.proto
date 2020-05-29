@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message ArMappingSettings {
+	int32 min_hours_between_prompt = 1;
+	int32 max_video_time_seconds = 2;
+	int32 preview_video_bitrate_kbps = 3;
+	int32 preview_video_deadline_ms = 4;
+	int32 research_video_bitrate_kbps = 5;
+	int32 research_video_deadline_ms = 6;
+	int32 min_video_time_seconds = 7;
+	int32 preview_frame_rate_fps = 8;
+	int32 preview_frames_to_jump = 9;
+	int32 max_upload_chunk_rejected_count = 10;
+	int32 ardk_desired_accuracy_mm = 11;
+	int32 ardk_update_distance_mm = 12;
+	int32 max_pending_upload_kilobytes = 13;
+}

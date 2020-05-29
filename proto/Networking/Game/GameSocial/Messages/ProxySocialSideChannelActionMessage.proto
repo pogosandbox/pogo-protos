@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameSocial.Messages;
+
+message ProxySocialSideChannelActionMessage {
+	uint32 action = 1;
+	string host = 2;
+	bytes payload = 3;
+}

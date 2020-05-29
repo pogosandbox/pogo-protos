@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ShoppingPageScrollTelemetry {
+	ShoppingPageScrollIds scroll_type = 1;
+	int32 scroll_row = 2;
+	int32 total_rows = 3;
+
+	enum ShoppingPageScrollIds {
+		UNDEFINED_SHOPPING_PAGE_SCROLL_TYPE = 0;
+		LAST_SCROLL = 1;
+		MAX_SCROLL = 2;
+	}
+}

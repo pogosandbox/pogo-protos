@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+import "POGOProtos/Map/Fort/IncidentLookup.proto";
+
+message InvasionEncounter {
+	.POGOProtos.Map.Fort.IncidentLookup incident_lookup = 1;
+	int32 step = 2;
+}

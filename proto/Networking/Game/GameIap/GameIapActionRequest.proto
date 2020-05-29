@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameIap;
+
+import "POGOProtos/Networking/Game/GameIap/GameIapAction.proto";
+
+message GameIapActionRequest {
+	.POGOProtos.Networking.Game.GameIap.GameIapAction request_type = 1;
+	bytes request_message = 2;
+}

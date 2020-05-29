@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameLocationAwareness;
+
+enum GameLocationAwarenessAction {
+	UNKNOWN_GAME_LOCATION_AWARENESS_ACTION = 0;  // No implementation required
+	REQUEST_GEOFENCE_UPDATES = 360000;           // Implemented
+	UPDATE_PLAYER_LOCATION = 360001;             // Implemented
+}

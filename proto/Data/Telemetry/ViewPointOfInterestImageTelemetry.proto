@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Map/Fort/FortType.proto";
+
+message ViewPointOfInterestImageTelemetry {
+	string result = 1;
+	string fort_id = 2;
+	.POGOProtos.Map.Fort.FortType fort_type = 3;
+	bool in_range = 4;
+	bool was_gym_interior = 5;
+	string partner_id = 6;
+	string campaign_id = 7;
+}

@@ -1,7 +1,0 @@
-syntax = "proto3";
-package POGOProtos.Networking.Requests.Social;
-
-message UpdateFacebookStatusMessage {
-	string fb_access_token = 1;
-	bool force_update = 2;
-}

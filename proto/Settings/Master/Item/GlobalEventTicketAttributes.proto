@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master.Item;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message GlobalEventTicketAttributes {
+	.POGOProtos.Enums.BadgeType event_badge = 1;
+	int64 grant_badge_before_event_start_ms = 2;
+	string event_start_time = 3;
+	string event_end_time = 4;
+	string item_bag_description_key = 6;
+	int64 client_event_start_time_utc_ms = 100;
+	int64 client_event_end_time_utc_ms = 101;
+}

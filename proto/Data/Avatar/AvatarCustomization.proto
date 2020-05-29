@@ -19,6 +19,9 @@ message AvatarCustomization {
 	int32 unlock_badge_level = 12;
 	string icon_name = 13;
 	int32 unlock_player_level = 14;
+	string set_name = 15;
+	bool set_prime_item = 16;
+	repeated string incompatible_bundle_names = 17;
 
 	enum AvatarCustomizationPromoType {
 		UNSET_PROMO_TYPE = 0;
@@ -32,6 +35,7 @@ message AvatarCustomization {
 		MEDAL_REWARD = 2;
 		IAP_CLOTHING = 3;
 		LEVEL_REWARD = 4;
+		COMBAT_RANK_REWARD = 5;
 	}
 
 	enum Slot {

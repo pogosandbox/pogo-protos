@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message CreateBuddyMultiplayerSessionResponse {
+	string plfe_session_id = 1;
+	bytes arbe_join_token = 2;
+	int64 generation_timestamp = 3;
+	int32 max_players = 4;
+	Result result = 5;
+
+	enum Result {
+		CREATE_SUCCESS = 0;
+		CREATE_BUDDY_NOT_SET = 1;
+		CREATE_BUDDY_NOT_FOUND = 2;
+		CREATE_BAD_BUDDY = 3;
+		CREATE_BUDDY_V2_NOT_ENABLED = 4;
+		CREATE_PLAYER_LEVEL_TOO_LOW = 5;
+		REATE_UNKNOWN_ERROR = 6;
+		CREATE_U13_NO_PERMISSION = 7;
+	}
+}

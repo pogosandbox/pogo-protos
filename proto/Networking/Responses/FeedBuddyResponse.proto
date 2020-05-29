@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Buddy/BuddyObservedData.proto";
+import "POGOProtos/Data/Buddy/BuddyStatsShownHearts.proto";
+
+message FeedBuddyResponse {
+	Result result = 1;
+	.POGOProtos.Data.Buddy.BuddyObservedData observed_data = 3;
+	.POGOProtos.Data.Buddy.BuddyStatsShownHearts.BuddyShownHeartType shown_hearts = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_BUDDY_NOT_VALID = 2;
+		FAILED_INSUFFICIENT_RESOURCES = 3;
+		FAILED_INVALID_ITEM_REQUIREMENT = 4;
+		FAILED_BUDDY_STILL_FULL_FROM_POFFIN = 5;
+	}
+}

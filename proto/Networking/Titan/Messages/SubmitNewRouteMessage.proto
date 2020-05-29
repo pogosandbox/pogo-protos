@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan.Messages;
+
+import "POGOProtos/Data/Route/RouteCheckpoint.proto";
+
+message SubmitNewRouteMessage {
+	string route_submission_id = 1;
+	string title = 2;
+	string description = 3;
+	//repeated RoutePoi pois = 4;
+	RouteVisitOrder visit_order = 5;
+	repeated .POGOProtos.Data.Route.RouteCheckpoint checkpoints = 6;
+	.POGOProtos.Data.Route.RouteCheckpoint.RouteImage main_image = 7;
+
+	enum RouteVisitOrder {
+		ROUTE_VISIT_ORDER_UNSPECIFIED = 0;
+		IN_ORDER = 1;
+		UNORDERED = 2;
+		REVERSIBLE = 3;
+	}
+}

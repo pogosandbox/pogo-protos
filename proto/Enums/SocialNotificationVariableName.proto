@@ -6,4 +6,5 @@ enum SocialNotificationVariableName {
 	SOCIAL_CODENAME = 1;
 	SOCIAL_TEAM = 2;
 	SOCIAL_PLAYER_SUMMARY = 3;
+	SOCIAL_FULL_NAME = 4;
 }

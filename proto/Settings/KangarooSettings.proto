@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message KangarooSettings {
+	bool enable_kangaroo_v2 = 1;
+}

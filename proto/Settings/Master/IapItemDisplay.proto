@@ -15,4 +15,8 @@ message IapItemDisplay {
 	string sprite_id = 8;
 	string title = 9;
 	string description = 10;
+	string sku_enable_time = 11;
+	string sku_disable_time = 12;
+	int64 sku_enable_time_utc_ms = 13;
+	int64 sku_disable_time_utc_ms = 14;
 }

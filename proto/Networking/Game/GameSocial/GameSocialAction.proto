@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameSocial;
+
+enum GameSocialAction {
+	UNKNOWN_GAME_SOCIAL_ACTION = 0;             // No implementation required
+	PROXY_SOCIAL_ACTION = 630000;               // Implemented
+	PROXY_SOCIAL_SIDE_CHANNEL_ACTION = 630001;  // Implemented
+}

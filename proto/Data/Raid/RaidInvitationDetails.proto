@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Data.Raid;
+
+import "POGOProtos/Enums/RaidLevel.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/Form.proto";
+import "POGOProtos/Enums/TeamColor.proto";
+import "POGOProtos/Data/Player/PlayerAvatar.proto";
+
+message RaidInvitationDetails {
+	string gym_id = 1;
+	repeated int32 lobby_id = 2;
+	int64 raid_seed = 3;
+	int64 raid_invitation_expire_ms = 4;
+	.POGOProtos.Enums.RaidLevel raid_level = 5;
+	string gym_name = 6;
+	string image_url = 7;
+	double latitude = 8;
+	double longitude = 9;
+	.POGOProtos.Enums.PokemonId raid_pokemon_id = 10;
+	.POGOProtos.Enums.Form raid_pokemon_form = 11;
+	string inviter_id = 12;
+	string inviter_nickname = 13;
+	.POGOProtos.Data.Player.PlayerAvatar inviter_avatar = 14;
+	.POGOProtos.Enums.TeamColor inviter_team = 15;
+}

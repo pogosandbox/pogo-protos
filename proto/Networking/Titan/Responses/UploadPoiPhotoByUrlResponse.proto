@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan.Responses;
+
+message UploadPoiPhotoByUrlResponse {
+	//ref PortalCurationImageResult.
+	Result status = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		FEATURE_DISABLED = 2;
+		ALREADY_UPLOADED = 3;
+		IMAGE_NOT_FOUND = 4;
+		IMAGE_TOO_BIG = 5;
+		IMAGE_NOT_SERVABLE = 6;
+		PORTAL_NOT_FOUND = 7;
+	}
+}

@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Grapeshot;
+
+import "POGOProtos/Data/Grapeshot/GrapeshotChunkData.proto";
+import "POGOProtos/Data/Grapeshot/GrapeshotComposeData.proto";
+
+message GrapeshotUploadingData {
+	repeated .POGOProtos.Data.Grapeshot.GrapeshotChunkData chunk_data = 1;
+	.POGOProtos.Data.Grapeshot.GrapeshotComposeData compose_data = 2;
+	string gcs_bucket = 3;
+	int32 number_of_chunks = 4;
+}

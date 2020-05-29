@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message PlatformClientApiSettings {
+	bytes payload = 1;
+
+	enum SettingsType {
+		UNDEFINED = 0;
+		MAP = 1;
+	}
+}

@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ServerRecordMetadata {
+	string user_id = 1;
+	string telemetry_name = 2;
+	string session_id = 3;
+	string request_id = 4;
+	int64 server_timestamp_ms = 5;
+}

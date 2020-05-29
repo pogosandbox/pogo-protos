@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message ClientUpgradeMessage {
+	string version = 1;
+	ClientOperatingSystem operating_system = 2;
+
+	enum ClientOperatingSystem {
+		OS_UNKNOWN = 0;
+		OS_ANDROID = 1;
+		OS_IOS = 2;
+		OS_DESKTOP = 3;
+	}
+}

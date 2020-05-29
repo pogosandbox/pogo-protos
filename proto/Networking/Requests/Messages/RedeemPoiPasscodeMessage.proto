@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message RedeemPoiPasscodeMessage {
+	string passcode = 1;
+	string poi_guid = 2;
+	DevicePlatform device_platform = 3;
+	string carrier = 4;
+
+	enum DevicePlatform {
+		PLATFORM_UNKNOWN = 0;
+		PLATFORM_ANDROID = 1;
+		PLATFORM_IOS = 2;
+		PLATFORM_WEB = 3;
+	}
+}

@@ -1,0 +1,69 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+import "POGOProtos/Settings/WeatherAlertSettings.proto";
+import "POGOProtos/Map/Weather/DisplayWeather.proto";
+import "POGOProtos/Map/Weather/GameplayWeather.proto";
+
+message WeatherSettings {
+	GameplayWeatherSettings gameplay_settings = 1;
+	DisplayWeatherSettings display_settings = 2;
+	WeatherAlertSettings alert_settings = 3;
+	StaleWeatherSettings stale_settings = 4;
+
+	message ConditionMapSettings {
+		.POGOProtos.Map.Weather.GameplayWeather.WeatherCondition gameplay_condition = 1;
+		repeated string provider_enums = 2;
+	}
+
+	message DisplayLevelSettings {
+		repeated string condition_enums = 1;
+		.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel cloud_level = 2;
+		.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel rain_level = 3;
+		.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel snow_level = 4;
+		.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel fog_level = 5;
+		.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel special_effect_level = 6;
+	}
+
+	message DisplayWeatherSettings {
+		message DisplayLevelSettings {
+			repeated string condition_enums = 1;
+			.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel cloud_level = 2;
+			.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel rain_level = 3;
+			.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel snow_level = 4;
+			.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel fog_level = 5;
+			.POGOProtos.Map.Weather.DisplayWeather.DisplayLevel special_effect_level = 6;
+		}
+
+		message WindLevelSettings {
+			int32 wind_level1_speed = 1;
+			int32 wind_level2_speed = 2;
+			int32 wind_level3_speed = 3;
+		}
+
+		repeated DisplayLevelSettings display_level_settings = 1;
+		WindLevelSettings wind_level_settings = 2;
+	}
+
+	message GameplayWeatherSettings {
+		message ConditionMapSettings {
+			.POGOProtos.Map.Weather.GameplayWeather.WeatherCondition gameplay_condition = 1;
+			repeated string provider_enums = 2;
+		}
+
+		repeated ConditionMapSettings condition_map = 1;
+		int32 min_speed_for_windy = 2;
+		repeated string conditions_for_windy = 3;
+	}
+
+	message StaleWeatherSettings {
+		int32 max_stale_weather_threshold_in_hrs = 1;
+		int32 default_weather_condition_code = 2;
+	}
+
+	message WindLevelSettings {
+		int32 wind_level1_speed = 1;
+		int32 wind_level2_speed = 2;
+		int32 wind_level3_speed = 3;
+	}
+}

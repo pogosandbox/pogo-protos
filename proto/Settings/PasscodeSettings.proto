@@ -3,4 +3,5 @@ package POGOProtos.Settings;
 
 message PasscodeSettings {
 	bool show_passcode_in_store = 1;
+	bool use_passcode_v2 = 2;
 }

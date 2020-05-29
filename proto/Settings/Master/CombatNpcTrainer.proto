@@ -2,7 +2,8 @@ syntax = "proto3";
 package POGOProtos.Settings.Master;
 
 import "POGOProtos/Data/Player/PlayerAvatar.proto";
-import "POGOProtos/Data/NpcPokemon.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonId.proto";
 
 message CombatNpcTrainer {
 	string trainer_name = 1;
@@ -11,7 +12,14 @@ message CombatNpcTrainer {
 	string win_loot_table_id = 4;
 	string lose_loot_table_id = 5;
 	.POGOProtos.Data.Player.PlayerAvatar avatar = 7;
-	repeated .POGOProtos.Data.NpcPokemon available_pokemon = 8;
+	repeated NpcPokemon available_pokemon = 8;
 	string trainer_title = 9;
 	string trainer_quote = 10;
+	string icon_url = 11;
+	string backdrop_image_bundle = 12;
+
+	message NpcPokemon {
+		.POGOProtos.Enums.PokemonId pokemon_type = 1;
+		.POGOProtos.Data.PokemonDisplay pokemon_display = 2;
+	}
 }

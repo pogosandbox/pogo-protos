@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message KoalaSettings {
+	string app_id = 1;
+	bool use_sandbox = 2;
+	bool use_koala = 3;
+}

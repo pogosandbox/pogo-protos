@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Responses;
+
+import "POGOProtos/Enums/PlatformWarningType.proto";
+
+message GetOutstandingWarningsResponse {
+	repeated WarningInfo outstanding_warning = 1;
+
+	message WarningInfo {
+		.POGOProtos.Enums.PlatformWarningType type = 1;
+	}
+}

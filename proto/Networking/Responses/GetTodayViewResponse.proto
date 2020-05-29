@@ -1,0 +1,110 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Enums/QuestType.proto";
+import "POGOProtos/Networking/Responses/GetLocalTimeResponse.proto";
+
+message GetTodayViewResponse {
+	Status status = 1;
+	TodayView today_view = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR = 2;
+	}
+
+	message TodayView {
+		repeated TodayViewSection sections = 1;
+
+		message TodayViewSection {
+			oneof Section {
+				PokecoinSection pokecoin = 1;
+				GymPokemonSection gym_pokemon = 2;
+				DailyStreaks streaks = 3;
+				EventSection event = 4;
+				UpNextSection up_next = 5;
+				TimedQuestSection timed_quest = 6;
+			}
+
+			message TimedQuestSection {
+				string quest_id = 1;
+			}
+
+			message DailyStreaks {
+				repeated Streak streaks = 1;
+
+				message Streak {
+					.POGOProtos.Enums.QuestType quest_type = 1;
+					int32 count = 2;
+					int32 target = 3;
+					int32 remaining_today = 4;
+				}
+			}
+
+			message EventSection {
+				string event_name = 1;
+				.POGOProtos.Networking.Responses.GetLocalTimeResponse.LocalTime end_time = 3;
+				string ref_news_id = 4;
+				repeated BonusBox bonus_boxes = 5;
+
+				message BonusBox {
+					string text = 1;
+					IconType icon_type = 2;
+
+					enum IconType {
+						UNSET = 0;
+						ADVENTURE_SYNC = 1;
+						BUDDY = 2;
+						CANDY_GENERAL = 3;
+						EGG = 4;
+						EGG_INCUBATOR = 5;
+						EVENT_MOVE = 6;
+						EVOLUTION = 7;
+						FIELD_RESEARCH = 8;
+						FRIENDSHIP = 9;
+						GIFT = 10;
+						INCENSE = 11;
+						LUCKY_EGG = 12;
+						LURE_MODULE = 13;
+						PHOTOBOMB = 14;
+						POKESTOP = 15;
+						RAID = 16;
+						RAID_PASS = 17;
+						SPAWN_UNKNOWN = 18;
+						STAR_PIECE = 19;
+						STARDUST = 20;
+						TEAM_ROCKET = 21;
+						TRADE = 22;
+						TRANSFER_CANDY = 23;
+						BATTLE = 24;
+						XP = 25;
+						SHOP = 26;
+					}
+				}
+			}
+
+			message UpNextSection {
+				repeated string event_id = 1;
+			}
+
+			message PokecoinSection {
+				int32 coins_earned_today = 1;
+				int32 max_coins_per_day = 2;
+				string coins_quest_id = 3;
+			}
+
+			message GymPokemonSection {
+				repeated GymPokemon pokemon_in_gym = 1;
+				repeated GymPokemon pokemon_returned_today = 2;
+
+				message GymPokemon {
+					int64 pokemon_id = 1;
+					float motivation = 2;
+					int64 deployed_timestamp_ms = 3;
+					int32 coins_returned = 4;
+				}
+			}
+		}
+	}
+}

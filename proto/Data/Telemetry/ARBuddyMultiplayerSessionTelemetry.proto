@@ -1,0 +1,22 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message ARBuddyMultiplayerSessionTelemetry {
+	bool camera_permission_granted = 1;
+	int64 host_time_to_publish_first_map = 2;
+	int32 host_number_of_maps_published = 3;
+	bool host_mapping_successful = 4;
+	bool lobby_connection_successful = 5;
+	int64 time_from_start_of_session_to_sync = 6;
+	bool sync_successful = 7;
+	int64 session_length = 8;
+	int32 crash_count = 9;
+	int64 duration_spent_in_lobby = 10;
+	int64 time_from_invite_to_lobby = 11;
+	int64 time_from_lobby_to_session = 12;
+	int64 length_of_ar_session = 13;
+	int32 players_connected = 14;
+	int32 players_dropped = 15;
+	int32 num_photos_taken = 16;
+	bool is_host = 17;
+}

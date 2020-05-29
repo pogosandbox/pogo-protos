@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePing;
+
+enum GamePingAction {
+	UNKNOWN_GAME_PING_ACTION = 0;  // No implementation required
+	PING = 220000;                 // Implemented
+	PING_ASYNC = 220001;           // ???
+	PING_DOWNSTREAM = 220002;      // ???
+}

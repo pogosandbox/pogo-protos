@@ -16,4 +16,13 @@ message CombatLeague {
 	repeated .POGOProtos.Enums.PokemonId banned_pokemon = 7;
 	.POGOProtos.Enums.BadgeType badge_type = 8;
 	int32 minigame_defense_chance_limit = 9;
+	string battle_party_combat_league_template_id = 10;
+	LeagueType league_type = 11;
+	string border_color_hex = 12;
+
+	enum LeagueType {
+		NONE = 0;
+		STANDARD = 1;
+		PREMIER = 2;
+	}
 }

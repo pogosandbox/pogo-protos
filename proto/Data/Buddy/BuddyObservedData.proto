@@ -1,0 +1,38 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+import "POGOProtos/Data/Buddy/BuddyStats.proto";
+import "POGOProtos/Data/Buddy/BuddyGift.proto";
+import "POGOProtos/Data/Souvenir.proto";
+import "POGOProtos/Data/Buddy/BuddyStatsShownHearts.proto";
+
+message BuddyObservedData {
+	int32 current_points_earned = 1;
+	.POGOProtos.Data.Buddy.BuddyStats total_stats = 3;
+	.POGOProtos.Data.Buddy.BuddyGift buddy_gift_picked_up = 6;
+	int32 current_emotion_points = 7;
+	BuddyValidationResult buddy_validation_result = 8;
+	map<int32, .POGOProtos.Data.Souvenir> souvenirs_collected = 9;
+	.POGOProtos.Data.Buddy.BuddyStatsShownHearts today_stats_shown_hearts = 10;
+	BuddyFeedStats buddy_feed_stats = 11;
+	string attractive_poi_id = 12;
+	int64 attractive_poi_expiration_time_ms = 13;
+	int32 num_days_spent_with_buddy = 14;
+
+	enum BuddyValidationResult {
+		UNSET = 0;
+		SUCCESS = 1;
+		FAILED_BUDDY_NOT_SET = 2;
+		FAILED_BUDDY_NOT_FOUND = 3;
+		FAILED_BAD_BUDDY = 4;
+		FAILED_BUDDY_V2_NOT_ENABLED = 5;
+		FAILED_PLAYER_LEVEL_TOO_LOW = 6;
+	}
+
+	message BuddyFeedStats {
+		int64 map_expiration_ms = 1;
+		float pre_map_fullness_percentage = 2;
+		int64 fullness_expiration_ms = 3;
+		int64 poffin_expiration_ms = 4;
+	}
+}

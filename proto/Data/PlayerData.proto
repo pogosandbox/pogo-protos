@@ -5,13 +5,16 @@ import "POGOProtos/Enums/TutorialState.proto";
 import "POGOProtos/Data/Player/PlayerAvatar.proto";
 import "POGOProtos/Data/Player/DailyBonus.proto";
 import "POGOProtos/Data/Player/EquippedBadge.proto";
-import "POGOProtos/Data/Player/ContactSettings.proto";
+import "POGOProtos/Settings/ContactSettings.proto";
 import "POGOProtos/Data/Store/CurrencyQuantity.proto";
-import "POGOProtos/Data/Player/SocialPlayerSettings.proto";
+import "POGOProtos/Settings/SocialPlayerSettings.proto";
 import "POGOProtos/Data/Player/TeamChangeInfo.proto";
 import "POGOProtos/Data/BuddyPokemon.proto";
 import "POGOProtos/Enums/TeamColor.proto";
 import "POGOProtos/Data/Combat/CombatPlayerPreferences.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Data/Combat/CombatLog.proto";
+import "POGOProtos/Data/Buddy/BuddyObservedData.proto";
 
 message PlayerData {
 	int64 creation_timestamp_ms = 1;
@@ -23,15 +26,20 @@ message PlayerData {
 	int32 max_item_storage = 10;
 	.POGOProtos.Data.Player.DailyBonus daily_bonus = 11;
 	.POGOProtos.Data.Player.EquippedBadge equipped_badge = 12;
-	.POGOProtos.Data.Player.ContactSettings contact_settings = 13;
+	.POGOProtos.Settings.ContactSettings contact_settings = 13;
 	repeated .POGOProtos.Data.Store.CurrencyQuantity currency_balance = 14;
 	int32 remaining_codename_claims = 15;
 	.POGOProtos.Data.BuddyPokemon buddy_pokemon = 16;
 	int64 battle_lockout_end_ms = 17;
 	.POGOProtos.Data.Player.PlayerAvatar secondary_player_avatar = 18;
 	bool name_is_blacklisted = 19;
-	.POGOProtos.Data.Player.SocialPlayerSettings social_player_settings = 20;
+	.POGOProtos.Settings.SocialPlayerSettings social_player_settings = 20;
 	.POGOProtos.Data.Combat.CombatPlayerPreferences combat_player_preferences = 21;
 	string player_support_id = 22;
 	.POGOProtos.Data.Player.TeamChangeInfo team_change_info = 23;
+	repeated .POGOProtos.Enums.PokemonId consumed_eevee_easter_eggs = 24;
+	.POGOProtos.Data.Combat.CombatLog combat_log = 25;
+	int64 time_zone_offset_ms = 26;
+	.POGOProtos.Data.Buddy.BuddyObservedData buddy_observed_data = 27;
+	string helpshift_user_id = 28;
 }

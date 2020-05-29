@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameIap.Messages;
+
+message PurchaseSkuMessage {
+	string sku_id = 1;
+}

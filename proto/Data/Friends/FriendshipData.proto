@@ -10,4 +10,6 @@ message FriendshipData {
 	string codename = 3;
 	string nickname = 4;
 	int64 open_trade_expire_ms = 5;
+	bool is_lucky = 6;
+	int32 lucky_count = 7;
 }

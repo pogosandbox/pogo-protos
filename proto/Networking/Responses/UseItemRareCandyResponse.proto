@@ -6,7 +6,6 @@ import "POGOProtos/Enums/PokemonId.proto";
 message UseItemRareCandyResponse {
 	Result result = 1;
 	.POGOProtos.Enums.PokemonId pokemon_id = 2;
-	int32 updated_candy_count = 3;
 
 	enum Result {
 		UNSET = 0;

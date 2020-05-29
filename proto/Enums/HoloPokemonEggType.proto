@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum HoloPokemonEggType {
+	EGG_TYPE_UNSET = 0;
+	EGG_TYPE_SHADOW = 1;
+}

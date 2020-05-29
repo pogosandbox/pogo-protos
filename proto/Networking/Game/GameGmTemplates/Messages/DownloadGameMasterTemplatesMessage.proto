@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameGmTemplates.Messages;
+
+message DownloadGameMasterTemplatesMessage {
+	int64 basis_batch_id = 1;
+	int64 batch_id = 2;
+	int32 page_offset = 3;
+	bool apply_experiments = 4;
+	repeated int32 basis_experiment_id = 5;
+	repeated int32 experiment_id = 6;
+}

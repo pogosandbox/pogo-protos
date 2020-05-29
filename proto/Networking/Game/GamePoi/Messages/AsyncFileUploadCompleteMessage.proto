@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Messages;
+
+import "POGOProtos/Enums/PlayerSubmissionType.proto";
+
+message AsyncFileUploadCompleteMessage {
+	string submission_id = 1;
+	.POGOProtos.Enums.PlayerSubmissionType submission_type = 2;
+	Status upload_status = 3;
+
+	enum Status {
+		UNSET = 0;
+		UPLOAD_DONE = 1;
+		UPLOAD_FAILED = 2;
+	}
+}

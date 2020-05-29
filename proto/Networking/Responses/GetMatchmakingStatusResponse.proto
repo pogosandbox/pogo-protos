@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/Combat/CombatChallenge.proto";
+
+message GetMatchmakingStatusResponse {
+	Result result = 1;
+	.POGOProtos.Data.Combat.CombatChallenge challenge = 2;
+	string queue_id = 3;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS_OPPONENT_FOUND = 1;
+		SUCCESS_QUEUED = 2;
+		SUCCESS_NOT_MATCHED_EXPIRED = 3;
+		ERROR_PLAYER_NOT_FOUND = 4;
+		ERROR_QUEUE_NOT_FOUND = 5;
+		ERROR_RETRY_UNSUCCESSFUL = 6;
+	}
+}

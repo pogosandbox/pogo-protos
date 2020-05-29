@@ -15,4 +15,14 @@ message CombatGlobalSettings {
 	bool enable_sockets = 11;
 	bool enable_spin_minigame = 12;
 	bool enable_quick_swap_v2 = 13;
+	bool deprecated_vs_seeker_setting = 14;
+	int32 vs_seeker_walking_dist_poll_duration_ms = 15;
+	int32 vs_seeker_player_min_level = 16;
+	int32 matchmaking_poll_duration_ms = 17;
+	bool enable_particle_minigame = 18;
+	bool enable_vs_seeker_upgrade_iap = 19;
+	bool enable_flyout_animations = 20;
+	bool enable_battle_hub = 21;
+	int32 matchmaking_timeout_duration_ms = 22;
+	int64 planned_downtime_timestamp_ms = 23;
 }

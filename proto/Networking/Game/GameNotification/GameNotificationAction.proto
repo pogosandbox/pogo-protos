@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameNotification;
+
+enum GameNotificationAction {
+	UNKNOWN_GAME_NOTIFICATION_ACTION = 0;  // No implementation required
+	UPDATE_NOTIFICATION_STATUS = 350000;   // Implemented
+}

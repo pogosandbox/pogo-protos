@@ -21,4 +21,5 @@ message PokedexEntry {
 	repeated .POGOProtos.Enums.Gender encountered_genders = 12;
 	bool encountered_shiny = 13;
 	int32 times_lucky_received = 14;
+	int32 times_purified = 15;
 }

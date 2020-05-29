@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message PlannedDowntimeSettings {
+	int64 downtime_timestamp_ms = 1;
+	int64 no_actions_window_sec_from_downtime = 2;
+}

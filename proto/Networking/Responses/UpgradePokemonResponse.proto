@@ -7,6 +7,7 @@ message UpgradePokemonResponse {
 	Result result = 1;
 	.POGOProtos.Data.PokemonData upgraded_pokemon = 2;
 	.POGOProtos.Data.PokemonData next_upgraded_pokemon = 3;
+	repeated BulkUpgradesCost bulk_upgrades_cost_table = 4;
 
 	enum Result {
 		UNSET = 0;
@@ -15,5 +16,16 @@ message UpgradePokemonResponse {
 		ERROR_INSUFFICIENT_RESOURCES = 3;
 		ERROR_UPGRADE_NOT_AVAILABLE = 4;
 		ERROR_POKEMON_IS_DEPLOYED = 5;
+		ERROR_DUPLICATE_REQUEST = 6;
+	}
+
+	message BulkUpgradesCost {
+		int32 number_of_upgrades = 1;
+		int32 pokemon_level = 2;
+		int32 pokemon_cp = 3;
+		int32 total_stardust_cost = 4;
+		int32 total_candy_cost = 5;
+		float total_cp_multiplier = 6;
+		int32 total_xl_candy_cost = 7;
 	}
 }

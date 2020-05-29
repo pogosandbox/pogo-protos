@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BuddySwapSettings {
+	int32 max_swaps_per_day = 1;
+}

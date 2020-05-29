@@ -1,0 +1,14 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message CancelMatchmakingResponse {
+	Result result = 1;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESSFULLY_CANCELLED = 1;
+		ERROR_ALREADY_MATCHED = 2;
+		ERROR_PLAYER_NOT_FOUND = 3;
+		ERROR_QUEUE_NOT_FOUND = 4;
+	}
+}

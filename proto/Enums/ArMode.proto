@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum ArMode {
+	ARMODE_NONE = 0;
+	ARSTANDARD = 1;
+	ARPLUS = 2;
+}

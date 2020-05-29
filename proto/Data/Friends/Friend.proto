@@ -11,4 +11,12 @@ message Friend {
 	int64 created_ms = 7;
 	string fb_user_id = 8;
 	bool is_facebook_friendship = 9;
+	SharedFriendship shared_data = 10;
+
+	message SharedFriendship {
+		bytes shared_data = 1;
+		int64 version = 2;
+		bytes data_from_me = 3;
+		bytes data_to_me = 4;
+	}
 }

@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Data.Grapeshot;
+
+import "POGOProtos/Data/Grapeshot/GrapeshotAuthenticationData.proto";
+
+message GrapeshotChunkData {
+	string chunk_file_path = 1;
+	uint32 chunk_number = 2;
+	.POGOProtos.Data.Grapeshot.GrapeshotAuthenticationData upload_authentication = 3;
+	.POGOProtos.Data.Grapeshot.GrapeshotAuthenticationData delete_authentication = 4;
+}

@@ -8,4 +8,12 @@ message FriendDetails {
 	bytes friend_visible_data = 2;
 	int32 score = 3;
 	bytes data_with_me = 4;
+	OnlineStatus online_status = 5;
+
+	enum OnlineStatus {
+		UNSET = 0;
+		STATUS_UNKNOWN = 1;
+		STATUS_ONLINE = 2;
+		STATUS_OFFLINE = 3;
+	}
 }

@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+import "POGOProtos/Networking/Responses/DownloadItemTemplatesResponse.proto";
+
+message GameMasterDecoder {
+	Result result = 1;
+	repeated ClientGameMasterTemplate template = 2;
+	repeated string deleted_template = 3;
+	uint64 batch_id = 4;
+	int32 page_offset = 5;
+	repeated int32 experiment_id = 6;
+
+	enum Result {
+		UNSET = 0;
+		COMPLETE = 1;
+		MORE_RESULTS = 2;
+		BATCH_ID_NOT_LIVE = 3;
+		INVALID_BASIS_BATCH_ID = 4;
+		WRONG_EXPERIMENTS = 5;
+	}
+
+	message ClientGameMasterTemplate {
+		string template_id = 1;
+		//Ignore bytes and decode directly
+		//bytes data = 2;
+		.POGOProtos.Networking.Responses.DownloadItemTemplatesResponse.GameMasterClientTemplate data = 2;
+	}
+}

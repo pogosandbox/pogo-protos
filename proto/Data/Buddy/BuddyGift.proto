@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+import "POGOProtos/Data/Souvenir.proto";
+import "POGOProtos/Inventory/Loot.proto";
+
+message BuddyGift {
+	.POGOProtos.Data.Souvenir souvenir = 1;
+	.POGOProtos.Inventory.Loot loot_proto = 2;
+}

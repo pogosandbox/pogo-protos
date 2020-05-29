@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+import "POGOProtos/Enums/PoiImageType.proto";
+
+message PoiSubmissionPhotoUploadErrorTelemetry {
+	PoiSubmissionPhotoUploadErrorIds error_id = 1;
+	.POGOProtos.Enums.PoiImageType image_type = 2;
+	string error_message = 3;
+
+	enum PoiSubmissionPhotoUploadErrorIds {
+		UNSET = 0;
+		POI_PHOTO_UPLOAD_ERROR = 1;
+		POI_PHOTO_UPLOAD_TIMEOUT = 2;
+	}
+}

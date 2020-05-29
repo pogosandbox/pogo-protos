@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message InputSettings {
+	bool enable_frame_independent_spin = 1;
+	int32 milliseconds_processed_spin_force = 2;
+	float spin_speed_multiplier = 3;
+}

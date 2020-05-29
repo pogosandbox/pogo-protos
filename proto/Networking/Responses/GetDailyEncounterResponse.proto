@@ -1,0 +1,25 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+
+message GetDailyEncounterResponse {
+	Result result = 1;
+	.POGOProtos.Enums.PokemonId pokedex_id = 2;
+	double lat = 3;
+	double lng = 4;
+	string encounter_location = 5;
+	fixed64 encounter_id = 6;
+	int64 disappear_time_ms = 7;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 8;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ALREADY_FINISHED_FOR_TODAY = 2;
+		MISSED_FOR_TODAY = 3;
+		NO_POKEMON_AVAILABLE = 4;
+		DISABLED = 5;
+	}
+}

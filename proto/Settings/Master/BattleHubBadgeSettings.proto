@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/BadgeType.proto";
+
+message BattleHubBadgeSettings {
+	repeated .POGOProtos.Enums.BadgeType combat_hub_displayed_badges = 1;
+}

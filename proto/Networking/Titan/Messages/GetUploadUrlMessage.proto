@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan.Messages;
+
+import "POGOProtos/Enums/PlayerSubmissionType.proto";
+
+message GetUploadUrlMessage {
+	string user_id = 1;
+	string game_unique_id = 2;
+	.POGOProtos.Enums.PlayerSubmissionType submission_type = 3;
+	string submission_id = 4;
+	repeated string image_contexts = 5;
+}

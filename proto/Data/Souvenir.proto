@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Data;
+
+import "POGOProtos/Enums/SouvenirTypeId.proto";
+
+message Souvenir {
+	.POGOProtos.Enums.SouvenirTypeId souvenir_type_id = 1;
+	repeated SouvenirDetails souvenirs_details = 2;
+
+	message SouvenirDetails {
+		int64 time_picked_up = 1;
+		double latitude = 3;
+		double longitude = 4;
+	}
+}

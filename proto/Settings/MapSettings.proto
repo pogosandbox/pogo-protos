@@ -13,4 +13,5 @@ message MapSettings {
 	bool enable_special_weather = 9;
 	float special_weather_probability = 10;
 	string google_maps_client_id = 11;
+	bool enable_encounter_v2 = 12;
 }

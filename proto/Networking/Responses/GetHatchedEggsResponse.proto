@@ -11,4 +11,5 @@ message GetHatchedEggsResponse {
 	repeated int32 stardust_awarded = 5;
 	repeated float egg_km_walked = 6;
 	repeated .POGOProtos.Data.PokemonData hatched_pokemon = 7;
+	repeated int32 xl_candy_awarded = 8;
 }

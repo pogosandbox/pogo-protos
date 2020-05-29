@@ -2,7 +2,6 @@ syntax = "proto3";
 package POGOProtos.Networking.Responses;
 
 import "POGOProtos/Enums/EncounterType.proto";
-import "POGOProtos/Data/Sfida/SfidaNearbyPokemon.proto";
 
 message SfidaUpdateResponse {
 	Status status = 1;
@@ -15,7 +14,6 @@ message SfidaUpdateResponse {
 	string pokestop_id = 8;
 	.POGOProtos.Enums.EncounterType encounter_type = 9;
 	int32 pokedex_number = 10;
-	repeated .POGOProtos.Data.Sfida.SfidaNearbyPokemon nearby = 11;
 
 	enum Status {
 		UNSET = 0;

@@ -5,6 +5,7 @@ import "POGOProtos/Data/Gym/GymStatusAndDefenders.proto";
 import "POGOProtos/Data/Badge/AwardedGymBadge.proto";
 import "POGOProtos/Data/Raid/EventInfo.proto";
 import "POGOProtos/Map/Weather/DisplayWeather.proto";
+import "POGOProtos/Map/Fort/SponsoredDetails.proto";
 
 message GymGetInfoResponse {
 	.POGOProtos.Data.Gym.GymStatusAndDefenders gym_status_and_defenders = 1;
@@ -17,6 +18,11 @@ message GymGetInfoResponse {
 	string checkin_image_url = 8;
 	.POGOProtos.Data.Raid.EventInfo event_info = 9;
 	.POGOProtos.Map.Weather.DisplayWeather display_weather = 10;
+	repeated string promo_image = 11;
+	repeated string promo_description = 12;
+	string call_to_action_link = 13;
+	int64 server_ms = 14;
+	.POGOProtos.Map.Fort.SponsoredDetails sponsored_details = 15;
 
 	enum Result {
 		UNSET = 0;

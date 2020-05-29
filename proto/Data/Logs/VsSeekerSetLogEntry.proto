@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Data.Logs;
+
+import "POGOProtos/Inventory/Loot.proto";
+
+message VsSeekerSetLogEntry {
+	Result result = 1;
+	.POGOProtos.Inventory.Loot rewards = 2;
+	int32 new_rank = 3;
+	float new_rating = 4;
+	int32 previous_rank = 5;
+	float previous_rating = 6;
+	int32 number_of_wins = 7;
+	int32 number_of_battles = 8;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+	}
+}

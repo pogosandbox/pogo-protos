@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message PokemonBulkUpgradeSettings {
+	bool enable_client_side_change = 1;
+}

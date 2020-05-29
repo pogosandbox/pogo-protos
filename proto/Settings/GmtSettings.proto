@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message GmtSettings {
+	bool enable_gmtdownload_v2 = 1;
+}

@@ -3,4 +3,5 @@ package POGOProtos.Settings;
 
 message BackgroundModeGlobalSettings {
 	uint32 min_player_level_fitness = 1;
+	int64 service_prompt_timestamp_ms = 2;
 }

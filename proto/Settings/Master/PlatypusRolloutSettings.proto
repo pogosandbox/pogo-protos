@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Settings/Master/WallabySettings.proto";
+
+message PlatypusRolloutSettings {
+	int32 buddy_v2_min_player_level = 1;
+	int32 buddy_multiplayer_min_player_level = 2;
+	bool enable_monodepth = 3;
+	.POGOProtos.Settings.Master.WallabySettings wallaby_settings = 4;
+}

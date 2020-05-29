@@ -1,0 +1,29 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Data/Buddy/BuddyStats.proto";
+import "POGOProtos/Data/Souvenir.proto";
+
+message BuddyHistoryData {
+	fixed64 pokemon_id = 1;
+	.POGOProtos.Enums.PokemonId pokedex_id = 2;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 3;
+	bool hatched_from_egg = 4;
+	string nickname = 5;
+	int64 captured_s2_cell_id = 6;
+	int64 creation_timestamp_ms = 7;
+	.POGOProtos.Inventory.Item.ItemId pokeball = 8;
+	.POGOProtos.Data.Buddy.BuddyStats total_stats = 9;
+	int32 current_points_earned = 10;
+	int64 last_set_timestamp_ms = 11;
+	int64 last_unset_timestamp_ms = 12;
+	int32 num_days_spent_with_buddy = 13;
+	bool ditched = 14;
+	string original_owner_nickname = 15;
+	int64 traded_time_ms = 16;
+	map<int32, .POGOProtos.Data.Souvenir> souvenirs_collected = 17;
+	float km_candy_progress = 18;
+}

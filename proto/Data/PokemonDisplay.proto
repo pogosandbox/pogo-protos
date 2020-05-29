@@ -12,4 +12,17 @@ message PokemonDisplay {
 	bool shiny = 3;
 	.POGOProtos.Enums.Form form = 4;
 	.POGOProtos.Enums.WeatherCondition weather_boosted_condition = 5;
+	Alignment alignment = 6;
+	PokemonBadge pokemon_badge = 7;
+
+	enum Alignment {
+		ALIGNMENT_UNSET = 0;
+		SHADOW = 1;
+		PURIFIED = 2;
+	}
+
+	enum PokemonBadge {
+		POKEMON_BADGE_UNSET = 0;
+		POKEMON_BADGE_BEST_BUDDY = 1;
+	}
 }

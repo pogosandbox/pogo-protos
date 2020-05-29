@@ -4,6 +4,7 @@ package POGOProtos.Data;
 import "POGOProtos/Data/PokemonDisplay.proto";
 import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
+import "POGOProtos/Enums/HoloPokemonEggType.proto";
 import "POGOProtos/Inventory/Item/ItemId.proto";
 import "POGOProtos/Data/Combat/PokemonCombatStats.proto";
 
@@ -56,4 +57,11 @@ message PokemonData {
 	.POGOProtos.Enums.PokemonMove move_3 = 47;
 	.POGOProtos.Data.Combat.PokemonCombatStats pvp_combat_stats = 48;
 	.POGOProtos.Data.Combat.PokemonCombatStats npc_combat_stats = 49;
+	bool move2_is_purified_exclusive = 50;
+	string limited_pokemon_identifier = 51;
+	int32 pre_boosted_cp = 52;
+	float pre_boosted_additional_cp_multiplier = 53;
+	double deployed_gym_lat_degree = 55;
+	double deployed_gym_lng_degree = 56;
+	.POGOProtos.Enums.HoloPokemonEggType egg_type = 58;
 }

@@ -3,6 +3,7 @@ package POGOProtos.Settings.Master.Item;
 
 import "POGOProtos/Enums/PokemonType.proto";
 import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Enums/Form.proto";
 
 message IncenseAttributes {
 	int32 incense_lifetime_seconds = 1;
@@ -12,11 +13,12 @@ message IncenseAttributes {
 	int32 moving_time_between_encounter_seconds = 5;
 	int32 distance_required_for_shorter_interval_meters = 6;
 	int32 pokemon_attracted_length_sec = 7;
-	repeated IncensedPokemon spawn_table = 8;
+	repeated SpawnTablePokemon spawn_table = 8;
 	float spawn_table_probability = 9;
 
-	message IncensedPokemon {
+	message SpawnTablePokemon {
 		.POGOProtos.Enums.PokemonId pokemon_id = 1;
 		float weight = 2;
+		.POGOProtos.Enums.Form form = 3;
 	}
 }

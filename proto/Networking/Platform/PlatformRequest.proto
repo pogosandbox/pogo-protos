@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform;
+
+import "POGOProtos/Networking/Platform/PlatformRequestType.proto";
+
+message PlatformRequest {
+	.POGOProtos.Networking.Platform.PlatformRequestType platform_request_type = 1;
+	bytes request_message = 2;
+}

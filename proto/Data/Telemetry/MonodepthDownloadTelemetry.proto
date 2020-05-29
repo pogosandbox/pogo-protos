@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Data.Telemetry;
+
+message MonodepthDownloadTelemetry {
+	string model_downloaded = 3;
+}

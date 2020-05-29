@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePlayer.Messages;
+
+message GetInventoryMessage {
+	int64 last_timestamp_ms = 1;
+}

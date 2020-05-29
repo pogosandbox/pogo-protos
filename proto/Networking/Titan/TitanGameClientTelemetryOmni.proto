@@ -1,0 +1,63 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan;
+
+import "POGOProtos/Enums/PoiImageType.proto";
+import "POGOProtos/Data/Telemetry/PlatformServerData.proto";
+
+message TitanGameClientTelemetryOmni {
+	oneof TelemetryData {
+		PoiSubmissionTelemetry poi_submission_telemetry = 1;
+		PoiSubmissionPhotoUploadErrorTelemetry poi_submission_photo_upload_error_telemetry = 2;
+		PoiPlayerMetadataTelemetry player_metadata_telemetry = 3;
+		.POGOProtos.Data.Telemetry.PlatformServerData server_data = 1001;
+	}
+
+	message PoiPlayerMetadataTelemetry {
+		string device_model = 1;
+		string device_os = 2;
+	}
+
+	message PoiSubmissionPhotoUploadErrorTelemetry {
+		PoiSubmissionPhotoUploadErrorIds error_id = 1;
+		.POGOProtos.Enums.PoiImageType image_type = 2;
+		string error_message = 3;
+
+		enum PoiSubmissionPhotoUploadErrorIds {
+			UNSET = 0;
+			POI_PHOTO_UPLOAD_ERROR = 1;
+			POI_PHOTO_UPLOAD_TIMEOUT = 2;
+		}
+	}
+
+	message PoiSubmissionTelemetry {
+		PoiSubmissionGuiEventId gui_event_id = 1;
+		.POGOProtos.Enums.PoiImageType image_type = 2;
+		PoiCameraStepIds camera_step_id = 3;
+
+		enum PoiCameraStepIds {
+			UNSET = 0;
+			ENTER = 1;
+			RETAKE = 2;
+			CONFIRM = 3;
+			EXIT = 4;
+		}
+
+		enum PoiSubmissionGuiEventId {
+			UNKNOWN = 0;
+			POI_NOMINATION_ENTER = 1;
+			POI_TUTORIAL_COMPLETE = 2;
+			POI_MAP_CHANGEDVIEW_MAP = 3;
+			POI_MAP_CHANGEDVIEW_SATELLITE = 4;
+			POI_MAP_CENTER_LOCATION = 5;
+			POI_LOCATION_SET = 6;
+			POI_PHOTO_CAMERA_ENTER = 7;
+			POI_PHOTO_CAMERA_EXIT = 8;
+			POI_TITLE_ENTERED = 9;
+			POI_DESCRIPTION_ENTER = 10;
+			POI_DETAILS_CONFIRM = 11;
+			POI_SUPPORTINGINFO_ENTER = 12;
+			POI_SUBMIT_BUTTON_HIT = 13;
+			POI_EXIT_BUTTON_HIT = 14;
+		}
+	}
+}

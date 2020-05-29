@@ -1,0 +1,10 @@
+syntax = "proto3";
+package POGOProtos.Data.VsSeeker;
+
+import "POGOProtos/Enums/CombatPlayerFinishState.proto";
+
+message VsSeekerBattleResult {
+	.POGOProtos.Enums.CombatPlayerFinishState battle_result = 1;
+	bool rewards_claimed = 2;
+	bool is_pending_pokemon_reward = 3;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+message SubmitPoiTakedownRequestMessage {
+	string poi_id = 1;
+	PoiInvalidReason invalid_reason = 2;
+
+	enum PoiInvalidReason {
+		INVALID_REASON_UNSPECIFIED = 0;
+		NO_PEDESTRIAN_ACCESS = 1;
+		OBSTRUCTS_EMERGENCY_SERVICES = 2;
+		PRIVATE_RESIDENTIAL_PROPERTY = 3;
+		SCHOOL = 4;
+		PERMANENTLY_REMOVED = 5;
+		DUPLICATE = 6;
+	}
+}

@@ -2,9 +2,11 @@ syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
 import "POGOProtos/Inventory/Item/ItemId.proto";
+import "POGOProtos/Enums/PokemonMove.proto";
 
 message UseItemMoveRerollMessage {
 	.POGOProtos.Inventory.Item.ItemId item_id = 1;
 	fixed64 pokemon_id = 2;
 	bool reroll_unlocked_move = 3;
+	.POGOProtos.Enums.PokemonMove target_elite_move = 4;
 }

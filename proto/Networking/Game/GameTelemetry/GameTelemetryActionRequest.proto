@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameTelemetry;
+
+import "POGOProtos/Networking/Game/GameTelemetry/GameTelemetryAction.proto";
+
+message GameTelemetryActionRequest {
+	.POGOProtos.Networking.Game.GameTelemetry.GameTelemetryAction request_type = 1;
+	bytes request_message = 2;
+}

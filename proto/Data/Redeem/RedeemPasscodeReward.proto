@@ -6,6 +6,7 @@ import "POGOProtos/Data/PokemonData.proto";
 import "POGOProtos/Data/Redeem/PokeCandy.proto";
 import "POGOProtos/Data/Redeem/RedeemedAvatarItem.proto";
 import "POGOProtos/Data/Redeem/RedeemedItem.proto";
+import "POGOProtos/Data/Sticker/RedeemedSticker.proto";
 
 message RedeemPasscodeReward {
 	repeated .POGOProtos.Data.Redeem.RedeemedItem items = 1;
@@ -16,4 +17,5 @@ message RedeemPasscodeReward {
 	int32 stardust = 6;
 	int32 pokecoins = 7;
 	repeated .POGOProtos.Enums.BadgeType badges = 8;
+	repeated .POGOProtos.Data.Sticker.RedeemedSticker redeemed_stickers = 9;
 }

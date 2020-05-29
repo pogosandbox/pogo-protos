@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Inventory/Loot.proto";
+import "POGOProtos/Data/Combat/CombatSeasonResult.proto";
+
+message CompleteCombatCompetitiveSeasonActionResponse {
+	Result result = 1;
+	.POGOProtos.Inventory.Loot loot_proto = 2;
+	int32 new_rank = 3;
+	float new_rating = 4;
+	.POGOProtos.Data.Combat.CombatSeasonResult last_season_result = 5;
+	bool was_player_active = 6;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_PLAYER_HAS_NO_VS_SEEKER = 2;
+		ERROR_REWARDS_ALREADY_COLLECTED = 3;
+	}
+}

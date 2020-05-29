@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Data.Grapeshot;
+
+message GrapeshotAuthenticationData {
+	string authorization = 1;
+	string date = 2;
+}

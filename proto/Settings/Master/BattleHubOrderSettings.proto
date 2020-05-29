@@ -1,0 +1,35 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BattleHubOrderSettings {
+	repeated SectionSettings section = 1;
+	repeated SectionGroup section_group = 2;
+
+	message SectionGroup {
+		repeated SectionSettings.BattleHubSection section = 1;
+	}
+
+	message SectionSettings {
+		BattleHubSection main_section = 1;
+		repeated BattleHubSubsection subsection = 2;
+
+		enum BattleHubSection {
+			SECTION_UNSET = 0;
+			SECTION_VS_SEEKER = 1;
+			SECTION_CURR_SEASON = 2;
+			SECTION_LAST_SEASON = 3;
+			SECTION_NEARBY = 4;
+			SECTION_TEAM_LEADERS = 5;
+			SECTION_QR_CODE = 6;
+		}
+
+		enum BattleHubSubsection {
+			SUBSECTION_UNSET = 0;
+			SUBSECTION_VS_CHARGING = 1;
+			SUBSECTION_VS_FREE = 2;
+			SUBSECTION_VS_PREMIUM = 3;
+			SUBSECTION_NEARBY_TEAM_LEADERS = 4;
+			SUBSECTION_NEARBY_QR_CODE = 5;
+		}
+	}
+}

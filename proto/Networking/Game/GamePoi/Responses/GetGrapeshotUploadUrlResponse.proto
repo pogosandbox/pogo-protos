@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Responses;
+
+import "POGOProtos/Data/Grapeshot/GrapeshotUploadingData.proto";
+
+message GetGrapeshotUploadUrlResponse {
+	Status status = 1;
+	map<string, .POGOProtos.Data.Grapeshot.GrapeshotUploadingData> file_context_to_grapeshot_data = 4;
+
+	enum Status {
+		UNSET = 0;
+		FAILURE = 1;
+		SUCCESS = 2;
+		MISSING_FILE_CONTEXTS = 3;
+		DUPLICATE_FILE_CONTEXT = 4;
+		MISSING_SUBMISSION_TYPE = 5;
+		MISSING_SUBMISSION_ID = 6;
+	}
+}

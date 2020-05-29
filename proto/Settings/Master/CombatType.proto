@@ -1,0 +1,11 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Enums/PokemonType.proto";
+
+message CombatType {
+	.POGOProtos.Enums.PokemonType type = 1;
+	float nice_level_threshold = 2;
+	float great_level_threshold = 3;
+	float excellent_level_threshold = 4;
+}

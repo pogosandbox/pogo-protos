@@ -9,4 +9,8 @@ message FoodAttributes {
 	float growth_percent = 3;
 	float berry_multiplier = 4;
 	float remote_berry_multiplier = 5;
+	int32 num_buddy_affection_points = 6;
+	int64 map_duration_ms = 7;
+	int64 active_duration_ms = 8;
+	int32 num_buddy_hunger_points = 9;
 }

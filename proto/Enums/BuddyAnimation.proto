@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum BuddyAnimation {
+	BUDDY_ANIMATION_UNSET = 0;
+	BUDDY_ANIMATION_HAPPY = 1;
+	BUDDY_ANIMATION_HATE = 2;
+}

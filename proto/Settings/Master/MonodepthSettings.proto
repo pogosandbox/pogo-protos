@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message MonodepthSettings {
+	bool enable_occlusions = 1;
+	bool occlusions_default_on = 2;
+	bool occlusions_toggle_visible = 3;
+}

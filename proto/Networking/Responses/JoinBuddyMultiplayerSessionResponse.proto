@@ -1,0 +1,23 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message JoinBuddyMultiplayerSessionResponse {
+	Result result = 1;
+	bytes arbe_join_token = 2;
+	int64 generation_timestamp = 3;
+	int32 max_players = 4;
+
+	enum Result {
+		JOIN_SUCCESS = 0;
+		JOIN_LOBBY_FULL = 1;
+		JOIN_HOST_TOO_FAR = 2;
+		JOIN_LOBBY_NOT_FOUND = 3;
+		JOIN_BUDDY_NOT_SET = 4;
+		JOIN_BUDDY_NOT_FOUND = 5;
+		JOIN_BAD_BUDDY = 6;
+		JOIN_BUDDY_V2_NOT_ENABLED = 7;
+		JOIN_PLAYER_LEVEL_TOO_LOW = 8;
+		JOIN_UNKNOWN_ERROR = 9;
+		JOIN_U13_NO_PERMISSION = 10;
+	}
+}

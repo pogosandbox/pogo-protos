@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GameAnticheat;
+
+import "POGOProtos/Networking/Game/GameAnticheat/GameAnticheatAction.proto";
+
+message GameAnticheatActionRequest {
+	.POGOProtos.Networking.Game.GameAnticheat.GameAnticheatAction request_type = 1;
+	bytes request_message = 2;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message GetLocalTimeResponse {
+	Status status = 1;
+	repeated LocalTime local_times = 2;
+
+	enum Status {
+		UNSET = 0;
+		SUCCESS = 1;
+		ERROR_UNKNOWN = 2;
+	}
+
+	message LocalTime {
+		int64 timestamp_ms = 1;
+		int32 year = 2;
+		int32 month = 3;
+		int32 day_of_month = 4;
+		int32 day_of_week = 5;
+		int32 hours = 6;
+		int32 minutes = 7;
+		int32 seconds = 8;
+		int32 milliseconds = 9;
+		string timezone_id = 10;
+	}
+}

@@ -1,8 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Map.Pokemon;
 
-import "POGOProtos/Data/FoodValue.proto";
 import "POGOProtos/Data/PokemonData.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
 
 message MotivatedPokemon {
 	.POGOProtos.Data.PokemonData pokemon = 1;
@@ -12,5 +12,11 @@ message MotivatedPokemon {
 	int32 cp_now = 5;
 	float berry_value = 6;
 	int64 feed_cooldown_duration_millis = 7;
-	repeated .POGOProtos.Data.FoodValue food_value = 8;
+	repeated FoodValue food_value = 8;
+
+	message FoodValue {
+		float motivation_increase = 1;
+		int32 cp_increase = 2;
+		.POGOProtos.Inventory.Item.ItemId food_item = 3;
+	}
 }

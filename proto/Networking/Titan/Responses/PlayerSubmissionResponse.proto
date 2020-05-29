@@ -1,0 +1,18 @@
+syntax = "proto3";
+package POGOProtos.Networking.Titan;
+
+message PlayerSubmissionResponse {
+	Status status = 1;
+	string submission_id = 2;
+
+	enum Status {
+		STATUS_UNSPECIFIED = 0;
+		SUCCESS = 1;
+		INTERNAL_ERROR = 2;
+		TOO_MANY_RECENT_SUBMISSIONS = 3;
+		MINOR = 4;
+		NOT_AVAILABLE = 5;
+		INVALID_INPUT = 6;
+		MISSING_IMAGE = 7;
+	}
+}

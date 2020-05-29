@@ -5,4 +5,5 @@ import "POGOProtos/Enums/IdentityProvider.proto";
 
 message RemoveLoginActionMessage {
 	.POGOProtos.Enums.IdentityProvider identity_provider = 1;
+	string auth_provider_id = 3;
 }

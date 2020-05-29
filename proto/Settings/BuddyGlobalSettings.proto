@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message BuddyGlobalSettings {
+	int32 buddy_v2_min_player_level = 1;
+	int32 buddy_multiplayer_min_player_level = 2;
+	bool enable_monodepth = 3;
+	repeated string monodepth_devices = 4;
+	int32 lobby_status_message_duration_ms = 5;
+	int32 mapping_instruction_duration_ms = 6;
+	int32 group_photo_leader_tracking_interval_ms = 7;
+	int32 group_photo_countdown_ms = 8;
+	int32 lobby_timeout_ms = 9;
+	bool enable_wallaby_telemetry = 10;
+	int32 mapping_hint_timeout_ms = 11;
+	int32 group_photo_simultaneous_shots = 12;
+	bool plfe_auth_tokens_enabled = 13;
+	int32 group_photo_shot_interval_ms = 14;
+	string arbe_endpoint_url = 15;
+	bool buddy_on_map_required_to_open_gifts = 16;
+}

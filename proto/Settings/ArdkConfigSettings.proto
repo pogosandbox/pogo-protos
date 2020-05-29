@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Settings;
+
+message ArdkConfigSettings {
+	string orb_vocab_url = 1;
+	string monodpeth_model_url = 2;
+	repeated string monodepth_devices = 3;
+	repeated ArContext monodepth_contexts = 4;
+	string ios_monodepth_model_url = 5;
+	string android_monodepth_model_url = 6;
+
+	enum ArContext {
+		UNSET = 0;
+		AR_ENCOUNTER = 1;
+		AR_SNAPSHOT = 2;
+		SINGLEPLAYER_BUDDY = 3;
+		MULTIPLAYER_BUDDY = 4;
+	}
+}

@@ -17,4 +17,6 @@ message BattleParticipant {
 	bool weather_boosted = 8;
 	.POGOProtos.Enums.FriendshipLevelMilestone highest_friendship_milestone = 9;
 	repeated string friend_codename = 10;
+	bool is_remote = 11;
+	bool is_social_invite = 12;
 }

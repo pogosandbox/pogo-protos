@@ -2,6 +2,7 @@ syntax = "proto3";
 package POGOProtos.Data.Quests;
 
 import "POGOProtos/Enums/QuestType.proto";
+import "POGOProtos/Enums/PokemonId.proto";
 import "POGOProtos/Data/Quests/CatchPokemonQuest.proto";
 import "POGOProtos/Data/Quests/QuestReward.proto";
 import "POGOProtos/Data/Quests/QuestGoal.proto";
@@ -17,8 +18,12 @@ message Quest {
 		.POGOProtos.Data.Quests.CatchPokemonQuest catch_pokemon = 4;
 		.POGOProtos.Data.Quests.AddFriendQuest add_friend = 5;
 		.POGOProtos.Data.Quests.TradePokemonQuest trade_pokemon = 6;
+		DailyBuddyAffectionQuest daily_buddy_affection = 7;
+		QuestWalk quest_walk = 8;
+		EvolveIntoPokemonQuest evolve_into_pokemon = 9;
 	}
 
+	DaysWithARowQuest days_in_arow = 99;
 	string quest_id = 100;
 	int64 quest_seed = 101;
 	Context quest_context = 102;
@@ -38,6 +43,23 @@ message Quest {
 	int32 story_quest_template_version = 116;
 	DailyCounter daily_counter = 117;
 	string reward_pokemon_icon_url = 118;
+	int64 end_timestamp_ms = 119;
+
+	message QuestWalk {
+		float quest_start_km_walked = 1;
+	}
+
+	message EvolveIntoPokemonQuest {
+		repeated .POGOProtos.Enums.PokemonId unique_pokemon_id = 1;
+	}
+
+	message DaysWithARowQuest {
+		int32 last_window = 1;
+	}
+
+	message DailyBuddyAffectionQuest {
+		DailyCounter daily_affection_counter = 1;
+	}
 
 	message MultiPartQuest {
 		repeated .POGOProtos.Data.Quests.Quest sub_quests = 1;
@@ -57,6 +79,8 @@ message Quest {
 		UNSET = 0;
 		STORY_QUEST = 1;
 		CHALLENGE_QUEST = 2;
+		DAILY_COIN_QUEST = 3;
+		TIMED_STORY_QUEST = 4;
 	}
 
 	enum Status {

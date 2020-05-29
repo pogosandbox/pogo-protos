@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePasscode;
+
+enum GamePasscodeAction {
+	UNKNOWN_GAME_PASSCODE_ACTION = 0;  // No implementation required
+	REDEEM_PASSCODE = 330000;          // Implemented
+}

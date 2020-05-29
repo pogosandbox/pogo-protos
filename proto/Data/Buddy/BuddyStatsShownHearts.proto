@@ -1,0 +1,17 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+message BuddyStatsShownHearts {
+	float buddy_affection_km_in_progress = 1;
+	map<int32, BuddyShownHeartsList> buddy_shown_hearts_per_category = 2;
+
+	enum BuddyShownHeartType {
+		BUDDY_HEART_UNSET = 0;
+		BUDDY_HEART_SINGLE = 1;
+		BUDDY_HEART_DOUBLE = 2;
+	}
+
+	message BuddyShownHeartsList {
+		repeated BuddyShownHeartType buddy_shown_heart_types = 1;
+	}
+}

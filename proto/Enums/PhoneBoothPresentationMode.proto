@@ -1,0 +1,8 @@
+syntax = "proto3";
+package POGOProtos.Enums;
+
+enum PhoneBoothPresentationMode {
+	NONE_PHONEBOLTHPRESENTATIONMODE = 0;
+	PORTRAIT = 1;
+	DIALOG = 2;
+}

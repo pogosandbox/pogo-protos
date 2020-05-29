@@ -1,0 +1,28 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+message RedeemPoiPasscodeResponse {
+	Status status = 1;
+	int32 inventory_check_failed_reason = 2;
+	repeated Reward rewards = 3;
+	string passcode_batch_id = 5;
+	bytes in_game_reward = 6;
+
+	enum Status {
+		STATUS_UNKNOWN = 0;
+		STATUS_SUCCESS = 1;
+		STATUS_ALREADY_REDEEMED = 2;
+		STATUS_FAILED_INVENTORY_CHECK = 3;
+		STATUS_OUT_OF_RANGE = 4;
+		STATUS_WRONG_LOCATION = 5;
+		STATUS_RATE_LIMITED = 6;
+		STATUS_INVALID = 7;
+		STATUS_FULLY_REDEEMED = 8;
+		STATUS_EXPIRED = 9;
+	}
+
+	message Reward {
+		string item = 1;
+		int32 count = 2;
+	}
+}

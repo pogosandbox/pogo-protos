@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Data.Friends;
+
+message TwoWaySharedFriendshipData {
+	bool is_lucky = 1;
+	int32 lucky_count = 2;
+	SharedMigrations shared_migrations = 3;
+
+	message SharedMigrations {
+		bool is_gifting_migrated = 1;
+	}
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Settings/Master/Item/VsSeekerAttributes.proto";
+import "POGOProtos/Data/Combat/CombatLog.proto";
+
+message GetVsSeekerStatusResponse {
+	Result result = 1;
+	.POGOProtos.Settings.Master.Item.VsSeekerAttributes vs_seeker = 2;
+	bool season_ended = 3;
+	.POGOProtos.Data.Combat.CombatLog combat_log = 4;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS_FULLY_CHARGED = 1;
+		SUCCESS_NOT_FULLY_CHARGED_YET = 2;
+		ERROR_VS_SEEKER_NOT_FOUND = 3;
+		ERROR_VS_SEEKER_NEVER_STARTED_CHARGING = 4;
+	}
+}

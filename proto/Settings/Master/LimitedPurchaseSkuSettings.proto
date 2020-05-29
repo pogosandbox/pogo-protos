@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message LimitedPurchaseSkuSettings {
+	int32 purchase_limit = 1;
+	int32 version = 2;
+	ChronoUnit chrono_unit = 3;
+	string loot_table_id = 4;
+	int32 reset_interval = 20;
+
+	enum ChronoUnit {
+		UNSET = 0;
+		MINUTE = 1;
+		HOUR = 2;
+		DAY = 3;
+		WEEK = 4;
+		MONTH = 5;
+	}
+}

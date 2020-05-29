@@ -12,4 +12,6 @@ message ClientTelemetryClientSettings {
 	double player_hash = 8;
 	string player_external_omni_id = 9;
 	bool disable_omni_sending = 10;
+	map<string, double> special_sampling_probability_map = 11;
+	string player_external_ua_id = 12;
 }

@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message BuddyInteractionSettings {
+	repeated .POGOProtos.Inventory.Item.ItemId feed_item_whitelist = 1;
+	repeated .POGOProtos.Inventory.Item.ItemId care_item_whitelist = 2;
+}

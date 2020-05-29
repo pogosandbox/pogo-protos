@@ -1,0 +1,60 @@
+syntax = "proto3";
+package POGOProtos.Data.Buddy;
+
+import "POGOProtos/Data/Buddy/BuddyGift.proto";
+import "POGOProtos/Data/Quests/Quest.proto";
+import "POGOProtos/Data/Souvenir.proto";
+import "POGOProtos/Data/PokemonDisplay.proto";
+import "POGOProtos/Enums/PokemonId.proto";
+import "POGOProtos/Inventory/Item/ItemId.proto";
+
+message BuddyData {
+	fixed64 buddy_pokemon_id = 1;
+	int32 current_points_earned = 2;
+	int32 highest_points_earned = 3;
+	int64 last_reached_full_ms = 4;
+	int64 last_groomed_ms = 5;
+	int64 map_expiration_ms = 7;
+	float km_candy_pending = 12;
+	.POGOProtos.Data.Buddy.BuddyGift buddy_gift_picked_up = 15;
+	int32 current_emotion_points = 18;
+	map<int32, .POGOProtos.Data.Quests.Quest.DailyCounter> daily_activity_counters = 19;
+	map<int32, .POGOProtos.Data.Quests.Quest.DailyCounter> daily_category_counters = 20;
+	BuddyStoredStats stats_today = 21;
+	BuddyStoredStats stats_total = 22;
+	map<int32, .POGOProtos.Data.Souvenir> souvenirs_collected = 23;
+	int32 current_hunger_points = 24;
+	int64 interaction_expiration_ms = 25;
+	int64 poffin_feeding_expiration_ms = 26;
+	float last_affection_or_emotion_awarded_km = 27;
+	int64 last_set_timestamp_ms = 28;
+	int64 last_unset_timestamp_ms = 29;
+	bool ditched = 30;
+	.POGOProtos.Data.PokemonDisplay pokemon_display = 31;
+	bool hatched_from_egg = 32;
+	string nickname = 33;
+	int64 captured_s2_cell_id = 34;
+	.POGOProtos.Enums.PokemonId pokedex_entry_number = 35;
+	int64 creation_timestamp_ms = 36;
+	.POGOProtos.Inventory.Item.ItemId pokeball = 37;
+	int32 num_days_spent_with_buddy = 38;
+	string original_owner_nickname = 39;
+	int64 traded_time_ms = 40;
+	string attractive_poi_id = 41;
+	int64 attractive_poi_time_generated = 42;
+	int64 attractive_poi_cooldown_ms = 43;
+	bool attractive_poi_visited = 44;
+	int64 berry_cooldown_ms = 45;
+	map<int32, int64> activity_emotion_last_increment_ms = 46;
+	int64 window = 47;
+	int64 last_fed_ms = 48;
+	int32 last_window_buddy_on_map = 49;
+	int32 last_window_fed_poffin = 50;
+	int64 yatta_expiration_ms = 51;
+	float hunger_points = 52;
+
+	message BuddyStoredStats {
+		int64 window = 1;
+		map<int32, float> buddy_stats = 2;
+	}
+}

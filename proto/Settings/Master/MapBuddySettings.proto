@@ -1,0 +1,16 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message MapBuddySettings {
+	int32 for_buddy_group_number = 1;
+	float target_offset_min = 2;
+	float target_offset_max = 3;
+	float leash_distance = 4;
+	float max_seconds_to_idle = 5;
+	float max_rotation_speed = 6;
+	float walk_threshold = 7;
+	float run_threshold = 8;
+	bool should_glide = 9;
+	float glide_smooth_time = 10;
+	float glide_max_speed = 11;
+}

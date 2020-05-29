@@ -1,0 +1,21 @@
+syntax = "proto3";
+package POGOProtos.Data.VsSeeker;
+
+import "POGOProtos/Data/VsSeeker/VsSeekerRewardTrack.proto";
+import "POGOProtos/Inventory/LootItem.proto";
+
+message VsSeekerLoot {
+	int32 rank_level = 1;
+	repeated Reward reward = 2;
+	.POGOProtos.Data.VsSeeker.VsSeekerRewardTrack reward_track = 3;
+
+	message Reward {
+		oneof RewardType {
+			.POGOProtos.Inventory.LootItem item = 1;
+			bool pokemon_reward = 2;
+			bool item_loot_table = 3;
+			int32 item_loot_table_count = 4;
+			int32 item_ranking_loot_table_count = 5;
+		}
+	}
+}

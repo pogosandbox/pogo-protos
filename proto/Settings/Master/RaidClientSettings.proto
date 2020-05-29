@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message RaidClientSettings {
+	bool remote_raid_enabled = 1;
+	int32 max_remote_raid_passes = 2;
+	float remote_damage_modifier = 3;
+	int32 remote_raids_min_player_level = 4;
+	int32 max_num_friend_invites = 5;
+	int32 friend_invite_cutoff_time_sec = 6;
+	bool can_invite_friends_in_person = 7;
+	bool can_invite_friends_remotely = 8;
+	int32 max_players_per_lobby = 9;
+	int32 max_remote_players_per_lobby = 10;
+}

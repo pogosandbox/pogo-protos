@@ -1,0 +1,6 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message BuddyWalkSettings {
+	float km_required_per_affection_point = 1;
+}

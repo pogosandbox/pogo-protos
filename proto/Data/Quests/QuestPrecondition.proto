@@ -11,6 +11,22 @@ message QuestPrecondition {
 		Level level = 3;
 		Medal medal = 4;
 		Quests quests = 5;
+		MonthYearBucket month_year_bucket = 6;
+		Group group = 7;
+	}
+
+	message Group {
+		Name name = 1;
+
+		enum Name {
+			UNSET = 0;
+			GIOVANNI = 1;
+		}
+	}
+
+	message MonthYearBucket {
+		int32 year = 1;
+		int32 month = 2;
 	}
 
 	enum Operator {
@@ -27,6 +43,10 @@ message QuestPrecondition {
 		QUEST_PRECONDITION_MEDAL = 3;
 		QUEST_PRECONDITION_IS_MINOR = 4;
 		QUEST_PRECONDITION_EXCLUSIVE_QUESTS = 5;
+		QUEST_PRECONDITION_NEVER = 6;
+		QUEST_PRECONDITION_RECEIVED_ANY_LISTED_QUEST = 7;
+		QUEST_PRECONDITION_MONTH_YEAR_BUCKET = 8;
+		QUEST_PRECONDITION_EXCLUSIVE_IN_PROGRESS_GROUP = 9;
 	}
 
 	message Quests {

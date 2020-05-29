@@ -1,0 +1,7 @@
+syntax = "proto3";
+package POGOProtos.Networking.Game.GamePoi.Messages;
+
+message SubmitPoiImageMessage {
+	string poi_id = 1;
+	bool async_file_upload = 2;
+}

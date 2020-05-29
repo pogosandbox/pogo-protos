@@ -4,7 +4,7 @@ package POGOProtos.Settings.Master;
 import "POGOProtos/Enums/BuddySize.proto";
 import "POGOProtos/Enums/Form.proto";
 import "POGOProtos/Enums/PokemonId.proto";
-import "POGOProtos/Enums/PokemonRarity.proto";
+import "POGOProtos/Enums/PokemonClass.proto";
 import "POGOProtos/Enums/PokemonType.proto";
 import "POGOProtos/Enums/PokemonMove.proto";
 import "POGOProtos/Enums/PokemonFamilyId.proto";
@@ -15,22 +15,22 @@ import "POGOProtos/Settings/Master/Pokemon/EvolutionBranch.proto";
 import "POGOProtos/Settings/Master/Pokemon/AnimationOverride.proto";
 
 message PokemonSettings {
-	.POGOProtos.Enums.PokemonId pokemon_id = 1;
+	.POGOProtos.Enums.PokemonId unique_id = 1;
 	float model_scale = 3;
-	.POGOProtos.Enums.PokemonType type = 4;
-	.POGOProtos.Enums.PokemonType type_2 = 5;
+	.POGOProtos.Enums.PokemonType type1 = 4;
+	.POGOProtos.Enums.PokemonType type2 = 5;
 	.POGOProtos.Settings.Master.Pokemon.CameraAttributes camera = 6;
 	.POGOProtos.Settings.Master.Pokemon.EncounterAttributes encounter = 7;
 	.POGOProtos.Settings.Master.Pokemon.StatsAttributes stats = 8;
 	repeated .POGOProtos.Enums.PokemonMove quick_moves = 9;
 	repeated .POGOProtos.Enums.PokemonMove cinematic_moves = 10;
-	repeated float animation_time = 11;
-	repeated .POGOProtos.Enums.PokemonId evolution_ids = 12;
+	repeated float anim_time = 11;
+	repeated .POGOProtos.Enums.PokemonId evolution = 12;
 	int32 evolution_pips = 13;
-	.POGOProtos.Enums.PokemonRarity rarity = 14;
+	.POGOProtos.Enums.PokemonClass pokemon_class = 14;
 	float pokedex_height_m = 15;
 	float pokedex_weight_kg = 16;
-	.POGOProtos.Enums.PokemonId parent_pokemon_id = 17;
+	.POGOProtos.Enums.PokemonId parent_id = 17;
 	float height_std_dev = 18;
 	float weight_std_dev = 19;
 	float km_distance_to_hatch = 20;
@@ -59,9 +59,21 @@ message PokemonSettings {
 	repeated float combat_player_focus_camera_angle = 43;
 	repeated float combat_player_pokemon_position_offset = 44;
 	repeated .POGOProtos.Settings.Master.Pokemon.AnimationOverride photobomb_animation_overrides = 45;
+	ShadowAttributes shadow = 46;
+	int32 buddy_group_number = 47;
+	int32 additional_cp_boost_level = 48;
+	repeated .POGOProtos.Enums.PokemonMove elite_quick_move = 49;
+	repeated .POGOProtos.Enums.PokemonMove elite_cinematic_move = 50;
 
 	message PokemonThirdMoveAttributes {
 		int32 stardust_to_unlock = 1;
 		int32 candy_to_unlock = 2;
+	}
+
+	message ShadowAttributes {
+		uint32 purification_stardust_needed = 1;
+		uint32 purification_candy_needed = 2;
+		.POGOProtos.Enums.PokemonMove purified_charge_move = 3;
+		.POGOProtos.Enums.PokemonMove shadow_charge_move = 4;
 	}
 }

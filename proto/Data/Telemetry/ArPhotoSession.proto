@@ -6,6 +6,22 @@ message ArPhotoSession {
 	Step furthest_step_completed = 2;
 	int32 num_photos_taken = 3;
 	int32 num_photos_shared = 4;
+	int32 num_photos_taken_occlusions = 5;
+	int32 num_occlusions_enabled = 6;
+	int32 num_occlusions_disabled = 7;
+	ArContext ar_context = 8;
+	int64 session_length = 9;
+	int64 session_length_occlusions = 10;
+	int32 num_photos_shared_occlusions = 11;
+	string model_url = 12;
+
+	enum ArContext {
+		NONE = 0;
+		AR_ENCOUNTER = 1;
+		AR_SNAPSHOT = 2;
+		SINGLEPLAYER_BUDDY = 3;
+		MULTIPLAYER_BUDDY = 4;
+	}
 
 	enum ArType {
 		UNSET = 0;

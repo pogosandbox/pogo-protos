@@ -1,0 +1,12 @@
+syntax = "proto3";
+package POGOProtos.Networking.Requests.Messages;
+
+message GetAssetVersionMessage {
+	uint32 app_version = 1;
+	repeated AssetVersionRequestProto request = 2;
+
+	message AssetVersionRequestProto {
+		string asset_id = 1;
+		fixed32 checksum = 2;
+	}
+}

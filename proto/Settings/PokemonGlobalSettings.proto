@@ -3,4 +3,5 @@ package POGOProtos.Settings;
 
 message PokemonGlobalSettings {
 	bool enable_camo_shader = 1;
+	bool display_pokemon_badge_on_model = 2;
 }

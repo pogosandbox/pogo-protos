@@ -1,0 +1,19 @@
+syntax = "proto3";
+package POGOProtos.Networking.Responses;
+
+import "POGOProtos/Settings/Master/Item/VsSeekerAttributes.proto";
+
+message ActivateVsSeekerResponse {
+	Result result = 1;
+	.POGOProtos.Settings.Master.Item.VsSeekerAttributes vs_seeker = 2;
+
+	enum Result {
+		UNSET = 0;
+		SUCCESS_ACTIVATED = 1;
+		ERROR_NO_PREMIUM_BATTLE_PASS = 2;
+		ERROR_VS_SEEKER_NOT_CHARGED = 3;
+		ERROR_VS_SEEKER_ALREADY_ACTIVATED = 4;
+		ERROR_EXCEEDED_LIMIT = 5;
+		ERROR_TEMPORARILY_UNAVAILABLE = 6;
+	}
+}

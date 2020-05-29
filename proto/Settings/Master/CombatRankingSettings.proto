@@ -1,0 +1,15 @@
+syntax = "proto3";
+package POGOProtos.Settings.Master;
+
+message CombatRankingSettings {
+	repeated RankLevel rank_level = 1;
+	RankLevel required_for_rewards = 2;
+	int32 min_rank_to_display_rating = 3;
+
+	message RankLevel {
+		int32 rank_level = 1;
+		int32 additional_total_battles_required = 2;
+		int32 additional_wins_required = 3;
+		int32 min_rating_required = 4;
+	}
+}

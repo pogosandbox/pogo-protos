@@ -1,8 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Networking.Requests.Messages;
 
-import "POGOProtos/Data/Player/SocialPlayerSettings.proto";
+import "POGOProtos/Settings/SocialPlayerSettings.proto";
 
 message SaveSocialPlayerSettingsMessage {
-	.POGOProtos.Data.Player.SocialPlayerSettings settings = 1;
+	.POGOProtos.Settings.SocialPlayerSettings settings = 1;
 }

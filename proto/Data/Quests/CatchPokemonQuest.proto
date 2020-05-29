@@ -1,6 +1,8 @@
 syntax = "proto3";
 package POGOProtos.Data.Quests;
 
+import "POGOProtos/Enums/PokemonId.proto";
+
 message CatchPokemonQuest {
-	//
+	repeated .POGOProtos.Enums.PokemonId unique_pokemon_id = 1;
 }

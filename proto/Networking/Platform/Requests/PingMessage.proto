@@ -1,0 +1,9 @@
+syntax = "proto3";
+package POGOProtos.Networking.Platform.Requests;
+
+message PingMessage {
+	int32 response_size_bytes = 1;
+	string random_request_bytes = 2;
+	bool use_cache_for_random_request_bytes = 3;
+	string return_value = 4;
+}
