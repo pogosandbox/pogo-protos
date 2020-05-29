@@ -1,5 +1,5 @@
 syntax = "proto3";
-package POGOProtos.Networking.Requests.Titan;
+package POGOProtos.Data.Titan;
 
 import "POGOProtos/Enums/PlayerSubmissionType.proto";
 
